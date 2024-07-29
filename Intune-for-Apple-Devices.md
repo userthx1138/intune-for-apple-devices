@@ -123,7 +123,7 @@ The Microsoft Documentation for this procedure is at
 
 ## Apps and Books Token
 
-*The Apps and Books Token (previously known as the Volume Purchase****Program or VPP token) enables secure communication between Apple***  *Business Manager or Apple School Manager and the MDM for the management**of Apps and Book licensing*
+*The Apps and Books Token (previously known as the Volume Purchase Program or VPP token) enables secure communication between Apple Business Manager or Apple School Manager and the MDM for the management of Apps and Book licensing*
 
 In **Apple Business Manager**
 
@@ -587,7 +587,7 @@ In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
-Click + **Create** to Create a new profile
+Click **+ Create** to Create a new profile
 
 Click **Profile Type - Settings Catalogue** then **Create**
 
@@ -617,7 +617,7 @@ In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
-Click 􀅼 **Create** to Create a new profile
+Click **+ Create** to Create a new profile
 
 Click **Profile Type - Settings Catalogue** then **Create**
 
@@ -645,7 +645,7 @@ In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
-Click 􀅼 **Create** to Create a new profile
+Click **+ Create** to Create a new profile
 
 Click **Profile Type - Settings Catalogue** then **Create**
 
@@ -681,7 +681,7 @@ In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
-Click + **Create** to Create a new profile
+Click **+ Create** to Create a new profile
 
 Click **Profile Type - Settings Catalogue** then **Create**
 
@@ -713,7 +713,7 @@ In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
-Click + **Create** to Create a new profile
+Click **+ Create** to create a new profile
 
 Click **Profile Type -> Templates** then **Custom** then **Create**
 
@@ -737,7 +737,7 @@ In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
-Click + **Create** to Create a new profile
+Click **+ Create** to Create a new profile
 
 Click **Profile Type - Settings Catalogue** then **Create**
 
