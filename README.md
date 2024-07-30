@@ -6,4 +6,4 @@ Be sure to download both the Markdown file and the images directory with all ima
 
 Image references in the Markdown file are relative and assume the images are in the images directory in the same root as the Markdown file.
 
-Source is in the Wiki at
+Source is in the Wiki at [Intune for Apple Devices](https://github.pie.apple.com/robert-dolphin/intune-for-apple-devices/wiki/Intune-for-Apple-Devices)
