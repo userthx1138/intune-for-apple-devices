@@ -1,6 +1,4 @@
-<head>
-  <title>Intune for Apple Devices</title>
-</head>
+<title>Intune for Apple Devices</title>
 
 # Introduction and Prerequisites
 
