@@ -1,7 +1,3 @@
-<head>
-  <title>Intune for Apple Devices</title>
-</head>
-
 # Introduction and Prerequisites
 
 The following pages give high level level directions for setting up Intune with basic Mac management capabilities.
