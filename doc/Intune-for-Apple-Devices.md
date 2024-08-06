@@ -188,7 +188,7 @@ In the **Intune UI**
 
 Ensure the app appears in the list under Apps -> iOS/iPadOS apps
 
-<img src="images/IF9DSDUOjQsDa.png" alt="" height="51" data-align="left"/>
+<img src="images/IF9DSDUOjQsDa.png" alt="" height="40" data-align="left"/>
 
 ****NOTE: It may be necessary to force synchronisation after the ABM app purchase*** 
 
@@ -226,7 +226,7 @@ Await Final Configuration = `Yes`
 
 Other settings can be default
 
-<img src="images/FtBdU09cONMZo.png" alt="" height="839" data-align="left"/>
+<img src="images/FtBdU09cONMZo.png" alt="" width="800" data-align="left"/>
 
 Enter a department Name and Phone Number and toggle all setup assistant screens to Hide except
 
@@ -236,7 +236,7 @@ Location Services = `Show`
 
 Touch ID and Face ID = `Show`
 
-![](images/HNEKjiiO8BmcJ.png)
+<img src="images/HNEKjiiO8BmcJ.png" alt="" height="839" data-align="left"/>
 
 Save the enrolment profile
 
