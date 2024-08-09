@@ -488,6 +488,8 @@ You can now test the enrolment process on the iPhone you have assigned
 
 ***
 
+<div style="page-break-after: always"></div>
+
 # macOS
 
 ## Mac Device Enrollment Profile
@@ -700,7 +702,7 @@ Under **Assignments** click **+Add all devices**
 
 Create a custom config for the Support app as per the documentation on the developers web site
 
-This can be done with a text editor or a tool like [iMazing Profile editor](https://imazing.com/profile-editor).
+This can be done with a text editor or a tool like [iMazing Profile Editor](https://imazing.com/profile-editor).
 
 <img src="images/gYahUWBiFhKgU.png" alt="" width="800" data-align="left"/>
 
@@ -718,7 +720,7 @@ For **Custom configuration profile name enter** Support App Config
 
 Set **Deployment Channel** to **Device Channel**
 
-Upload the Custom Configuration profile file. Use filename `Suppport_Intune.mobileconfig`
+Upload the Custom Configuration profile file. Use filename `Support_Intune.mobileconfig`
 
 Under **Assignments** click **+Add all devices**
 
@@ -1177,6 +1179,8 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 <img src="images/l9aGkXT9CmjXt.png" alt="" width="400" data-align="left"/>
 
 ***
+
+<div style="page-break-after: always"></div>
 
 # Resources
 
