@@ -153,7 +153,7 @@ Enter the Managed Apple ID used to create the VPP token in ABM
 
 Upload the token file and click **Next**
 
-<img src="images/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
+<img src="assets/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
 
 
 Click through to complete the process.
@@ -190,7 +190,7 @@ In the **Intune UI**
 
 Ensure the app appears in the list under Apps -> iOS/iPadOS apps
 
-<img src="images/IF9DSDUOjQsDa.png" alt="" height="48" data-align="left"/>
+<img src="assets/IF9DSDUOjQsDa.png" alt="" height="48" data-align="left"/>
 
 **NOTE:** *It may be necessary to force synchronisation after the ABM app purchase* 
 
@@ -228,7 +228,7 @@ Await Final Configuration = `Yes`
 
 Other settings can be default
 
-<img src="images/FtBdU09cONMZo.png" alt="" width="800" data-align="left"/>
+<img src="assets/FtBdU09cONMZo.png" alt="" width="800" data-align="left"/>
 
 Enter a department Name and Phone Number and toggle all setup assistant screens to Hide except
 
@@ -238,7 +238,7 @@ Location Services = `Show`
 
 Touch ID and Face ID = `Show`
 
-<img src="images/HNEKjiiO8BmcJ.png" alt="" width="800" data-align="left"/>
+<img src="assets/HNEKjiiO8BmcJ.png" alt="" width="800" data-align="left"/>
 
 
 Save the enrolment profile
@@ -269,7 +269,7 @@ Give the policy a name e.g. `Passcode` then click **Next**
 
 Under **System Security**
 
-<img src="images/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left"/>
+<img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left"/>
 
 
 Click **+ Add all devices**
@@ -298,7 +298,7 @@ Click **+ Add settings** and choose **Restrictions** and select the settings in 
 
 Set the values to True or False as shown
 
-<img src="images/0U9jAlaGcu9Vw.png" alt="" width="800" data-align="left"/>
+<img src="assets/0U9jAlaGcu9Vw.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -325,7 +325,7 @@ Give the profile a name e.g. `Entra ID SSO` then click Next
 
 Click **+ Add settings** and choose **Authentication -> Extensible Single Sign On (SSO)** and select the settings in the screenshot below and close the Settings Picker
 
-<img src="images/HnfsoqYENrt5D.png" alt="" width="800" data-align="left"/>
+<img src="assets/HnfsoqYENrt5D.png" alt="" width="800" data-align="left"/>
 
 | Key                             | Type    | Value                     |
 | ------------------------------- | ------- | ------------------------- |
@@ -356,7 +356,7 @@ Click **Profile Type - Templates** then **Email** then **Create**
 
 Give the profile a name e.g. `Exchange` Online then click **Next**
 
-<img src="images/iRqMwGxb2KpBS.png" alt="" width="800" data-align="left"/>
+<img src="assets/iRqMwGxb2KpBS.png" alt="" width="800" data-align="left"/>
 
 
 Click **+ Add all devices**
@@ -440,7 +440,7 @@ Enter values as follows:
 | IntuneMAMUPN                 | String | {{userprincipalname}} |
 
 
-<img src="images/UU4xNkTP4X3O3.png" alt="" width="800" data-align="left"/>
+<img src="assets/UU4xNkTP4X3O3.png" alt="" width="800" data-align="left"/>
 
 Set Scope to All devices
 
@@ -527,14 +527,14 @@ Touch ID and Face ID = `Show`
 
 Configure Account Settings
 
-<img src="images/5Yq7p8yzbb7q0.png" alt="" width="800" data-align="left"/>
+<img src="assets/5Yq7p8yzbb7q0.png" alt="" width="800" data-align="left"/>
 
 
 Click **Create**
 
 Click **Set default profile** and set the just created profile as the default for macOS
 
-<img src="images/CntiwVDVz784T.png" alt="" width="800" data-align="left"/>
+<img src="assets/CntiwVDVz784T.png" alt="" width="800" data-align="left"/>
 
 
 ***
@@ -567,7 +567,7 @@ Click **+ Add settings** and choose **Full Disk Encryption** and select the sett
 
 Make the selections as shown
 
-<img src="images/tSlGZEiBOTHGx.png" alt="" width="800" data-align="left"/>
+<img src="assets/tSlGZEiBOTHGx.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -597,7 +597,7 @@ Click **+ Add settings** and choose **Networking -> Firewall** and select the se
 
 Make the selections as shown
 
-<img src="images/9jTidF7O3hn6F.png" alt="" width="800" data-align="left"/>
+<img src="assets/9jTidF7O3hn6F.png" alt="" width="800" data-align="left"/>
 
 
 Click **Next** then on Scope Tags click **Next**
@@ -624,7 +624,7 @@ Give the profile a name e.g. Gatekeeper then click **Next**
 
 Click **+ Add settings** and choose setting from **App Store, System Policy** and select the settings in the screenshot below and close the **Settings Picker**
 
-<img src="images/fP1Q85BdL0PgE.png" alt="" width="800" data-align="left"/>
+<img src="assets/fP1Q85BdL0PgE.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -652,7 +652,7 @@ Give the profile a name e.g. Entra ID SSO then click **Next**
 
 Click **+ Add settings** and choose **Authentication -> Extensible Single Sign On (SSO)** and select the settings in the screenshot below and close the **Settings Picker**
 
-<img src="images/xqCmlk3nSKslZ.png" alt="" width="800" data-align="left"/>
+<img src="assets/xqCmlk3nSKslZ.png" alt="" width="800" data-align="left"/>
 
 
 
@@ -688,7 +688,7 @@ Give the profile a name e.g. Office 365 Parameters then click **Next**
 
 Click **+ Add settings** and choose **Microsoft Office -> Microsoft Office** then click the **Enable Automatic sign-in** and **Office Activation Email Address** checkboxes and close the **Settings Picker**
 
-<img src="images/ckbr88YtyUFJT.png" alt="" width="800" data-align="left"/>
+<img src="assets/ckbr88YtyUFJT.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -702,7 +702,7 @@ Create a custom config for the Support app as per the documentation on the devel
 
 This can be done with a text editor or a tool like [iMazing Profile editor](https://imazing.com/profile-editor).
 
-<img src="images/gYahUWBiFhKgU.png" alt="" width="800" data-align="left"/>
+<img src="assets/gYahUWBiFhKgU.png" alt="" width="800" data-align="left"/>
 
 In the **Intune UI**
 
@@ -740,7 +740,7 @@ Give the profile a name e.g. Background and Login Items then click **Next**
 
 Click **+ Add settings** and choose **Login -> Service Management - Managed Login Items** then check all but **Team Identifier** and close the **Settings Picker**
 
-<img src="images/ExjJYDRiuHooD.png" alt="" width="800" data-align="left"/>
+<img src="assets/ExjJYDRiuHooD.png" alt="" width="800" data-align="left"/>
 
 Enter the following values: 
 
@@ -778,7 +778,7 @@ Name the Script e.g. Install Company Portal and click **Next**
 
 Upload the saved `InstallCompanyPortal.zsh` file and set the parameters as 
 
-<img src="images/RNXQeUjQSYFrJ.png" alt="" width="800" data-align="left"/>
+<img src="assets/RNXQeUjQSYFrJ.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -822,7 +822,7 @@ From the drop down menu select **Other -> Line-of-business app**
 
 Upload the Support App package file `Support.x.x.pkg`
 
-<img src="images/jc1XaxxvpBPJ9.png" alt="" width="800" data-align="left"/>
+<img src="assets/jc1XaxxvpBPJ9.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -850,10 +850,10 @@ From the drop down menu select **macOS app (PKG)**
 
 Upload the .pkg file
 
-<img src="images/jPR2IxCjwYLSp.png" alt="" width="800" data-align="left"/>
+<img src="assets/jPR2IxCjwYLSp.png" alt="" width="800" data-align="left"/>
 
 
-<img src="images/uKuhESxdNJIe3.png" alt="" width="800" data-align="left"/>
+<img src="assets/uKuhESxdNJIe3.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -906,7 +906,7 @@ From the drop down menu select **Other -> macOS App (PKG)**
 
 *The user would normally be prompted to approve the MDM Agent setting the Wallpaper so we deploy a PPPC Profile. This can be created using the [Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility) as follows. Save the profile as `IntunePPPC.mobileconfig`
 
-<img src="images/l8ijJoc7qbcFt.png" alt="PPPC Utility" width="800" data-align="left"/>
+<img src="assets/l8ijJoc7qbcFt.png" alt="PPPC Utility" width="800" data-align="left"/>
 
 
 In the **Intune UI**
@@ -953,11 +953,11 @@ Set the following:
 
 **System Security -> Device Security -> Stealth Mode** to `Enable`
 
-<img src="images/O15DRZ7lKzghS.png" alt="" width="800" data-align="left"/>
+<img src="assets/O15DRZ7lKzghS.png" alt="" width="800" data-align="left"/>
 
 Set the **Action** to **Mark device noncompliant** and the **Schedule** to **Immediately**
 
-<img src="images/zGQUjGACfEgEa.png" alt="" width="800" data-align="left"/>
+<img src="assets/zGQUjGACfEgEa.png" alt="" width="800" data-align="left"/>
 
 Under Assignments click **+Add all devices**
 
@@ -1021,7 +1021,7 @@ Click **+ Create** to Create a new profile
 
 Give the profile a name then click **Next**
 
-<img src="images/Hk2FJRLFPSLdr.png" alt="" width="800" data-align="left"/>
+<img src="assets/Hk2FJRLFPSLdr.png" alt="" width="800" data-align="left"/>
 
 ***
 
@@ -1040,7 +1040,7 @@ Give the profile a name e.g. `macOS Software Update` then click **Next**
 Click **+ Add settings** and choose **Declarative Device Management (DDM) -> Software Update** then check Local Date and Time and Target OS Version and close the Settings Picker
 
 
-<img src="images/hcEAcR7W48pDS.png" alt="" width="800" data-align="left"/>
+<img src="assets/hcEAcR7W48pDS.png" alt="" width="800" data-align="left"/>
 
 ***
 
@@ -1086,7 +1086,7 @@ Click **+ Add settings** and choose **Accounts -> Accounts -> Disable Guest Acco
 
 Then set **Disable Guest Account** to **True**
 
-<img src="images/tdHRoNvxZdVVO.png" alt="" width="800" data-align="left"/>
+<img src="assets/tdHRoNvxZdVVO.png" alt="" width="800" data-align="left"/>
 
 ***
 
@@ -1174,7 +1174,7 @@ Give the profile a name e.g. Passcode Policy then click **Next**
 
 Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings based on company security policy*
 
-<img src="images/l9aGkXT9CmjXt.png" alt="" width="400" data-align="left"/>
+<img src="assets/l9aGkXT9CmjXt.png" alt="" width="400" data-align="left"/>
 
 ***
 
