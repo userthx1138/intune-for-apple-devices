@@ -112,7 +112,7 @@ Enter the Managed Apple ID used to create the VPP token in ABM
 
 Upload the token file and click **Next**
 
-<img src="images/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
+<img src="assets/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
 
 
 Click through to complete the process.
