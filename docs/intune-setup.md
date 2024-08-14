@@ -4,9 +4,9 @@ This section describes the essential setup information that links Intune to the 
 
 ## APNS Certificate
 
-*Apple Push Notification Services are critical to the operation of MDM. For any action the MDM needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS.*
+_Apple Push Notification Services are critical to the operation of MDM. For any action the MDM needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS._
 
-To access the Intune UI, in a browser open [https://intune.microsoft.com/](https://endpoint.microsoft.com/) and log in with a **Entra ID** user ID that has the role of *Global Administrator* or *Intune Service Administrator* for your tenancy
+To access the Intune UI, in a browser open [https://intune.microsoft.com/](https://endpoint.microsoft.com/) and log in with an **Entra ID** user ID that has the role of _Global Administrator_ or _Intune Service Administrator_ for your tenancy
 
 Navigate to **Devices -> macOS -> macOS Enrollment**
 
@@ -112,7 +112,7 @@ Enter the Managed Apple ID used to create the VPP token in ABM
 
 Upload the token file and click **Next**
 
-<img src="images/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
+<img src="assets/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
 
 
 Click through to complete the process.
