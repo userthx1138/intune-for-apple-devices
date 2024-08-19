@@ -2,7 +2,7 @@
 
 [Intune for Apple Devices](Intune-for-Apple-Devices.md)
 
-[Apple Business Manager Email Template](Apple\ Business\ Manager\ Setup.md)
+[Apple Business Manager Email Template](Apple-Business-Manager-Setup.md)
 
 
 
