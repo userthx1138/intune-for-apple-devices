@@ -1158,15 +1158,15 @@ Click **+ Add settings** and choose **System Configuration -> Screensaver -> Sel
 
 **Login Window Module Path =** `/System/Library/`
 
-**Login Window Idle Time =** *Preferred Value*
+**Login Window Idle Time =** _Preferred Value_
 
-**Ask For Password Delay =** *Preferred Value*
+**Ask For Password Delay =** _Preferred Value_
 
 **Ask For Password =** `True`
 
 ## Configure Passcode Profile
 
-NOTE: Be sure to set this via the Settings Catalogue and not via a Template
+_**NOTE:** Be sure to set this via the Settings Catalogue and not via a Template_
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
@@ -1174,7 +1174,7 @@ Click **+ Create** to Create a new profile
 
 Click **Profile Type -> Settings Catalogue** then **Create**
 
-Give the profile a name e.g. Passcode Policy then click **Next**
+Give the profile a name e.g. `Passcode Policy` then click **Next**
 
 Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings based on company security policy*
 
