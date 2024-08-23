@@ -1,0 +1,11 @@
+{
+    "frontMatter.content.pageFolders": [
+        {
+            "title": "Intune for Apple Devices - docs",
+            "path": "[[workspace]]/docs"
+        }
+    ],
+    "frontMatter.framework.id": "jekyll",
+    "frontMatter.content.publicFolder": "assets",
+    "frontMatter.preview.host": "http://localhost:4000"
+}

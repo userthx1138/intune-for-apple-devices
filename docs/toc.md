@@ -1,6 +1,12 @@
+---
+date: 2024-08-23T04:36:37.705Z
+title: Intune for Apple Devices TOC
+---
 # Table of Contents
 
 [Introduction and Prerequisites](Intune-for-Apple-Devices.md#Introduction%20and%20Prerequisites)
+
+[Intune Setup](Intune-for-Apple-Devices.md#Intune%20Setup)
 
 [iOS Configuration Profiles](Intune-for-Apple-Devices.md#iOS%20Configuration%20Profiles)
 

@@ -36,6 +36,7 @@ In Apple Business Manager a managed Apple ID with either the Administrator or De
 
 In Intune sign in as a member of the *Global Administrator* or *Intune Service Administrator* Entra ID roles
 
+[Table of Contents](toc.md)
 ***
 <div style="page-break-after: always"></div>
 
@@ -163,6 +164,7 @@ You can ignore the Scope Tags page for this exercise
 The Microsoft Documentation for this procedure is at  
 [https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios](https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios#upload-an-apple-vpp-or-apple-business-manager-location-token)
 
+[Table of Contents](toc.md)
 ***
 <div style="page-break-after: always"></div>
 

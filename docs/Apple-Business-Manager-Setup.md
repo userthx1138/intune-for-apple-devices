@@ -1,3 +1,8 @@
+---
+date: 2024-08-23T04:51:27.947Z
+title: Apple Business Manager Setup - Email Template
+description: Thsi template can be used to create an email to a customer to guide them on how to get an ABM instace for their business
+---
 
 # Apple Business Manager Email Template
 
@@ -10,7 +15,7 @@ Essentially you just go to [https://business.apple.com](https://business.apple.c
  
 You will need to know you DUNS which you can look up at [Illion Express](https://express.illion.com.au/)
 
- 
+    
 The result I got for your organisation was:
 
 ![Synnex DUNS](assets/synnex_duns.png)
