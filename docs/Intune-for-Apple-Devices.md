@@ -7,6 +7,7 @@ Intune for Apple Devices
 
 <!-- code_chunk_output -->
 
+- [Intune for Apple Devices](#intune-for-apple-devices)
 - [Introduction and Prerequisites](#introduction-and-prerequisites)
 - [Intune Setup](#intune-setup)
   - [APNS Certificate](#apns-certificate)
@@ -14,6 +15,7 @@ Intune for Apple Devices
   - [Apps and Books Token](#apps-and-books-token)
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
+    - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
   - [Passcode Compliance Policy](#passcode-compliance-policy)
   - [Managed Open In Profile](#managed-open-in-profile)
@@ -21,6 +23,8 @@ Intune for Apple Devices
   - [Email Profile](#email-profile)
 - [iOS App Deployment](#ios-app-deployment)
   - [VPP](#vpp)
+    - [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
+    - [Deploy Additional Apps](#deploy-additional-apps)
 - [iOS App Configuration](#ios-app-configuration)
   - [Teams](#teams)
 - [iOS Device Assignment](#ios-device-assignment)
@@ -37,8 +41,13 @@ Intune for Apple Devices
   - [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
   - [Scripting](#scripting)
+    - [Deploy Company Portal](#deploy-company-portal)
   - [Line of Business / Packaged](#line-of-business--packaged)
+    - [Deploy Microsoft Office](#deploy-microsoft-office)
+    - [Deploy Support App](#deploy-support-app)
+    - [Deploy Privileges App](#deploy-privileges-app)
   - [VPP](#vpp-1)
+    - [Deploy Slack](#deploy-slack)
 - [Mac Additional Setup](#mac-additional-setup)
   - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
@@ -48,7 +57,7 @@ Intune for Apple Devices
 - [Mac Operations](#mac-operations)
   - [Software Updates](#software-updates)
   - [DDM Software Updates](#ddm-software-updates)
-- [FileVault Key Escrow](#filevault-key-escrow)
+  - [FileVault Key Escrow](#filevault-key-escrow)
   - [Erase All Content and Settings](#erase-all-content-and-settings)
 - [Additional Mac Config Profiles](#additional-mac-config-profiles)
   - [Disable the Guest Account](#disable-the-guest-account)
@@ -57,9 +66,16 @@ Intune for Apple Devices
   - [Configure Passcode Profile](#configure-passcode-profile)
 - [Resources](#resources)
   - [Setup](#setup)
+    - [APNS](#apns)
+    - [Automated Device Enrolment](#automated-device-enrolment)
   - [Configuration Profiles](#configuration-profiles)
   - [App Deployment](#app-deployment)
+    - [Apps and Books](#apps-and-books)
+    - [Scripting](#scripting-1)
+    - [Packaged Apps](#packaged-apps)
   - [Operations](#operations)
+    - [Software Update](#software-update)
+    - [Third Party Tools](#third-party-tools)
 
 <!-- /code_chunk_output -->
 
@@ -1099,7 +1115,7 @@ Click **+ Add settings** and choose **Declarative Device Management (DDM) -> Sof
 ***
 <div style="page-break-after: always"></div>
 
-# FileVault Key Escrow
+## FileVault Key Escrow
 
 In the **Intune UI**
 

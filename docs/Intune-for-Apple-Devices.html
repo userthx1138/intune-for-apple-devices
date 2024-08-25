@@ -1,5 +1,5 @@
 <!DOCTYPE html><html><head>
-      <title>Intune-for-Apple-Devices_toc</title>
+      <title>Intune-for-Apple-Devices</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
@@ -26,6 +26,7 @@
       
 <h1>Intune for Apple Devices</h1>
 <div class="code-chunk" data-id="code-chunk-id-0" data-cmd="toc"><div class="input-div"><div class="code-chunk-btn-group"><div class="run-btn btn btn-xs btn-primary"><span>▶︎</span></div><div class="run-all-btn btn btn-xs btn-primary">all</div></div><div class="status">running...</div></div><div class="output-div"></div></div><ul>
+<li><a href="#intune-for-apple-devices">Intune for Apple Devices</a></li>
 <li><a href="#introduction-and-prerequisites">Introduction and Prerequisites</a></li>
 <li><a href="#intune-setup">Intune Setup</a>
 <ul>
@@ -36,7 +37,11 @@
 </li>
 <li><a href="#ios--ipados">iOS / iPadOS</a>
 <ul>
-<li><a href="#ios-device-enrollment-profile">iOS Device Enrollment Profile</a></li>
+<li><a href="#ios-device-enrollment-profile">iOS Device Enrollment Profile</a>
+<ul>
+<li><a href="#purchase-company-portal-licenses">Purchase Company Portal licenses</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#ios-configuration-profiles">iOS Configuration Profiles</a>
@@ -49,7 +54,12 @@
 </li>
 <li><a href="#ios-app-deployment">iOS App Deployment</a>
 <ul>
-<li><a href="#vpp">VPP</a></li>
+<li><a href="#vpp">VPP</a>
+<ul>
+<li><a href="#deploy-microsoft-authenticator">Deploy Microsoft Authenticator</a></li>
+<li><a href="#deploy-additional-apps">Deploy Additional Apps</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#ios-app-configuration">iOS App Configuration</a>
@@ -80,9 +90,23 @@
 </li>
 <li><a href="#mac-app-deployment">Mac App Deployment</a>
 <ul>
-<li><a href="#scripting">Scripting</a></li>
-<li><a href="#line-of-business--packaged">Line of Business / Packaged</a></li>
-<li><a href="#vpp-1">VPP</a></li>
+<li><a href="#scripting">Scripting</a>
+<ul>
+<li><a href="#deploy-company-portal">Deploy Company Portal</a></li>
+</ul>
+</li>
+<li><a href="#line-of-business--packaged">Line of Business / Packaged</a>
+<ul>
+<li><a href="#deploy-microsoft-office">Deploy Microsoft Office</a></li>
+<li><a href="#deploy-support-app">Deploy Support App</a></li>
+<li><a href="#deploy-privileges-app">Deploy Privileges App</a></li>
+</ul>
+</li>
+<li><a href="#vpp-1">VPP</a>
+<ul>
+<li><a href="#deploy-slack">Deploy Slack</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li><a href="#mac-additional-setup">Mac Additional Setup</a>
@@ -104,10 +128,7 @@
 <ul>
 <li><a href="#software-updates">Software Updates</a></li>
 <li><a href="#ddm-software-updates">DDM Software Updates</a></li>
-</ul>
-</li>
-<li><a href="#filevault-key-escrow">FileVault Key Escrow</a>
-<ul>
+<li><a href="#filevault-key-escrow">FileVault Key Escrow</a></li>
 <li><a href="#erase-all-content-and-settings">Erase All Content and Settings</a></li>
 </ul>
 </li>
@@ -121,10 +142,26 @@
 </li>
 <li><a href="#resources">Resources</a>
 <ul>
-<li><a href="#setup">Setup</a></li>
+<li><a href="#setup">Setup</a>
+<ul>
+<li><a href="#apns">APNS</a></li>
+<li><a href="#automated-device-enrolment">Automated Device Enrolment</a></li>
+</ul>
+</li>
 <li><a href="#configuration-profiles">Configuration Profiles</a></li>
-<li><a href="#app-deployment">App Deployment</a></li>
-<li><a href="#operations">Operations</a></li>
+<li><a href="#app-deployment">App Deployment</a>
+<ul>
+<li><a href="#apps-and-books">Apps and Books</a></li>
+<li><a href="#scripting-1">Scripting</a></li>
+<li><a href="#packaged-apps">Packaged Apps</a></li>
+</ul>
+</li>
+<li><a href="#operations">Operations</a>
+<ul>
+<li><a href="#software-update">Software Update</a></li>
+<li><a href="#third-party-tools">Third Party Tools</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -736,7 +773,7 @@ osascript <span class="token parameter variable">-e</span> <span class="token st
 <img src="assets/hcEAcR7W48pDS.png" alt="" width="800" data-align="left">
 <hr>
 <div style="page-break-after: always"></div>
-<h1 id="filevault-key-escrow">FileVault Key Escrow </h1>
+<h2 id="filevault-key-escrow">FileVault Key Escrow </h2>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS</strong></p>
 <p>Select the relevant Mac from the list of devices</p>
