@@ -1,68 +1,30 @@
-<!-- title: Intune for Apple Devices -->
+<!--
+# Table of Contents
 
-Intune for Apple Devices
-========================
+[Introduction and Prerequisites](#Introduction%20and%20Prerequisites)
 
-<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
+[iOS Configuration Profiles](#iOS%20Configuration%20Profiles)
 
-<!-- code_chunk_output -->
+[iOS App Deployment](#iOS%20App%20Deployment)
 
-- [Introduction and Prerequisites](#introduction-and-prerequisites)
-- [Intune Setup](#intune-setup)
-  - [APNS Certificate](#apns-certificate)
-  - [Automated Device Enrollment Token](#automated-device-enrollment-token)
-  - [Apps and Books Token](#apps-and-books-token)
-- [iOS / iPadOS](#ios--ipados)
-  - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
-- [iOS Configuration Profiles](#ios-configuration-profiles)
-  - [Passcode Compliance Policy](#passcode-compliance-policy)
-  - [Managed Open In Profile](#managed-open-in-profile)
-  - [Single Sign On Profile](#single-sign-on-profile)
-  - [Email Profile](#email-profile)
-- [iOS App Deployment](#ios-app-deployment)
-  - [VPP](#vpp)
-- [iOS App Configuration](#ios-app-configuration)
-  - [Teams](#teams)
-- [iOS Device Assignment](#ios-device-assignment)
-  - [Enrolment Test](#enrolment-test)
-- [macOS](#macos)
-  - [Mac Device Enrollment Profile](#mac-device-enrollment-profile)
-- [Mac Configuration Profiles](#mac-configuration-profiles)
-  - [FileVault Profile](#filevault-profile)
-  - [Firewall Profile](#firewall-profile)
-  - [Gatekeeper Profile](#gatekeeper-profile)
-  - [Extensible SSO Profile](#extensible-sso-profile)
-  - [Office 365 Profile](#office-365-profile)
-  - [Custom Profile](#custom-profile)
-  - [Managed Login Items Profile](#managed-login-items-profile)
-- [Mac App Deployment](#mac-app-deployment)
-  - [Scripting](#scripting)
-  - [Line of Business / Packaged](#line-of-business--packaged)
-  - [VPP](#vpp-1)
-- [Mac Additional Setup](#mac-additional-setup)
-  - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
-- [Compliance Policies](#compliance-policies)
-  - [Disk Encryption Policy](#disk-encryption-policy)
-- [Mac Device Assignment](#mac-device-assignment)
-  - [Enrolment Test](#enrolment-test-1)
-- [Mac Operations](#mac-operations)
-  - [Software Updates](#software-updates)
-  - [DDM Software Updates](#ddm-software-updates)
-- [FileVault Key Escrow](#filevault-key-escrow)
-  - [Erase All Content and Settings](#erase-all-content-and-settings)
-- [Additional Mac Config Profiles](#additional-mac-config-profiles)
-  - [Disable the Guest Account](#disable-the-guest-account)
-  - [Disable Auto-login](#disable-auto-login)
-  - [Configure Screensaver Lock](#configure-screensaver-lock)
-  - [Configure Passcode Profile](#configure-passcode-profile)
-- [Resources](#resources)
-  - [Setup](#setup)
-  - [Configuration Profiles](#configuration-profiles)
-  - [App Deployment](#app-deployment)
-  - [Operations](#operations)
+[iOS Device Assignment an d Enrollment Test](#iOS%20Device%20Assignment)
 
-<!-- /code_chunk_output -->
+[Mac Configuration Profiles](#Mac%20Configuration%20Profiles)
 
+[Mac App Deployment](#Mac%20App%20Deployment)
+
+[Mac Additional Setup](#Mac%20Additional%20Setup)
+
+[Mac Device Assignment and Enrollment Test](#Mac%20Device%20Assignment)
+
+[Mac Operations](#Mac%20Operations)
+
+[Additional Mac Config Profiles](#Additional%20Mac%20Config%20Profiles)
+
+[Resources](#Resources)
+
+***
+-->
 
 # Introduction and Prerequisites
 
@@ -70,10 +32,11 @@ The following pages give high level level directions for setting up Intune with 
 
 It is assumed that you are already familiar with Intune and have existing Intune and Apple Business Manager instances set up and have logins with sufficient privilege to carry out the operations required.
 
-In Apple Business Manager a managed Apple ID with either the *Administrator* or *Device Enrollment Manager* role is required to add an MDM. To add a Location and assign the content Manager Role the Administrator or People Manager role is required.
+In Apple Business Manager a managed Apple ID with either the Administrator or Device Enrollment Manager role is required to add an MDM. To add a Location and assign the content Manager Role the Administrator or People Manager role is required.
 
 In Intune sign in as a member of the *Global Administrator* or *Intune Service Administrator* Entra ID roles
 
+[Table of Contents](toc.md)
 ***
 <div style="page-break-after: always"></div>
 
@@ -99,11 +62,15 @@ In a new browser window or tab open [https://identity.apple.com/pushcert/](https
 
 *Do not use a personal Apple ID for this process as management the APNS certificate will be critical over the life of your device management solution and access via a personal Apple ID may become unavailable as staff change over time. Using a Managed Apple ID keeps control within the Apple Business Manager (or Apple School Manager) instance.*
 
+
+
 Click **Create a Certificate**
 
 Upload the CSR, create and download the certificate
 
 You can log out and close this window/tab
+
+
 
 Return to the **Intune UI**
 
@@ -131,6 +98,8 @@ Check the box granting permission to send information to Apple
 
 Click on **Download your public key**
 
+
+
 To access Apple Business Manager open a new browser window or tab and navigate to [https://business.apple.com](https://business.apple.com) and log in with a Managed Apple ID that has the role of Administrator or Device Enrolment Manager
 
 Click your name at the bottom of the sidebar, and click **Preferences**
@@ -140,6 +109,8 @@ Under **Your MDM Servers** click the plus sign to **+ Add**
 Name your MDM server and upload the **Public Key**
 
 Download the Server Token by clicking on **Download Token** then clicking **Download Server Token**
+
+
 
 In the **Intune UI**
 
@@ -169,6 +140,8 @@ Click **Payments and Billing**
 
 Find the location you just created under **Server Tokens** and download the VPP token by clicking **Download**
 
+
+
 In the **Intune UI**
 
 Navigate to **Tenant administration -> Connectors and tokens -> Apple VPP Tokens**
@@ -183,6 +156,7 @@ Upload the token file and click **Next**
 
 <img src="assets/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
 
+
 Click through to complete the process.
 
 You can ignore the Scope Tags page for this exercise
@@ -190,6 +164,7 @@ You can ignore the Scope Tags page for this exercise
 The Microsoft Documentation for this procedure is at  
 [https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios](https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios#upload-an-apple-vpp-or-apple-business-manager-location-token)
 
+[Table of Contents](toc.md)
 ***
 <div style="page-break-after: always"></div>
 
@@ -273,7 +248,6 @@ Save the enrolment profile
 Click **Set default profile** and set the just created profile as the default for iOS/iPadOS
 
 ***
-<div style="page-break-after: always"></div>
 
 # iOS Configuration Profiles
 
@@ -307,7 +281,6 @@ Click **Next**
 Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Managed Open In Profile
 
@@ -336,7 +309,6 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Single Sign On Profile
 
@@ -371,7 +343,6 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Email Profile
 
@@ -397,7 +368,6 @@ Click **Next**
 Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 # iOS App Deployment
 
@@ -441,9 +411,8 @@ Navigate to **Tenant administration -> Connectors and tokens -> Apple VPP Tokens
 Right click on the token name and select **Sync**
 
 ***
-<div style="page-break-after: always"></div>
 
-# iOS App Configuration
+# App Configuration
 
 *These settings are app specific and control, behaviour of the specific apps as determined by the app developer. The example below sets the UPN used by Teams based on the user that enrolled the device*
 
@@ -482,7 +451,6 @@ Click **Next**
 Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 # iOS Device Assignment
 
@@ -521,6 +489,7 @@ Click **Sync** to sync with ABM. This can be done only after 15 mins or more fro
 You can now test the enrolment process on the iPhone you have assigned
 
 ***
+
 <div style="page-break-after: always"></div>
 
 # macOS
@@ -573,7 +542,6 @@ Click **Set default profile** and set the just created profile as the default fo
 
 
 ***
-<div style="page-break-after: always"></div>
 
 # Mac Configuration Profiles
 
@@ -612,7 +580,6 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Firewall Profile
 
@@ -644,7 +611,6 @@ In Assignments Click **+ Add all devices**
 Click **Next** then **** Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Gatekeeper Profile
 
@@ -671,7 +637,6 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Extensible SSO Profile
 
@@ -708,7 +673,6 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Office 365 Profile
 
@@ -733,7 +697,6 @@ Click **+ Add settings** and choose **Microsoft Office -> Microsoft Office** the
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Custom Profile
 
@@ -764,7 +727,6 @@ Upload the Custom Configuration profile file. Use filename `Support_Intune.mobil
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Managed Login Items Profile
 
@@ -795,7 +757,6 @@ Enter the following values: 
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 # Mac App Deployment
 
@@ -826,7 +787,6 @@ Upload the saved `InstallCompanyPortal.zsh` file and set the parameters as 
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Line of Business / Packaged
 
@@ -843,7 +803,6 @@ From the **App type** drop down list select **Microsoft 365 Apps / macOS**
 Under **Assignments** click **+Add all devices** under **REQUIRED**
 
 ***
-<div style="page-break-after: always"></div>
 
 ### Deploy Support App
 
@@ -872,7 +831,6 @@ Upload the Support App package file `Support.x.x.pkg`
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 ### Deploy Privileges App
 
@@ -906,7 +864,6 @@ Upload the .pkg file
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 ## VPP
 
@@ -929,7 +886,6 @@ Select **Slack for Desktop** from the list of available apps. If it is not liste
 Under **Properties -> Assignments** click **Edit** and click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 # Mac Additional Setup
 
@@ -978,7 +934,6 @@ Upload the Custom Configuration profile file. Use filename `IntunePPPC.mobilecon
 Under **Assignments** click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 # Compliance Policies
 
@@ -1013,7 +968,6 @@ Set the **Action** to **Mark device noncompliant** and the **Schedule** to **Imm
 Under Assignments click **+Add all devices**
 
 ***
-<div style="page-break-after: always"></div>
 
 # Mac Device Assignment
 
@@ -1060,7 +1014,6 @@ Log back into Company Portal and see the device is now compliant
 Launch Apps, open [https://portal.office.com](https://portal.office.com) in Safari and add Exchange account to Mail.
 
 ***
-<div style="page-break-after: always"></div>
 
 # Mac Operations
 
@@ -1077,7 +1030,6 @@ Give the profile a name then click **Next**
 <img src="assets/Hk2FJRLFPSLdr.png" alt="" width="800" data-align="left"/>
 
 ***
-<div style="page-break-after: always"></div>
 
 ## DDM Software Updates
 
@@ -1097,7 +1049,6 @@ Click **+ Add settings** and choose **Declarative Device Management (DDM) -> Sof
 <img src="assets/hcEAcR7W48pDS.png" alt="" width="800" data-align="left"/>
 
 ***
-<div style="page-break-after: always"></div>
 
 # FileVault Key Escrow
 
@@ -1122,7 +1073,6 @@ Click **X Erase**
 Enter any Recovery PIN then click **Erase**
 
 ***
-<div style="page-break-after: always"></div>
 
 # Additional Mac Config Profiles
 
@@ -1145,7 +1095,6 @@ Then set **Disable Guest Account** to **True**
 <img src="assets/tdHRoNvxZdVVO.png" alt="" width="800" data-align="left"/>
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Disable Auto-login
 
@@ -1194,7 +1143,6 @@ Assign to All Devices
 ```
 
 ***
-<div style="page-break-after: always"></div>
 
 ## Configure Screensaver Lock
 
@@ -1235,6 +1183,7 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 <img src="assets/l9aGkXT9CmjXt.png" alt="" width="400" data-align="left"/>
 
 ***
+
 <div style="page-break-after: always"></div>
 
 # Resources
@@ -1249,7 +1198,7 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 
 [Set up macOS enrollment](https://learn.microsoft.com/en-us/mem/intune/enrollment/macos-enroll)
 
-## Configuration Profiles
+### Configuration Profiles
 
 [Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
 
@@ -1259,13 +1208,13 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 
 [iMazing Profile Editor](https://imazing.com/profile-editor)
 
-## App Deployment
+### App Deployment
 
-### Apps and Books
+#### Apps and Books
 
 [Volume-purchased iOS apps](https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios)
 
-### Scripting
+#### Scripting
 
 [Use shell scripts on macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/apps/macos-shell-scripts)
 
@@ -1275,7 +1224,7 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 
 [Installomator](https://github.com/Installomator/Installomator)
 
-### Packaged Apps
+#### Packaged Apps
 
 [macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
 
@@ -1289,13 +1238,13 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 
 [Intune Uploader](https://github.com/almenscorner/intune-uploader)
 
-## Operations
+### Operations
 
-### Software Update
+#### Software Update
 
 [macOS update policies](https://learn.microsoft.com/en-us/mem/intune/protect/software-updates-macos)
 
-### Third Party Tools
+#### Third Party Tools
 
 [SAP Privileges App](https://github.com/SAP/macOS-enterprise-privileges)
 
