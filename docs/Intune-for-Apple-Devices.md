@@ -700,8 +700,6 @@ Click **+ Add settings** and choose **Authentication -> Extensible Single Sign O
 
 <img src="assets/PSSO1.png" alt="" width="800" data-align="left"/>
 
-
-
 | Key                             | Type    | Value                     |
 | ------------------------------- | ------- | ------------------------- |
 | browser_sso_interaction_enabled | Integer | 1                         |
@@ -720,8 +718,7 @@ Click **Next** then Click **Create**
 ## Office 365 Profile
 
 *This sets some parameters for Office 365 including the default user for licensing*
-
-
+<br>
 
 In the **Intune UI**
 
@@ -810,13 +807,12 @@ Under **Assignments** click **+Add all devices**
 
 ### Deploy Company Portal
 
-*Company Portal is required for a number of functions. These include device registration with Azure AD, a self Service App catalogue and provision of the Azure AD SSO Extension code.*
+_Company Portal is required for a number of functions. These include device registration with Azure AD, a self Service App catalogue and provision of the Azure AD SSO Extension code._
 
 In a new browser window or tab open [https://github.com/microsoft/shell-intune samples/blob/master/macOS/Apps/Company%20Portal/installCompanyPortal.zsh](https://github.com/microsoft/shell-intune%20samples/blob/master/macOS/Apps/Company%2520Portal/installCompanyPortal.zsh)
 
 Copy the contents of the zsh script, paste in to a text editor and save the file as `InstallCompanyPortal.zsh`
-
-
+<br>
 
 In the **Intune UI**
 
@@ -861,8 +857,7 @@ _This package has been created and signed by the developer so can be uploaded an
 _Intune supports two methods to deploy .pkg files. In this example we will use the Line-of-business method that leverages the MDM command InstallEnterpriseApplication._
 
 Download the latest packaged version of the Support app from [https://github.com/root3nl/SupportApp/releaseshttps://github.com/root3nl/SupportApp/releases](https://github.com/root3nl/SupportApp/releases)
-
-
+<br>
 
 In the **Intune UI**
 
@@ -892,7 +887,6 @@ Download the latest version of the SAP Privileges tool from [https://github.com/
 On a Mac install Privileges in the Applications folder
 
 Use the [Packages App](http://s.sudre.free.fr/Software/Packages/about.html) to create a file called `Privileges.pkg`
-
 <br>
 
 In the **Intune UI**
@@ -927,6 +921,7 @@ In the sidebar click **Apps and Books**
 Search for **Slack for Desktop** and select the macOS version
 
 Under Buy Licenses select the location corresponding to your Intune instance and specify 10 in the quantity then click **Get**
+<br>
 
 In the **Intune UI**
 
@@ -1005,6 +1000,7 @@ Click **Next** then Click **Create**
 ## Disk Encryption Policy
 
 *Intune can implement Compliance Policies which are evaluated as true or*false. This calculated state can be used by Azure AD Conditional Access polices to determine whether a user can access certain cloud based**resources from the device.*
+<br>
 
 In the Intune UI
 
@@ -1046,6 +1042,7 @@ Search for the serial number of the Mac you will enrol and select it
 Click **Edit MDM Server**
 
 Click **Assign the Following MDM** and choose the appropriate MDM from the drop down list then click **Continue**
+<br>
 
 In the I**ntune UI**
 
@@ -1101,7 +1098,7 @@ Give the profile a name then click **Next**
 
 ## DDM Software Updates
 
-In the Intune UI
+In the **Intune UI**
 
 Navigate to Devices -> macOS -> Configuration Profiles
 
@@ -1149,6 +1146,8 @@ Enter any Recovery PIN then click **Erase**
 *When you run the Mac Evaluation Utility on a Mac there is a category Mac Management -> Security with a number of items that are evaluated. The following profiles can help achieve a Success status for some of these items.*
 
 ## Disable the Guest Account
+
+In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
@@ -1218,6 +1217,8 @@ Assign to All Devices
 
 ## Configure Screensaver Lock
 
+In the **Intune UI**
+
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
@@ -1237,10 +1238,14 @@ Click **+ Add settings** and choose **System Configuration -> Screensaver -> Sel
 **Ask For Password Delay =** _Preferred Value_
 
 **Ask For Password =** `True`
+***
+<div style="page-break-after: always"></div>
 
 ## Configure Passcode Profile
 
 _**NOTE:** Be sure to set this via the Settings Catalog and not via a Template_
+
+In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
