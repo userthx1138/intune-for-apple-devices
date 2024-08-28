@@ -31,7 +31,7 @@ Intune for Apple Devices
   - [FileVault Profile](#filevault-profile)
   - [Firewall Profile](#firewall-profile)
   - [Gatekeeper Profile](#gatekeeper-profile)
-  - [Platform SSO Profile](#platform-sso-profile)
+  - [Extensible SSO Profile](#extensible-sso-profile)
   - [Office 365 Profile](#office-365-profile)
   - [Custom Profile](#custom-profile)
   - [Managed Login Items Profile](#managed-login-items-profile)
@@ -66,11 +66,11 @@ Intune for Apple Devices
 
 # Introduction and Prerequisites
 
-The following pages give high level directions for setting up Intune with basic iOS / iPadOS and Mac management capabilities.
+The following pages give high level level directions for setting up Intune with basic Mac management capabilities.
 
 It is assumed that you are already familiar with Intune and have existing Intune and Apple Business Manager instances set up and have logins with sufficient privilege to carry out the operations required.
 
-In Apple Business Manager a managed Apple ID with either the *Administrator* or *Device Enrollment Manager* role is required to add an MDM. To add a Location and assign the Content the _Administrator_ or _People Manager_ role is required.
+In Apple Business Manager a managed Apple ID with either the *Administrator* or *Device Enrollment Manager* role is required to add an MDM. To add a Location and assign the content Manager Role the Administrator or People Manager role is required.
 
 In Intune sign in as a member of the *Global Administrator* or *Intune Service Administrator* Entra ID roles
 
@@ -85,11 +85,7 @@ This section describes the essential setup information that links Intune to the 
 
 *Apple Push Notification Services are critical to the operation of MDM. For any action the MDM needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS.*
 
-<br>
-
-To access the **Intune UI**, in a browser open [https://intune.microsoft.com/](https://intune.microsoft.com/) and log in as an **Entra ID** user that has the role of *Global Administrator* or *Intune Service Administrator* for your tenancy
-
-In the **Intune UI**
+To access the Intune UI, in a browser open [https://intune.microsoft.com/](https://endpoint.microsoft.com/) and log in with a **Entra ID** user ID that has the role of *Global Administrator* or *Intune Service Administrator* for your tenancy
 
 Navigate to **Devices -> macOS -> macOS Enrollment**
 
@@ -135,16 +131,15 @@ Check the box granting permission to send information to Apple
 
 Click on **Download your public key**
 
-To access Apple Business Manager open a new browser window or tab and navigate to [https://business.apple.com](https://business.apple.com) and log in with a Managed Apple ID that has the role of _Administrator_ or _Device Enrolment Manager_
+To access Apple Business Manager open a new browser window or tab and navigate to [https://business.apple.com](https://business.apple.com) and log in with a Managed Apple ID that has the role of Administrator or Device Enrolment Manager
 
-Click your name at the bottom of the left sidebar, and click **Preferences**
+Click your name at the bottom of the sidebar, and click **Preferences**
 
-Under **Your MDM Servers** click the plus sign **+** to add an MDM
+Under **Your MDM Servers** click the plus sign to **+ Add**
 
 Name your MDM server and upload the **Public Key**
 
 Download the Server Token by clicking on **Download Token** then clicking **Download Server Token**
-<br>
 
 In the **Intune UI**
 
@@ -159,22 +154,20 @@ The Microsoft Documentation for this procedure is at
 ## Apps and Books Token
 
 *The Apps and Books Token (previously known as the Volume Purchase Program or VPP token) enables secure communication between Apple Business Manager or Apple School Manager and the MDM for the management of Apps and Book licensing*
-<br>
 
 In **Apple Business Manager**
 
 In the sidebar click **Locations**
 
-Click the plus sign **+** to Add a location
+Click the plus sign to **+ Add**
 
 Enter the details and create the new location
 
-Click your name at the bottom of the left sidebar, and click **Preferences**
+Click your name at the bottom of the sidebar, and click **Preferences**
 
 Click **Payments and Billing**
 
 Find the location you just created under **Server Tokens** and download the VPP token by clicking **Download**
-<br>
 
 In the **Intune UI**
 
@@ -187,7 +180,6 @@ Under **Token Name** give the Token the same name used in ABM
 Enter the Managed Apple ID used to create the VPP token in ABM
 
 Upload the token file and click **Next**
-<br>
 
 <img src="assets/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
 
@@ -227,10 +219,9 @@ Ensure the app appears in the list under Apps -> iOS/iPadOS apps
 
 <img src="assets/IF9DSDUOjQsDa.png" alt="" height="48" data-align="left"/>
 
-<br>
+**NOTE:** *It may be necessary to force synchronisation after the ABM app purchase* 
 
-**NOTE:** _It may be necessary to force synchronisation after the ABM app purchase_ 
-<br>
+
 
 In the **Intune UI**
 
@@ -286,7 +277,7 @@ Click **Set default profile** and set the just created profile as the default fo
 
 # iOS Configuration Profiles
 
-*Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting Catalog.*
+*Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting catalogue.*
 
 ## Passcode Compliance Policy
 
@@ -294,7 +285,7 @@ Click **Set default profile** and set the just created profile as the default fo
 
 [https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios](https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios)
 
-<br>
+
 
 In the **Intune UI**
 
@@ -328,7 +319,7 @@ Navigate to **Devices -> iOS/iPadOS -> Configuration Profiles**
 
 Click **+ Create profile** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. `Managed Open In` then click **Next**
 
@@ -352,13 +343,13 @@ Click **Next** then Click **Create**
 *The Single Sign On profile enables the use of Apple's Extensible Single Sign On framework in conjunction with the Entra ID SSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Microsoft Authenticator is installed on the device.*
 
 
-In the **Intune UI**
+*In the **Intune UI**
 
 Navigate to **Devices -> iOS/iPadOS -> Configuration Profiles**
 
 Click **+ Create profile** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. `Entra ID SSO` then click Next
 
@@ -421,9 +412,8 @@ In the sidebar click **Apps and Books**
 Search for **Microsoft Authenticato**r and select the iOS version
 
 Under Buy Licenses select the location corresponding to your Intune instance and specify 10 in the quantity then click **Get**
-<br>
 
-In the **Intune UI**
+**In the Intune UI**
 
 Navigate to **Apps -> iOS/iPadOS**
 
@@ -435,13 +425,14 @@ Click on Assignments **Edit** and assign the app under Required -> **+ Add all d
 
 ### Deploy Additional Apps
 
-Repeat the above process to deploy additional apps such as **Microsoft Teams** and **OneDrive** and **Workday**
+Repeat the above process to deploy additional apps such as Microsoft Teams and OneDrive and Workday
 
-You can make apps appear as optional installs within the Company Portal app by assigning them as **Available** for enrolled devices rather than **Required**
+You can make apps appear as optional installs within the Company Portal  
+pp by assigning them as Available for enrolled devices rather than Required
 
 ***NOTE: It may be necessary to force synchronisation after the ABM app purchase*** 
 
-<br>
+
 
 **In the Intune UI**
 
@@ -482,8 +473,9 @@ Enter values as follows:
 | IntuneMAMUPN                 | String | {{userprincipalname}} |
 
 
+<img src="assets/UU4xNkTP4X3O3.png" alt="" width="800" data-align="left"/>
 
-Set Scope to **All devices**
+Set Scope to All devices
 
 Click **Next**
 
@@ -496,7 +488,7 @@ Click **Create**
 
 In **Apple Business Manager**
 
-From the sidebar click **Devices**
+From the sidebar click Devices
 
 Search for the serial number of the iPhone you will enrol and select it
 
@@ -506,7 +498,7 @@ Click **Assign the Following MDM** and choose the appropriate MDM from the drop 
 
 
 
-In the **Intune UI**
+**In the Intune UI**
 
 Navigate to **Devices -> iOS/iPadOS -> iOS/iPadOS Enrollment**
 
@@ -516,7 +508,7 @@ Select the token you created from the list
 
 Under Manage click **Devices**
 
-If the device you assigned from ABM is not listed click **Sync**, wait a minute and click Refresh
+If the device you assigned from ABM is not listed click Sync, wait a minute and click Refresh
 
 Check the box next to the device(s) in the list that you wish to apply an ADE profile then click **Assign Profile**
 
@@ -536,7 +528,8 @@ You can now test the enrolment process on the iPhone you have assigned
 ## Mac Device Enrollment Profile
 
 *The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.*
-<br>
+
+
 
 In the **Intune UI**
 
@@ -584,17 +577,17 @@ Click **Set default profile** and set the just created profile as the default fo
 
 # Mac Configuration Profiles
 
-Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template of the Setting catalog. An example of each is given.
+Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template of the Setting catalogue. An example of each is given.
 
-For configuration profiles created using the Settings Catalog there is an Export JSON capability. There is a corresponding capability to select Import Policy as an option when creating a new configuration profile so previous configs can be reused.
+For configuration profiles created using the Settings Catalogue there is an Export JSON capability. There is a corresponding capability to select Import Policy as an option when creating a new configuration profile so previous configs can be reused.
 
 
 
 ## FileVault Profile
 
-*This profile enforces enables FileVault full disk encryption.*
+*This profile enables FileVault full disk encryption.*
 
-<br>
+
 
 In the **Intune UI**
 
@@ -602,7 +595,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. `FileVault` then click **Next**
 
@@ -625,7 +618,7 @@ Click **Next** then Click **Create**
 
 *This profile enables the built in macOS Application Firewall*
 
-<br>
+
 
 In the **Intune UI**
 
@@ -633,7 +626,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click + **Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. Firewall then click **Next**
 
@@ -663,7 +656,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. Gatekeeper then click **Next**
 
@@ -680,11 +673,11 @@ Click **Next** then Click **Create**
 ***
 <div style="page-break-after: always"></div>
 
-## Platform SSO Profile
+## Extensible SSO Profile
 
-*The Platform Single Sign On profile enables the use of Apple's Single Sign On framework in conjunction with the Entra ID PSSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device.*
+*The Single Sign On profile enables the use of Apple's Extensible Single Sign On framework in conjunction with the Entra ID SSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device.*
 
-<br>
+
 
 In the **Intune UI**
 
@@ -692,13 +685,13 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
-Give the profile a name e.g. `Entra ID PSSO` then click **Next**
+Give the profile a name e.g. Entra ID SSO then click **Next**
 
 Click **+ Add settings** and choose **Authentication -> Extensible Single Sign On (SSO)** and select the settings in the screenshot below and close the **Settings Picker**
 
-<img src="assets/PSSO1.png" alt="" width="800" data-align="left"/>
+<img src="assets/xqCmlk3nSKslZ.png" alt="" width="800" data-align="left"/>
 
 
 
@@ -729,7 +722,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. Office 365 Parameters then click **Next**
 
@@ -783,7 +776,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. Background and Login Items then click **Next**
 
@@ -893,7 +886,7 @@ On a Mac install Privileges in the Applications folder
 
 Use the [Packages App](http://s.sudre.free.fr/Software/Packages/about.html) to create a file called `Privileges.pkg`
 
-<br>
+
 
 In the **Intune UI**
 
@@ -905,11 +898,10 @@ From the drop down menu select **macOS app (PKG)**
 
 Upload the .pkg file
 
-<img src="assets/PrivilegesApp1.png" alt="" width="800" data-align="left"/>
+<img src="assets/jPR2IxCjwYLSp.png" alt="" width="800" data-align="left"/>
 
-<br>
 
-<img src="assets/PrivilegesApp2.png" alt="" width="800" data-align="left"/>
+<img src="assets/uKuhESxdNJIe3.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -943,11 +935,16 @@ Under **Properties -> Assignments** click **Edit** and click **+Add all devices*
 
 ## Set Mac Wallpaper (Optional)
 
-*In order to use a custom image as the Mac Wallpaper the image file needs to be installed on the device. There are multiple methods to then set this image as the Wallpaper. This example uses a custom package to install the images and then uses a configuration profile to set the Wallpaper.*
+*In order to use a custom image as the Mac Wallpaper the image file needs to be installed on the device. There are multiple methods to then set this image as the Wallpaper. This example uses a custom package to install the images and run a post install script to set the Wallpaper.*
 
-Create the .pkg file using a tool such as [Packages from Whitebox](http://s.sudre.free.fr/Software/Packages/about.html) and name it `Wallpaper.pkg`. This just needs to put the required image(s) into a directory on the Mac. e.g. `/usr/local/wallpaper/background.png`
+Create the .pkg file using a tool such as [Packages from Whitebox](http://s.sudre.free.fr/Software/Packages/about.html). Include a post install script with the following content:
 
-<br>
+```shell
+#!/bin/zsh
+osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/usr/local/wallpaper/Pretendco_Demokit_Dark.png"'
+```
+
+
 
 In the **Intune UI**
 
@@ -955,25 +952,12 @@ In the **Intune UI**
 
 Click **+ Add**
 
-From the drop down menu select **Other -> macOS App (PKG)** then click **Select**
+From the drop down menu select **Other -> macOS App (PKG)**
 
-Click **Slect app package file** and choose the `Wallpaper.pkg` file
+*The user would normally be prompted to approve the MDM Agent setting the Wallpaper so we deploy a PPPC Profile. This can be created using the [Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility) as follows. Save the profile as `IntunePPPC.mobileconfig`
 
-Under **App Information** set
+<img src="assets/l8ijJoc7qbcFt.png" alt="PPPC Utility" width="800" data-align="left"/>
 
-**Name** = `Wallpaper`
-**Description** = `Wallpaper images`
-**Publisher** = `managedevices.biz`
-
-Click **Next** then **Next**
-
-Set **Minimum operating system** = `macOS Ventura 13.0`
-
-Under **Detection Rules** leave the defaults and click **Next**
-
-Under **Assigment** choose **Add all devices** then click **Next** then **Create**
-
-<br>
 
 In the **Intune UI**
 
@@ -981,21 +965,17 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Templates** then **Custom** then **Create**
 
-Give the profile a name e.g. `Set Wallpaper` then click **Next**
+Give the profile a name e.g. `Intune Agent PPPC` then click **Next**
 
-Click **+ Add settings** and choose **User Exoperience > Desktop** then check **Override Picture Path** and close the **Settings Picker**
+For **Custom configuration profile name** enter `Intune to Finder PPPC`
 
-Set **Overide Picture Path** to `/usr/local/wallpaper/background.png`
+Set **Deployment Channel** to **Device Channel**
 
-<img src="assets/wallpaper_path.png" alt="" width="800" data-align="left"/>
+Upload the Custom Configuration profile file. Use filename `IntunePPPC.mobileconfig`
 
-Click **Next** then on Scope Tags click **Next**
-
-In Assignments Click **+ Add all devices**
-
-Click **Next** then Click **Create**
+Under **Assignments** click **+Add all devices**
 
 ***
 <div style="page-break-after: always"></div>
@@ -1107,7 +1087,7 @@ Navigate to Devices -> macOS -> Configuration Profiles
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type - Settings Catalogue** then **Create**
 
 Give the profile a name e.g. `macOS Software Update` then click **Next**
 
@@ -1154,7 +1134,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type -> Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalogue** then **Create**
 
 Give the profile a name e.g. Disable Guest Account then click **Next**
 
@@ -1222,7 +1202,7 @@ Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type -> Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalogue** then **Create**
 
 Give the profile a name e.g. Screensaver Lock then click **Next**
 
@@ -1240,13 +1220,13 @@ Click **+ Add settings** and choose **System Configuration -> Screensaver -> Sel
 
 ## Configure Passcode Profile
 
-_**NOTE:** Be sure to set this via the Settings Catalog and not via a Template_
+_**NOTE:** Be sure to set this via the Settings Catalogue and not via a Template_
 
 Navigate to **Devices -> macOS -> Configuration Profiles**
 
 Click **+ Create** to Create a new profile
 
-Click **Profile Type -> Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalogue** then **Create**
 
 Give the profile a name e.g. `Passcode Policy` then click **Next**
 
