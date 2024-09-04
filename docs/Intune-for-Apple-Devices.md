@@ -2,6 +2,7 @@
 
 Intune for Apple Devices
 ========================
+<img src="assets/OSList.png" alt="" height="" data-align="left"/>
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
 
@@ -160,8 +161,9 @@ The Microsoft Documentation for this procedure is at
 
 ## Apps and Books Token
 
-*The Apps and Books Token (previously known as the Volume Purchase Program or VPP token) enables secure communication between Apple Business Manager or Apple School Manager and the MDM for the management of Apps and Book licensing*
+*The Apps and Books Token (previously known as the Volume Purchase Program or VPP token) enables secure communication between Apple Business Manager or Apple School Manager and the MDM for the management of Apps and Book licensing*  
 <br>
+
 
 In **Apple Business Manager**
 
@@ -1231,7 +1233,7 @@ Give the profile a name e.g. Screensaver Lock then click **Next**
 
 Click **+ Add settings** and choose **System Configuration -> Screensaver -> Select all these settings**
 
-**Module Name =** 
+**Module Name =** _Preferred Value_
 
 **Login Window Module Path =** `/System/Library/`
 
