@@ -2,7 +2,8 @@
 
 Intune for Apple Devices
 ========================
-<img src="assets/OSList.png" alt="" height="" data-align="left"/>
+
+[<img src="assets/OSList.png" width="600"/>](assets/OSList.png)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
 
