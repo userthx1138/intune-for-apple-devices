@@ -9,6 +9,7 @@ Intune for Apple Devices
 
 <!-- code_chunk_output -->
 
+- [Intune for Apple Devices](#intune-for-apple-devices)
 - [Introduction and Prerequisites](#introduction-and-prerequisites)
 - [Intune Setup](#intune-setup)
   - [APNS Certificate](#apns-certificate)
@@ -16,6 +17,7 @@ Intune for Apple Devices
   - [Apps and Books Token](#apps-and-books-token)
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
+    - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
   - [Passcode Compliance Policy](#passcode-compliance-policy)
   - [Managed Open In Profile](#managed-open-in-profile)
@@ -23,6 +25,8 @@ Intune for Apple Devices
   - [Email Profile](#email-profile)
 - [iOS App Deployment](#ios-app-deployment)
   - [VPP](#vpp)
+    - [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
+    - [Deploy Additional Apps](#deploy-additional-apps)
 - [iOS App Configuration](#ios-app-configuration)
   - [Teams](#teams)
 - [iOS Device Assignment](#ios-device-assignment)
@@ -39,8 +43,13 @@ Intune for Apple Devices
   - [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
   - [Scripting](#scripting)
+    - [Deploy Company Portal](#deploy-company-portal)
   - [Line of Business / Packaged](#line-of-business--packaged)
+    - [Deploy Microsoft Office](#deploy-microsoft-office)
+    - [Deploy Support App](#deploy-support-app)
+    - [Deploy Privileges App](#deploy-privileges-app)
   - [VPP](#vpp-1)
+    - [Deploy Slack](#deploy-slack)
 - [Mac Additional Setup](#mac-additional-setup)
   - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
@@ -58,10 +67,6 @@ Intune for Apple Devices
   - [Configure Screensaver Lock](#configure-screensaver-lock)
   - [Configure Passcode Profile](#configure-passcode-profile)
 - [Resources](#resources)
-  - [Setup](#setup)
-  - [Configuration Profiles](#configuration-profiles)
-  - [App Deployment](#app-deployment)
-  - [Operations](#operations)
 
 <!-- /code_chunk_output -->
 
@@ -74,7 +79,7 @@ The following pages give high level directions for setting up Intune with basic 
 
 It is assumed that you are already familiar with Intune and have existing Intune and Apple Business Manager instances set up and have logins with sufficient privilege to carry out the operations required.
 
-In Apple Business Manager a managed Apple ID with either the *Administrator* or *Device Enrollment Manager* role is required to add an MDM. To add a Location and assign the Content the _Administrator_ or _People Manager_ role is required.
+In Apple Business Manager a Managed Apple Account with either the *Administrator* or *Device Enrollment Manager* role is required to add an MDM. To add a Location and assign the Content the _Administrator_ or _People Manager_ role is required.
 
 In Intune sign in as a member of the *Global Administrator* or *Intune Service Administrator* Entra ID roles
 
@@ -87,7 +92,7 @@ This section describes the essential setup information that links Intune to the 
 
 ## APNS Certificate
 
-*Apple Push Notification Services are critical to the operation of MDM. For any action the MDM needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS.*
+_Apple Push Notification Services are critical to the operation of MDM. For any action the MDM needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS._
 
 <br>
 
@@ -103,9 +108,9 @@ Check the box granting permission to send information to Apple
 
 Click on **Download your CSR**
 
-In a new browser window or tab open [https://identity.apple.com/pushcert/](https://identity.apple.com/pushcert/) and log in with a managed Apple ID.
+In a new browser window or tab open [https://identity.apple.com/pushcert/](https://identity.apple.com/pushcert/) and log in with a managed Apple Account.
 
-*Do not use a personal Apple ID for this process as management the APNS certificate will be critical over the life of your device management solution and access via a personal Apple ID may become unavailable as staff change over time. Using a Managed Apple ID keeps control within the Apple Business Manager (or Apple School Manager) instance.*
+*Do not use a personal Apple Account for this process as management the APNS certificate will be critical over the life of your device management solution and access via a personal Apple Account may become unavailable as staff change over time. Using a Managed Apple Account keeps control within the Apple Business Manager (or Apple School Manager) instance.*
 
 Click **Create a Certificate**
 
@@ -115,7 +120,7 @@ You can log out and close this window/tab
 
 Return to the **Intune UI**
 
-Under **Apple ID** Enter the Managed Apple ID you used to log in and create the certificate
+Under **Apple Account** Enter the Managed Apple Account you used to log in and create the certificate
 
 Under **Apple MDM push certificate** Select the certificate you just downloaded then click **Upload**
 
@@ -139,7 +144,7 @@ Check the box granting permission to send information to Apple
 
 Click on **Download your public key**
 
-To access Apple Business Manager open a new browser window or tab and navigate to [https://business.apple.com](https://business.apple.com) and log in with a Managed Apple ID that has the role of _Administrator_ or _Device Enrolment Manager_
+To access Apple Business Manager open a new browser window or tab and navigate to [https://business.apple.com](https://business.apple.com) and log in with a Managed Apple Account that has the role of _Administrator_ or _Device Enrolment Manager_
 
 Click your name at the bottom of the left sidebar, and click **Preferences**
 
@@ -147,12 +152,12 @@ Under **Your MDM Servers** click the plus sign **+** to add an MDM
 
 Name your MDM server and upload the **Public Key**
 
-Download the Server Token by clicking on **Download Token** then clicking **Download Server Token**
+Download the Server Token by clicking on **Download MDM Server Token** then clicking **Download Server MDM Token**
 <br>
 
 In the **Intune UI**
 
-Under **Apple ID** enter the Managed Apple ID you used to log in and  
+Under **Apple Account** enter the Managed Apple Account you used to log in and  
 create the Server Token
 
 Under **Apple token** select the Server Token just downloaded then click **Next** then click **Create**
@@ -189,7 +194,7 @@ Click **+ Create** to Create VPP Token
 
 Under **Token Name** give the Token the same name used in ABM
 
-Enter the Managed Apple ID used to create the VPP token in ABM
+Enter the Managed Apple Account used to create the VPP token in ABM
 
 Upload the token file and click **Next**
 <br>
@@ -1269,68 +1274,6 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 
 # Resources
 
-## Setup
-
-### APNS
-
-[Get Apple MDM push certificate](https://learn.microsoft.com/en-us/mem/intune/enrollment/apple-mdm-push-certificate-get)
-
-### Automated Device Enrolment
-
-[Set up macOS enrollment](https://learn.microsoft.com/en-us/mem/intune/enrollment/macos-enroll)
-
-## Configuration Profiles
-
-[Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
-
-[macOS Configuration - See Settings for macOS](https://learn.microsoft.com/en-us/mem/intune/configuration/)
-
-[Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility/releases)
-
-[iMazing Profile Editor](https://imazing.com/profile-editor)
-
-## App Deployment
-
-### Apps and Books
-
-[Volume-purchased iOS apps](https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios)
-
-### Scripting
-
-[Use shell scripts on macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/apps/macos-shell-scripts)
-
-[Deploying macOS apps with the Microsoft Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-microsoft-intune-scripting-agent/ba-p/2298072)
-
-[Sample shell scripts for macOS](https://github.com/microsoft/shell-intune-samples)
-
-[Installomator](https://github.com/Installomator/Installomator)
-
-### Packaged Apps
-
-[macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
-
-[AutoPkg](https://github.com/autopkg/autopkg)
-
-[Munki - Software Management for OS X](https://www.munki.org/munki/)
-
-[Comprehensive guide to managing macOS with Intune](https://oliverkieselbach.com/2021/07/14/comprehensive-guide-to-managing-macos-with-intune/) - A bit out of date but useful
-
-[Packages App](http://s.sudre.free.fr/Software/Packages/about.html)
-
-[Intune Uploader](https://github.com/almenscorner/intune-uploader)
-
-## Operations
-
-### Software Update
-
-[macOS update policies](https://learn.microsoft.com/en-us/mem/intune/protect/software-updates-macos)
-
-### Third Party Tools
-
-[SAP Privileges App](https://github.com/SAP/macOS-enterprise-privileges)
-
-[macOS Support App](https://github.com/root3nl/SupportApp)
-
-[Outset](https://github.com/macadmins/outset/)
+[Resouurces Page](Resources.md)
 
 ***

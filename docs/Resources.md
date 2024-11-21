@@ -1,17 +1,12 @@
----
-title: Intune Workshop Follow Up Email
-creation_date: March 6, 2024
-modification_date: September 2, 2024
----
-
 
 # Resource Links
 
 ## Apple
 
-* [Use Apple products on enterprise networks](https://support.apple.com/en-au/HT210060)
-
+* [Get Apple MDM push certificate](https://learn.microsoft.com/en-us/mem/intune/enrollment/apple-mdm-push-certificate-get)
 * [Contact Apple for help with Apple Push Notification service certificates](https://support.apple.com/en-au/HT210060)
+
+* [Use Apple products on enterprise networks](https://support.apple.com/en-au/HT210060)
 
 * [Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
 
@@ -45,7 +40,13 @@ modification_date: September 2, 2024
 
 * [Apple Configurator Support](https://support.apple.com/apple-configurator)
 
+* [Volume-purchased iOS apps](https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios)
+
 ## Microsoft
+
+* [End-to-end guide to get started with macOS endpoints by Microsoft](https://learn.microsoft.com/en-au/mem/solutions/end-to-end-guides/macos-endpoints-get-started)
+
+* [Set up enrollment for macOS devices in Intune](https://learn.microsoft.com/en-us/mem/intune/enrollment/macos-enroll)
 
 * [Configure Temporary Access Pass in Azure AD to register Passwordless authentication methods](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-temporary-access-pass)
 
@@ -59,13 +60,21 @@ modification_date: September 2, 2024
 
 * [Intune Device Checkin Frequency](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot)
 
-* [End-to-end guide to get started with macOS endpoints by Microsoft](https://learn.microsoft.com/en-au/mem/solutions/end-to-end-guides/macos-endpoints-get-started)
-
-* [iTunes Shell Scripts](https://github.com/microsoft/shell-intune-samples/tree/master/macOS)
+* [Intune Shell Scripts](https://github.com/microsoft/shell-intune-samples/tree/master/macOS)
 
 * [Script to report on stale devices](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Reporting/ManagedDeviceCertificateExpiryReport)
 
 * [Deploying Microsoft 365 Apps for Mac](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-intune-a/ba-p/2243040)
+
+* [macOS update policies](https://learn.microsoft.com/en-us/mem/intune/protect/software-updates-macos)
+  
+* [Use shell scripts on macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/apps/macos-shell-scripts)
+
+* [Deploying macOS apps with the Microsoft Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-microsoft-intune-scripting-agent/ba-p/2298072)
+
+* [Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
+
+* [macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
 
 
 ## Other 3rd Party
@@ -80,7 +89,7 @@ modification_date: September 2, 2024
 
 * [Suspicious Package](https://www.mothersruin.com/software/SuspiciousPackage/)
 
-* [PPPC Utility](https://github.com/jamf/PPPC-Utility)
+* [Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility)
 
 * [Outset](https://github.com/macadmins/outset/)
 
@@ -96,3 +105,13 @@ modification_date: September 2, 2024
 
 * [DFU Blaster (twocanoes) download](https://bitbucket.org/twocanoes/dfu-blaster-public/downloads/)
 
+* [Munki - Software Management for OS X](https://www.munki.org/munki/)
+
+* [Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility/releases)
+
+* [iMazing Profile Editor](https://imazing.com/profile-editor)
+
+* [Comprehensive guide to managing macOS with Intune](https://oliverkieselbach.com/2021/07/14/comprehensive-guide-to-managing-macos-with-intune/) - A bit out of date but useful
+
+
+***
