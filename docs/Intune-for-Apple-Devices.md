@@ -15,6 +15,8 @@ Intune for Apple Devices
   - [APNS Certificate](#apns-certificate)
   - [Automated Device Enrollment Token](#automated-device-enrollment-token)
   - [Apps and Books Token](#apps-and-books-token)
+- [Assignments / Scoping](#assignments--scoping)
+  - [Using Filters](#using-filters)
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
     - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
@@ -211,6 +213,38 @@ The Microsoft Documentation for this procedure is at
 ***
 <div style="page-break-after: always"></div>
 
+# Assignments / Scoping
+
+## Using Filters 
+
+_In this workshop most examples of scoping use a scope of **All Devices** for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to **All Devices** you can use a Filter_
+
+Navigate to **Devices -> Tenant administration -> Filters**
+
+Click **Create -> Managed Devices**
+
+Give the Filter a name e.g. `Enrollment Profile = iOS ADE with MFA` and under **Platform** choose **iOS/iPadOS** then click **Next**
+
+<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left"/>
+
+Click **Next** then Click **Create**
+
+When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
+
+Under the **Assignments** screen for a Configuration Profile Click on **Edit Filter**
+
+<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left"/>
+
+Select **Include filtered devices in assignment** then slelct the previouly created Filter called `Enrollment Profile = iOS ADE with MFA`then click **Select**
+
+<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left"/>
+
+<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left"/>
+
+***
+<div style="page-break-after: always"></div>
+   
+
 # iOS / iPadOS
 
 ## iOS Device Enrollment Profile
@@ -350,7 +384,7 @@ Set the values to True or False as shown
 
 Click **Next** then on Scope Tags click **Next**
 
-In Assignments Click **+ Add all devices**
+In Assignments Click **+ Add all devices** (Optionally apply a Filter)
 
 Click **Next** then Click **Create**
 
