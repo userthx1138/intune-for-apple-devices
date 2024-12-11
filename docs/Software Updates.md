@@ -1,0 +1,46 @@
+<!-- title: Operating System Updates -->
+
+Managing Operating System Updates
+=================================
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Apple Reference](#apple-reference)
+- [Update Methods prior to iOS 17 / macOS 14](#update-methods-prior-to-ios-17--macos-14)
+- [Deferal Methods prior to iOS 18 / macOS 15](#deferal-methods-prior-to-ios-18--macos-15)
+
+<!-- /code_chunk_output -->
+
+
+# Apple Reference
+[About software updates for Apple devices](https://support.apple.com/en-au/guide/deployment/depc4c80847a/1/web/1.0)
+
+# Update Methods prior to iOS 17 / macOS 14
+
+_Prior to the implemetation of Declaritive Device Management (DDM) on Apple operating systems updates were managed using a series of MDM commands. This was configured in the Update Policies area of the Intune UI_
+
+In the **Intune UI**
+
+Navigate to **Devices -> iOS/iPadOS -> iOS/iPadOS updates**
+
+Click **+ Create Profile**
+
+
+# Deferal Methods prior to iOS 18 / macOS 15
+
+Navigate to **Devices -> iOS/iPadOS -> Configuration**
+
+Click **+ Create -> + New Policy**
+
+Click **Profile Type - Settings Catalog** then **Create**
+
+Give the profile a name e.g. `OS Update Deferral` then click **Next**
+
+Click **+ Add settings** and select **Restrictions -> Enforced Software Update Delay** and close the **Settings Picker**
+
+<img src="assets/OS_Update_Deferal_Restriction.png" alt="" width="800" data-align="left"/>
+
+The flow for macOS deferrals is similar
+

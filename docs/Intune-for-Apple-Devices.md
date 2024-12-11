@@ -9,17 +9,15 @@ Intune for Apple Devices
 
 <!-- code_chunk_output -->
 
-- [Intune for Apple Devices](#intune-for-apple-devices)
 - [Introduction and Prerequisites](#introduction-and-prerequisites)
 - [Intune Setup](#intune-setup)
   - [APNS Certificate](#apns-certificate)
   - [Automated Device Enrollment Token](#automated-device-enrollment-token)
   - [Apps and Books Token](#apps-and-books-token)
-- [Assignments / Scoping](#assignments--scoping)
-  - [Using Filters](#using-filters)
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
-    - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
+- [Assignments / Scoping](#assignments--scoping)
+  - [Using Filters](#using-filters)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
   - [Passcode Compliance Policy](#passcode-compliance-policy)
   - [Managed Open In Profile](#managed-open-in-profile)
@@ -27,8 +25,6 @@ Intune for Apple Devices
   - [Email Profile](#email-profile)
 - [iOS App Deployment](#ios-app-deployment)
   - [VPP](#vpp)
-    - [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
-    - [Deploy Additional Apps](#deploy-additional-apps)
 - [iOS App Configuration](#ios-app-configuration)
   - [Teams](#teams)
 - [iOS Device Assignment](#ios-device-assignment)
@@ -45,13 +41,8 @@ Intune for Apple Devices
   - [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
   - [Scripting](#scripting)
-    - [Deploy Company Portal](#deploy-company-portal)
   - [Line of Business / Packaged](#line-of-business--packaged)
-    - [Deploy Microsoft Office](#deploy-microsoft-office)
-    - [Deploy Support App](#deploy-support-app)
-    - [Deploy Privileges App](#deploy-privileges-app)
   - [VPP](#vpp-1)
-    - [Deploy Slack](#deploy-slack)
 - [Mac Additional Setup](#mac-additional-setup)
   - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
@@ -213,37 +204,6 @@ The Microsoft Documentation for this procedure is at
 ***
 <div style="page-break-after: always"></div>
 
-# Assignments / Scoping
-
-## Using Filters 
-
-_In this workshop most examples of scoping use a scope of **All Devices** for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to **All Devices** you can use a Filter_
-
-Navigate to **Devices -> Tenant administration -> Filters**
-
-Click **Create -> Managed Devices**
-
-Give the Filter a name e.g. `Enrollment Profile = iOS ADE with MFA` and under **Platform** choose **iOS/iPadOS** then click **Next**
-
-<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left"/>
-
-Click **Next** then Click **Create**
-
-When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
-
-Under the **Assignments** screen for a Configuration Profile Click on **Edit Filter**
-
-<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left"/>
-
-Select **Include filtered devices in assignment** then slelct the previouly created Filter called `Enrollment Profile = iOS ADE with MFA`then click **Select**
-
-<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left"/>
-
-<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left"/>
-
-***
-<div style="page-break-after: always"></div>
-   
 
 # iOS / iPadOS
 
@@ -328,6 +288,37 @@ Click **Set default profile** and set the just created profile as the default fo
 ***
 <div style="page-break-after: always"></div>
 
+# Assignments / Scoping
+
+## Using Filters 
+
+_In this workshop most examples of scoping use a scope of **All Devices** for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to **All Devices** you can use a Filter_
+
+Navigate to **Devices -> Tenant administration -> Filters**
+
+Click **Create -> Managed Devices**
+
+Give the Filter a name e.g. `Enrollment Profile = iOS ADE with MFA` and under **Platform** choose **iOS/iPadOS** then click **Next**
+
+<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left"/>
+
+Click **Next** then Click **Create**
+
+When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
+
+Under the **Assignments** screen for a Configuration Profile Click on **Edit Filter**
+
+<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left"/>
+
+Select **Include filtered devices in assignment** then slelct the previouly created Filter called `Enrollment Profile = iOS ADE with MFA`then click **Select**
+
+<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left"/>
+
+<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left"/>
+
+***
+<div style="page-break-after: always"></div>
+   
 # iOS Configuration Profiles
 
 *Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting Catalog.*
@@ -928,9 +919,6 @@ _Intune supports two methods to deploy .pkg files. In this example we will use t
 
 Download the latest version of the SAP Privileges tool from [https://github.com/SAP/macOS-enterprise-privileges](https://github.com/SAP/macOS-enterprise-privileges)
 
-On a Mac install Privileges in the Applications folder
-
-Use the [Packages App](http://s.sudre.free.fr/Software/Packages/about.html) to create a file called `Privileges.pkg`
 <br>
 
 In the **Intune UI**
@@ -941,7 +929,7 @@ Click **+Add**
 
 From the drop down menu select **macOS app (PKG)**
 
-Upload the .pkg file
+Upload the Privileges.2.x.pkg file
 
 <img src="assets/PrivilegesApp1.png" alt="" width="800" data-align="left"/>
 
