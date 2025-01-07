@@ -470,7 +470,7 @@ Click on Assignments **Edit** and assign the app under Required -> **+ Add all d
 
 ### Deploy Additional Apps
 
-Repeat the above process to deploy additional apps such as **Microsoft Teams** and **OneDrive** and **Workday**
+Repeat the above process to deploy additional apps such as **Microsoft Teams** and **OneDrive** and **Outlook*
 
 You can make apps appear as optional installs within the Company Portal app by assigning them as **Available** for enrolled devices rather than **Required**
 
