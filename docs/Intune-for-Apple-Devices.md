@@ -93,7 +93,7 @@ To access the **Intune UI**, in a browser open [https://intune.microsoft.com/](h
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> macOS Enrollment**
+Navigate to **Devices -> macOS -> Enrollment**
 
 Click **Apple MDM Push Certificate**
 
@@ -125,13 +125,13 @@ The Microsoft Documentation for this procedure is at [https://learn.microsoft.co
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> iOS/iPadOS Enrollment**
+Navigate to **Devices -> iOS/iPadOS -> Enrollment**
 
-(Devices -> macOS -> macOS Enrollment will also work)
+(Devices -> macOS -> Enrollment will also work)
 
 Click **Enrollment program tokens**
 
-Click on **+ Add** to add a new token
+Click on **+ Create** to add a new token
 
 Check the box granting permission to send information to Apple
 
@@ -242,7 +242,7 @@ Navigate to **Tenant administration -> Connectors and tokens -> Apple VPP Tokens
 
 Right click on the token name and select  **Sync**
 
-Navigate to **Devices -> iOS/iPadOS -> iOS/iPadOS Enrollment**
+Navigate to **Devices -> iOS/iPadOS -> Enrollment**
 
 Click **Enrollment program tokens**
 
@@ -333,9 +333,9 @@ Select **Include filtered devices in assignment** then slelct the previouly crea
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Compliance Policies**
+Navigate to **Devices -> iOS/iPadOS -> Compliance**
 
-Click **+ Create** to Create a new policy then Create a Policy **Create**
+Click **+ Create policy** to Create a new policy then Create a Policy **Create**
 
 Give the policy a name e.g. `Passcode` then click **Next**
 
@@ -359,9 +359,9 @@ Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Configuration Profiles**
+Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
-Click **+ Create profile** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -389,9 +389,9 @@ Click **Next** then Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Configuration Profiles**
+Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
-Click **+ Create profile** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -423,9 +423,9 @@ Click **Next** then Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Configuration Profiles**
+Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
-Click **+ Create profile** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Templates** then **Email** then **Create**
 
@@ -575,7 +575,7 @@ You can now test the enrolment process on the iPhone you have assigned
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> macOS Enrollment**
+Navigate to **Devices -> macOS -> Enrollment**
 
 Click **Enrollment program tokens**
 
@@ -633,9 +633,9 @@ For configuration profiles created using the Settings Catalog there is an Export
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click **+ Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -664,9 +664,9 @@ Click **Next** then Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click + **Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -694,9 +694,9 @@ Click **Next** then **** Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click **+ Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -723,9 +723,9 @@ Click **Next** then Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click **+ Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -757,9 +757,9 @@ Click **Next** then Click **Create**
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click **+ Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -786,9 +786,9 @@ This can be done with a text editor or a tool like [iMazing Profile Editor](http
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click + **Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Templates** then **Custom** then **Create**
 
@@ -811,9 +811,9 @@ Under **Assignments** click **+Add all devices**
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click **+ Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
@@ -825,11 +825,11 @@ Click **+ Add settings** and choose **Login -> Service Management - Managed Logi
 
 Enter the following values: 
 
-| Comment           | Rule Type                | Rule Value       | Team Identifier |
-| ----------------- | ------------------------ | ---------------- | --------------- |
-| Microsoft Apps    | Bundle Identifier Prefix | com.microsoft    | Not Configured  |
-| Microsoft Daemons | Label Prefix             | com.microsoft    | Not Configured  |
-| Support App       | Label                    | nl.root3.support | Not Configured  |
+| Comment           | Rule Type                | Rule Value       | Team Identifier  | 
+| ----------------- | ------------------------ | ---------------- | ---------------- |
+| Microsoft Apps    | Bundle Identifier Prefix | com.microsoft    | _Not Configured_ |
+| Microsoft Daemons | Label Prefix             | com.microsoft    | _Not Configured_ |
+| Support App       | Label                    | nl.root3.support | _Not Configured_ |
 
 Under **Assignments** click **+Add all devices**
 
@@ -851,7 +851,7 @@ Copy the contents of the zsh script, paste in to a text editor and save the file
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Shell Scripts**
+Navigate to **Devices -> macOS -> Scripts**
 
 Click **+ Add**
 
@@ -1219,9 +1219,9 @@ Upload the Custom Configuration profile file
 Assign to All Devices
 
 ```xml
-<?xml version=”1.0” encoding=”UTF-8”?>
-<!DOCTYPE plist PUBLIC “-//Apple//DTD PLIST 1.0//EN” “http://www.apple.com/DTDs/PropertyList-1.0.dtd”>
-<plist version=”1.0”>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
 <dict>
     <key>PayloadContent</key>
     <array>
@@ -1279,9 +1279,9 @@ _**NOTE:** Be sure to set this via the Settings Catalog and not via a Template_
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Configuration Profiles**
+Navigate to **Devices -> macOS -> Configuration**
 
-Click **+ Create** to Create a new profile
+Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
