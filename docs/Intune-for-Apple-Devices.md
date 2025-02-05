@@ -93,7 +93,9 @@ To access the **Intune UI**, in a browser open [https://intune.microsoft.com/](h
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Enrollment**
+Navigate to **Devices -> iOS/iPadOS -> Enrollment**
+
+(**Devices -> macOS -> Enrollment** will also work)
 
 Click **Apple MDM Push Certificate**
 
@@ -126,8 +128,6 @@ The Microsoft Documentation for this procedure is at [https://learn.microsoft.co
 In the **Intune UI**
 
 Navigate to **Devices -> iOS/iPadOS -> Enrollment**
-
-(Devices -> macOS -> Enrollment will also work)
 
 Click **Enrollment program tokens**
 
@@ -241,6 +241,8 @@ In the **Intune UI**
 Navigate to **Tenant administration -> Connectors and tokens -> Apple VPP Tokens**
 
 Right click on the token name and select  **Sync**
+
+### Create Enrollment Profile
 
 Navigate to **Devices -> iOS/iPadOS -> Enrollment**
 

@@ -35,14 +35,14 @@
 <li><a href="#apps-and-books-token">Apps and Books Token</a></li>
 </ul>
 </li>
-<li><a href="#assignments--scoping">Assignments / Scoping</a>
-<ul>
-<li><a href="#using-filters">Using Filters</a></li>
-</ul>
-</li>
 <li><a href="#ios--ipados">iOS / iPadOS</a>
 <ul>
 <li><a href="#ios-device-enrollment-profile">iOS Device Enrollment Profile</a></li>
+</ul>
+</li>
+<li><a href="#assignments--scoping">Assignments / Scoping</a>
+<ul>
+<li><a href="#using-filters">Using Filters</a></li>
 </ul>
 </li>
 <li><a href="#ios-configuration-profiles">iOS Configuration Profiles</a>
@@ -140,7 +140,7 @@
 <br>
 <p>To access the <strong>Intune UI</strong>, in a browser open <a href="https://intune.microsoft.com/">https://intune.microsoft.com/</a> and log in as an <strong>Entra ID</strong> user that has the role of <em>Global Administrator</em> or <em>Intune Service Administrator</em> for your tenancy</p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; macOS Enrollment</strong></p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Enrollment</strong></p>
 <p>Click <strong>Apple MDM Push Certificate</strong></p>
 <p>Check the box granting permission to send information to Apple</p>
 <p>Click on <strong>Download your CSR</strong></p>
@@ -156,10 +156,10 @@
 <h2 id="automated-device-enrollment-token">Automated Device Enrollment Token </h2>
 <p><em>The Device Enrollment token enables secure communication between Apple Business Manager or Apple School Manager and the MDM to allow for Automated Device Enrollment.</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; iOS/iPadOS Enrollment</strong></p>
-<p>(Devices -&gt; macOS -&gt; macOS Enrollment will also work)</p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Enrollment</strong></p>
+<p>(Devices -&gt; macOS -&gt; Enrollment will also work)</p>
 <p>Click <strong>Enrollment program tokens</strong></p>
-<p>Click on <strong>+ Add</strong> to add a new token</p>
+<p>Click on <strong>+ Create</strong> to add a new token</p>
 <p>Check the box granting permission to send information to Apple</p>
 <p>Click on <strong>Download your public key</strong></p>
 <p>To access Apple Business Manager open a new browser window or tab and navigate to <a href="https://business.apple.com">https://business.apple.com</a> and log in with a Managed Apple Account that has the role of <em>Administrator</em> or <em>Device Enrolment Manager</em></p>
@@ -199,22 +199,6 @@ create the Server Token</p>
 <a href="https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios#upload-an-apple-vpp-or-apple-business-manager-location-token">https://learn.microsoft.com/en-us/mem/intune/apps/vpp-apps-ios</a></p>
 <hr>
 <div style="page-break-after: always"></div>
-<h1 id="assignments--scoping">Assignments / Scoping </h1>
-<h2 id="using-filters">Using Filters </h2>
-<p><em>In this workshop most examples of scoping use a scope of <strong>All Devices</strong> for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to <strong>All Devices</strong> you can use a Filter</em></p>
-<p>Navigate to <strong>Devices -&gt; Tenant administration -&gt; Filters</strong></p>
-<p>Click <strong>Create -&gt; Managed Devices</strong></p>
-<p>Give the Filter a name e.g. <code>Enrollment Profile = iOS ADE with MFA</code> and under <strong>Platform</strong> choose <strong>iOS/iPadOS</strong> then click <strong>Next</strong></p>
-<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left">
-<p>Click <strong>Next</strong> then Click <strong>Create</strong></p>
-<p>When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to <strong>All Devices</strong></p>
-<p>Under the <strong>Assignments</strong> screen for a Configuration Profile Click on <strong>Edit Filter</strong></p>
-<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left">
-<p>Select <strong>Include filtered devices in assignment</strong> then slelct the previouly created Filter called <code>Enrollment Profile = iOS ADE with MFA</code>then click <strong>Select</strong></p>
-<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left">
-<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left">
-<hr>
-<div style="page-break-after: always"></div>
 <h1 id="ios--ipados">iOS / iPadOS </h1>
 <h2 id="ios-device-enrollment-profile">iOS Device Enrollment Profile </h2>
 <p><em>The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.</em></p>
@@ -233,7 +217,7 @@ create the Server Token</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Tenant administration -&gt; Connectors and tokens -&gt; Apple VPP Tokens</strong></p>
 <p>Right click on the token name and select  <strong>Sync</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; iOS/iPadOS Enrollment</strong></p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Enrollment</strong></p>
 <p>Click <strong>Enrollment program tokens</strong></p>
 <p>Click the token you created from the list</p>
 <p>Under Manage click <strong>Profiles</strong></p>
@@ -256,6 +240,22 @@ create the Server Token</p>
 <p>Click <strong>Set default profile</strong> and set the just created profile as the default for iOS/iPadOS</p>
 <hr>
 <div style="page-break-after: always"></div>
+<h1 id="assignments--scoping">Assignments / Scoping </h1>
+<h2 id="using-filters">Using Filters </h2>
+<p><em>In this workshop most examples of scoping use a scope of <strong>All Devices</strong> for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to <strong>All Devices</strong> you can use a Filter</em></p>
+<p>Navigate to <strong>Devices -&gt; Tenant administration -&gt; Filters</strong></p>
+<p>Click <strong>Create -&gt; Managed Devices</strong></p>
+<p>Give the Filter a name e.g. <code>Enrollment Profile = iOS ADE with MFA</code> and under <strong>Platform</strong> choose <strong>iOS/iPadOS</strong> then click <strong>Next</strong></p>
+<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left">
+<p>Click <strong>Next</strong> then Click <strong>Create</strong></p>
+<p>When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to <strong>All Devices</strong></p>
+<p>Under the <strong>Assignments</strong> screen for a Configuration Profile Click on <strong>Edit Filter</strong></p>
+<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left">
+<p>Select <strong>Include filtered devices in assignment</strong> then slelct the previouly created Filter called <code>Enrollment Profile = iOS ADE with MFA</code>then click <strong>Select</strong></p>
+<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left">
+<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left">
+<hr>
+<div style="page-break-after: always"></div>
 <h1 id="ios-configuration-profiles">iOS Configuration Profiles </h1>
 <p><em>Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting Catalog.</em></p>
 <h2 id="passcode-compliance-policy">Passcode Compliance Policy </h2>
@@ -263,8 +263,8 @@ create the Server Token</p>
 <p><a href="https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios">https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios</a></p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Compliance Policies</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new policy then Create a Policy <strong>Create</strong></p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Compliance</strong></p>
+<p>Click <strong>+ Create policy</strong> to Create a new policy then Create a Policy <strong>Create</strong></p>
 <p>Give the policy a name e.g. <code>Passcode</code> then click <strong>Next</strong></p>
 <p>Under <strong>System Security</strong></p>
 <img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left">
@@ -276,8 +276,8 @@ create the Server Token</p>
 <h2 id="managed-open-in-profile">Managed Open In Profile </h2>
 <p><em>The Managed Open profile is used to implement the Managed Open In controls on iOS and iPadOS that limit the flow of data between managed and unmanaged apps.</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create profile</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Managed Open In</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Restrictions</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
@@ -291,8 +291,8 @@ create the Server Token</p>
 <h2 id="single-sign-on-profile">Single Sign On Profile </h2>
 <p><em>The Single Sign On profile enables the use of Apple's Extensible Single Sign On framework in conjunction with the Entra ID SSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Microsoft Authenticator is installed on the device.</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create profile</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Entra ID SSO</code> then click Next</p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Authentication -&gt; Extensible Single Sign On (SSO)</strong> and select the settings in the screenshot below and close the Settings Picker</p>
@@ -336,8 +336,8 @@ create the Server Token</p>
 <h2 id="email-profile">Email Profile </h2>
 <p><em>The Email profile will add an account the the native iOS Mail app on behalf of the user.</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create profile</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Templates</strong> then <strong>Email</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Exchange</code> Online then click <strong>Next</strong></p>
 <img src="assets/iRqMwGxb2KpBS.png" alt="" width="800" data-align="left">
@@ -360,7 +360,7 @@ create the Server Token</p>
 <p>Click on <strong>Properties</strong></p>
 <p>Click on Assignments <strong>Edit</strong> and assign the app under Required -&gt; <strong>+ Add all devices</strong> then <strong>Review + save</strong></p>
 <h3 id="deploy-additional-apps">Deploy Additional Apps </h3>
-<p>Repeat the above process to deploy additional apps such as <strong>Microsoft Teams</strong> and <strong>OneDrive</strong> and <strong>Workday</strong></p>
+<p>Repeat the above process to deploy additional apps such as <strong>Microsoft Teams</strong> and <strong>OneDrive</strong> and *<em>Outlook</em></p>
 <p>You can make apps appear as optional installs within the Company Portal app by assigning them as <strong>Available</strong> for enrolled devices rather than <strong>Required</strong></p>
 <p><em><strong>NOTE: It may be necessary to force synchronisation after the ABM app purchase</strong></em></p>
 <br>
@@ -431,7 +431,7 @@ create the Server Token</p>
 <p><em>The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.</em><br>
 <br></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; macOS Enrollment</strong></p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Enrollment</strong></p>
 <p>Click <strong>Enrollment program tokens</strong></p>
 <p>Click the token you created from the list</p>
 <p>Under Manage click <strong>Profiles</strong></p>
@@ -459,8 +459,8 @@ screens to Hide except</p>
 <p><em>This profile enforces enables FileVault full disk encryption.</em></p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>FileVault</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Full Disk Encryption</strong> and select the settings in the screenshot below and close the Settings Picker.</p>
@@ -475,8 +475,8 @@ screens to Hide except</p>
 <p><em>This profile enables the built in macOS Application Firewall</em></p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click + <strong>Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Firewall then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Networking -&gt; Firewall</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
@@ -490,8 +490,8 @@ screens to Hide except</p>
 <h2 id="gatekeeper-profile">Gatekeeper Profile </h2>
 <p><em>This profile enables Gatekeeper to ensure only trusted apps can launch on macOS</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Gatekeeper then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose setting from <strong>App Store, System Policy</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
@@ -505,8 +505,8 @@ screens to Hide except</p>
 <p><em>The Platform Single Sign On profile enables the use of Apple's Single Sign On framework in conjunction with the Entra ID PSSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device.</em></p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Entra ID PSSO</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Authentication -&gt; Extensible Single Sign On (SSO)</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
@@ -546,8 +546,8 @@ screens to Hide except</p>
 <p><em>This sets some parameters for Office 365 including the default user for licensing</em><br>
 <br></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Office 365 Parameters then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Microsoft Office -&gt; Microsoft Office</strong> then click the <strong>Enable Automatic sign-in</strong> and <strong>Office Activation Email Address</strong> checkboxes and close the <strong>Settings Picker</strong></p>
@@ -561,8 +561,8 @@ screens to Hide except</p>
 <p>This can be done with a text editor or a tool like <a href="https://imazing.com/profile-editor">iMazing Profile Editor</a>.</p>
 <img src="assets/gYahUWBiFhKgU.png" alt="" width="800" data-align="left">
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click + <strong>Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type -&gt; Templates</strong> then <strong>Custom</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Support App Config then click <strong>Next</strong></p>
 <p>For <strong>Custom configuration profile name enter</strong> Support App Config</p>
@@ -574,8 +574,8 @@ screens to Hide except</p>
 <h2 id="managed-login-items-profile">Managed Login Items Profile </h2>
 <p><em>Any background items that run upon a device boot or at user login including Launch Daemons, Launch Agents and Open at Login Apps can be deactivated by an Admin user. In order to prevent these items being deactivated a Managed Login Items config profile is deployed.</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Background and Login Items then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Login -&gt; Service Management - Managed Login Items</strong> then check all but <strong>Team Identifier</strong> and close the <strong>Settings Picker</strong></p>
@@ -595,19 +595,19 @@ screens to Hide except</p>
 <td>Microsoft Apps</td>
 <td>Bundle Identifier Prefix</td>
 <td>com.microsoft</td>
-<td>Not Configured</td>
+<td><em>Not Configured</em></td>
 </tr>
 <tr>
 <td>Microsoft Daemons</td>
 <td>Label Prefix</td>
 <td>com.microsoft</td>
-<td>Not Configured</td>
+<td><em>Not Configured</em></td>
 </tr>
 <tr>
 <td>Support App</td>
 <td>Label</td>
 <td>nl.root3.support</td>
-<td>Not Configured</td>
+<td><em>Not Configured</em></td>
 </tr>
 </tbody>
 </table>
@@ -622,7 +622,7 @@ screens to Hide except</p>
 <p>Copy the contents of the zsh script, paste in to a text editor and save the file as <code>InstallCompanyPortal.zsh</code><br>
 <br></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Shell Scripts</strong></p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Scripts</strong></p>
 <p>Click <strong>+ Add</strong></p>
 <p>Name the Script e.g. Install Company Portal and click <strong>Next</strong></p>
 <p>Upload the saved <code>InstallCompanyPortal.zsh</code> file and set the parameters as</p>
@@ -814,9 +814,9 @@ screens to Hide except</p>
 <p>Set <strong>Deployment Channel</strong> to <strong>Device Channel</strong></p>
 <p>Upload the Custom Configuration profile file</p>
 <p>Assign to All Devices</p>
-<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version=”1.0” encoding=”UTF-8”?&gt;</span>
-<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">plist</span> <span class="token name">PUBLIC</span> <span class="token name">“-//Apple//DTD</span> <span class="token name">PLIST</span> <span class="token name">1.0//EN”</span> <span class="token name">“http://www.apple.com/DTDs/PropertyList-1.0.dtd”</span><span class="token punctuation">&gt;</span></span>
-<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plist</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span>”1.0”</span><span class="token punctuation">&gt;</span></span>
+<pre data-role="codeBlock" data-info="xml" class="language-xml xml"><code><span class="token prolog">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">plist</span> <span class="token name">PUBLIC</span> <span class="token string">"-//Apple//DTD PLIST 1.0//EN"</span> <span class="token string">"http://www.apple.com/DTDs/PropertyList-1.0.dtd"</span><span class="token punctuation">&gt;</span></span>
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>plist</span> <span class="token attr-name">version</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1.0<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>PayloadContent<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
@@ -856,8 +856,8 @@ screens to Hide except</p>
 <h2 id="configure-passcode-profile">Configure Passcode Profile </h2>
 <p><em><strong>NOTE:</strong> Be sure to set this via the Settings Catalog and not via a Template</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
+<p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Passcode Policy</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Security -&gt; Passcode -&gt;</strong> <em>Needed Settings based on company security policy</em></p>

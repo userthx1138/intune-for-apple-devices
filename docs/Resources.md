@@ -60,7 +60,6 @@
 
 * [Intune Device Checkin Frequency](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot)
 
-* [Intune Shell Scripts](https://github.com/microsoft/shell-intune-samples/tree/master/macOS)
 
 * [Script to report on stale devices](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Reporting/ManagedDeviceCertificateExpiryReport)
 
@@ -71,10 +70,12 @@
 * [Use shell scripts on macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/apps/macos-shell-scripts)
 
 * [Deploying macOS apps with the Microsoft Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-microsoft-intune-scripting-agent/ba-p/2298072)
+* [Intune Shell Scripts](https://github.com/microsoft/shell-intune-samples/tree/master/macOS)
 
 * [Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
 
 * [macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
+* [Compliance and device configuration policies that conflict](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot#compliance-and-device-configuration-policies-that-conflict)
 
 
 ## Other 3rd Party
