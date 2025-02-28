@@ -5,6 +5,3 @@
 [Apple Business Manager Email Template](Apple-Business-Manager-Setup.md)
 
 [Resources](Resources.md)
-
-
-

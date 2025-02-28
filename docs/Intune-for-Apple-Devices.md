@@ -9,6 +9,7 @@ Intune for Apple Devices
 
 <!-- code_chunk_output -->
 
+- [Intune for Apple Devices](#intune-for-apple-devices)
 - [Introduction and Prerequisites](#introduction-and-prerequisites)
 - [Intune Setup](#intune-setup)
   - [APNS Certificate](#apns-certificate)
@@ -16,8 +17,8 @@ Intune for Apple Devices
   - [Apps and Books Token](#apps-and-books-token)
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
-- [Assignments / Scoping](#assignments--scoping)
-  - [Using Filters](#using-filters)
+    - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
+    - [Create Enrollment Profile](#create-enrollment-profile)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
   - [Passcode Compliance Policy](#passcode-compliance-policy)
   - [Managed Open In Profile](#managed-open-in-profile)
@@ -25,6 +26,8 @@ Intune for Apple Devices
   - [Email Profile](#email-profile)
 - [iOS App Deployment](#ios-app-deployment)
   - [VPP](#vpp)
+    - [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
+    - [Deploy Additional Apps](#deploy-additional-apps)
 - [iOS App Configuration](#ios-app-configuration)
   - [Teams](#teams)
 - [iOS Device Assignment](#ios-device-assignment)
@@ -41,14 +44,21 @@ Intune for Apple Devices
   - [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
   - [Scripting](#scripting)
+    - [Deploy Company Portal](#deploy-company-portal)
   - [Line of Business / Packaged](#line-of-business--packaged)
+    - [Deploy Microsoft Office](#deploy-microsoft-office)
+    - [Deploy Support App](#deploy-support-app)
+    - [Deploy Privileges App](#deploy-privileges-app)
   - [VPP](#vpp-1)
+    - [Deploy Slack](#deploy-slack)
 - [Mac Additional Setup](#mac-additional-setup)
   - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
   - [Disk Encryption Policy](#disk-encryption-policy)
 - [Mac Device Assignment](#mac-device-assignment)
   - [Enrolment Test](#enrolment-test-1)
+- [Assignments / Scoping](#assignments--scoping)
+  - [Using Filters](#using-filters)
 - [Mac Operations](#mac-operations)
   - [Software Updates](#software-updates)
   - [DDM Software Updates](#ddm-software-updates)
@@ -289,37 +299,6 @@ Click **Set default profile** and set the just created profile as the default fo
 
 ***
 <div style="page-break-after: always"></div>
-
-# Assignments / Scoping
-
-## Using Filters 
-
-_In this workshop most examples of scoping use a scope of **All Devices** for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to **All Devices** you can use a Filter_
-
-Navigate to **Devices -> Tenant administration -> Filters**
-
-Click **Create -> Managed Devices**
-
-Give the Filter a name e.g. `Enrollment Profile = iOS ADE with MFA` and under **Platform** choose **iOS/iPadOS** then click **Next**
-
-<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left"/>
-
-Click **Next** then Click **Create**
-
-When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
-
-Under the **Assignments** screen for a Configuration Profile Click on **Edit Filter**
-
-<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left"/>
-
-Select **Include filtered devices in assignment** then slelct the previouly created Filter called `Enrollment Profile = iOS ADE with MFA`then click **Select**
-
-<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left"/>
-
-<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left"/>
-
-***
-<div style="page-break-after: always"></div>
    
 # iOS Configuration Profiles
 
@@ -347,6 +326,8 @@ Under **System Security**
 
 
 Click **+ Add all devices**
+
+_**Note:** You can refine your scope by using Filters. See [Using Filters](#using-filters)_
 
 Click **Next**
 
@@ -1109,6 +1090,37 @@ Log out and back in again enabling FileVault in the process.
 Log back into Company Portal and see the device is now compliant
 
 Launch Apps, open [https://portal.office.com](https://portal.office.com) in Safari and add Exchange account to Mail.
+
+***
+<div style="page-break-after: always"></div>
+
+# Assignments / Scoping
+
+## Using Filters 
+
+_In this workshop most examples of scoping use a scope of **All Devices** for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to **All Devices** you can use a Filter_
+
+Navigate to **Devices -> Tenant administration -> Filters**
+
+Click **Create -> Managed Devices**
+
+Give the Filter a name e.g. `Enrollment Profile = iOS ADE with MFA` and under **Platform** choose **iOS/iPadOS** then click **Next**
+
+<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left"/>
+
+Click **Next** then Click **Create**
+
+When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
+
+Under the **Assignments** screen for a Configuration Profile Click on **Edit Filter**
+
+<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left"/>
+
+Select **Include filtered devices in assignment** then slelct the previouly created Filter called `Enrollment Profile = iOS ADE with MFA`then click **Select**
+
+<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left"/>
+
+<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left"/>
 
 ***
 <div style="page-break-after: always"></div>
