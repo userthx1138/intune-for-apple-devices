@@ -20,7 +20,7 @@ Managing Operating System Updates
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Configuration**
+Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create -> + New Policy**
 
@@ -38,7 +38,7 @@ Check **Target Date Time** and **Target OS Version** then close the **Settings P
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Configuration**
+Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create -> + New Policy**
 
@@ -62,6 +62,11 @@ Navigate to **Devices -> iOS/iPadOS -> iOS/iPadOS updates**
 
 Click **+ Create Profile**
 
+Give the profile a name e.g. `iOS Updates` then click **Next**
+
+From the drop down select the appropriate settings for **Select version to install** and **Schedule Type**
+
+<img src="assets/Update_Policy_1.png" alt="" width="800" data-align="left"/>
 
 # Deferal Methods prior to iOS 18 / macOS 15
 
