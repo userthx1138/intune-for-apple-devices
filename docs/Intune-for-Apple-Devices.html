@@ -40,11 +40,6 @@
 <li><a href="#ios-device-enrollment-profile">iOS Device Enrollment Profile</a></li>
 </ul>
 </li>
-<li><a href="#assignments--scoping">Assignments / Scoping</a>
-<ul>
-<li><a href="#using-filters">Using Filters</a></li>
-</ul>
-</li>
 <li><a href="#ios-configuration-profiles">iOS Configuration Profiles</a>
 <ul>
 <li><a href="#passcode-compliance-policy">Passcode Compliance Policy</a></li>
@@ -104,6 +99,11 @@
 <li><a href="#mac-device-assignment">Mac Device Assignment</a>
 <ul>
 <li><a href="#enrolment-test-1">Enrolment Test</a></li>
+</ul>
+</li>
+<li><a href="#assignments--scoping">Assignments / Scoping</a>
+<ul>
+<li><a href="#using-filters">Using Filters</a></li>
 </ul>
 </li>
 <li><a href="#mac-operations">Mac Operations</a>
@@ -241,22 +241,6 @@ create the Server Token</p>
 <p>Click <strong>Set default profile</strong> and set the just created profile as the default for iOS/iPadOS</p>
 <hr>
 <div style="page-break-after: always"></div>
-<h1 id="assignments--scoping">Assignments / Scoping </h1>
-<h2 id="using-filters">Using Filters </h2>
-<p><em>In this workshop most examples of scoping use a scope of <strong>All Devices</strong> for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to <strong>All Devices</strong> you can use a Filter</em></p>
-<p>Navigate to <strong>Devices -&gt; Tenant administration -&gt; Filters</strong></p>
-<p>Click <strong>Create -&gt; Managed Devices</strong></p>
-<p>Give the Filter a name e.g. <code>Enrollment Profile = iOS ADE with MFA</code> and under <strong>Platform</strong> choose <strong>iOS/iPadOS</strong> then click <strong>Next</strong></p>
-<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left">
-<p>Click <strong>Next</strong> then Click <strong>Create</strong></p>
-<p>When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to <strong>All Devices</strong></p>
-<p>Under the <strong>Assignments</strong> screen for a Configuration Profile Click on <strong>Edit Filter</strong></p>
-<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left">
-<p>Select <strong>Include filtered devices in assignment</strong> then slelct the previouly created Filter called <code>Enrollment Profile = iOS ADE with MFA</code>then click <strong>Select</strong></p>
-<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left">
-<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left">
-<hr>
-<div style="page-break-after: always"></div>
 <h1 id="ios-configuration-profiles">iOS Configuration Profiles </h1>
 <p><em>Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting Catalog.</em></p>
 <h2 id="passcode-compliance-policy">Passcode Compliance Policy </h2>
@@ -270,6 +254,7 @@ create the Server Token</p>
 <p>Under <strong>System Security</strong></p>
 <img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left">
 <p>Click <strong>+ Add all devices</strong></p>
+<p><em><strong>Note:</strong> You can refine your scope by using Filters. See <a href="#using-filters">Using Filters</a></em></p>
 <p>Click <strong>Next</strong></p>
 <p>Click <strong>Create</strong></p>
 <hr>
@@ -758,6 +743,22 @@ screens to Hide except</p>
 <p>Log out and back in again enabling FileVault in the process.</p>
 <p>Log back into Company Portal and see the device is now compliant</p>
 <p>Launch Apps, open <a href="https://portal.office.com">https://portal.office.com</a> in Safari and add Exchange account to Mail.</p>
+<hr>
+<div style="page-break-after: always"></div>
+<h1 id="assignments--scoping">Assignments / Scoping </h1>
+<h2 id="using-filters">Using Filters </h2>
+<p><em>In this workshop most examples of scoping use a scope of <strong>All Devices</strong> for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to <strong>All Devices</strong> you can use a Filter</em></p>
+<p>Navigate to <strong>Devices -&gt; Tenant administration -&gt; Filters</strong></p>
+<p>Click <strong>Create -&gt; Managed Devices</strong></p>
+<p>Give the Filter a name e.g. <code>Enrollment Profile = iOS ADE with MFA</code> and under <strong>Platform</strong> choose <strong>iOS/iPadOS</strong> then click <strong>Next</strong></p>
+<img src="assets/Filter_Criteria.png" alt="" width="800" data-align="left">
+<p>Click <strong>Next</strong> then Click <strong>Create</strong></p>
+<p>When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to <strong>All Devices</strong></p>
+<p>Under the <strong>Assignments</strong> screen for a Configuration Profile Click on <strong>Edit Filter</strong></p>
+<img src="assets/Assignment_edit_filter.png" alt="" width="800" data-align="left">
+<p>Select <strong>Include filtered devices in assignment</strong> then slelct the previouly created Filter called <code>Enrollment Profile = iOS ADE with MFA</code>then click <strong>Select</strong></p>
+<img src="assets/Assignment_edit_filter_2.png" alt="" width="600" data-align="left">
+<img src="assets/Assignment_edit_filter_3.png" alt="" width="800" data-align="left">
 <hr>
 <div style="page-break-after: always"></div>
 <h1 id="mac-operations">Mac Operations </h1>
