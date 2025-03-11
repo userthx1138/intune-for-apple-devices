@@ -10,7 +10,7 @@ Managing Operating System Updates
 - [Software Updates using Declaritive Device Management (DDM)](#software-updates-using-declaritive-device-management-ddm)
 - [Software Update Deferrals using Declaritive Device Management (DDM)](#software-update-deferrals-using-declaritive-device-management-ddm)
 - [Update Methods prior to iOS 17 / macOS 14](#update-methods-prior-to-ios-17--macos-14)
-- [Deferal Methods prior to iOS 18 / macOS 15](#deferal-methods-prior-to-ios-18--macos-15)
+- [Deferral Methods prior to iOS 18 / macOS 15](#deferral-methods-prior-to-ios-18--macos-15)
 - [References](#references)
 
 <!-- /code_chunk_output -->
@@ -68,7 +68,7 @@ From the drop down select the appropriate settings for **Select version to insta
 
 <img src="assets/Update_Policy_1.png" alt="" width="800" data-align="left"/>
 
-# Deferal Methods prior to iOS 18 / macOS 15
+# Deferral Methods prior to iOS 18 / macOS 15
 
 Navigate to **Devices -> iOS/iPadOS -> Configuration**
 

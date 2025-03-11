@@ -35,13 +35,12 @@ Intune for Apple Devices
   - [Gatekeeper Profile](#gatekeeper-profile)
   - [Platform SSO Profile](#platform-sso-profile)
   - [Office 365 Profile](#office-365-profile)
-  - [Custom Profiles](#custom-profiles)
+  - [Custom Profile](#custom-profile)
   - [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
-  - [Apple App Store (VPP)](#apple-app-store-vpp)
-  - [Line of Business / Packaged](#line-of-business--packaged)
-  - [Built In Apps](#built-in-apps)
   - [Scripting](#scripting)
+  - [Line of Business / Packaged](#line-of-business--packaged)
+  - [VPP](#vpp-1)
 - [Mac Additional Setup](#mac-additional-setup)
   - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
@@ -61,8 +60,6 @@ Intune for Apple Devices
   - [Configure Screensaver Lock](#configure-screensaver-lock)
   - [Configure Passcode Profile](#configure-passcode-profile)
 - [Resources](#resources)
-  - [Baseline Configuration Profile](#baseline-configuration-profile)
-  - [Links to other resources](#links-to-other-resources)
 
 <!-- /code_chunk_output -->
 
@@ -750,21 +747,15 @@ Under **Assignments** click **+Add all devices**
 ***
 <div style="page-break-after: always"></div>
 
-## Custom Profiles
+## Custom Profile
 
-*These profiles set the configuration of the Baseline App and the Support App which we will install as part of this setup.*
+*This profile sets the configuration of the Support App which we will install as part of this setup.*
 
-Create a custom config for the Baseline and Support app as per the documentation on the developers web sites.
+Create a custom config for the Support app as per the documentation on the developers web site
 
 This can be done with a text editor or a tool like [iMazing Profile Editor](https://imazing.com/profile-editor).
 
-[Baseline Sample Configs](https://github.com/SecondSonConsulting/Baseline/tree/main/ExampleConfigurationFiles)
-[Support App Sample Config](https://github.com/root3nl/SupportApp/blob/master/Configuration%20Profile%20Samples/Support%20App%20Configuration%20Sample.mobileconfig)
-
-The Baseline Config for this workshop can be found here - [Baseline Configuration File](#baseline-configuration-profile)
-
-
-<img src="assets/Imazing_Baseline.png" alt="" width="800" data-align="left"/>
+<img src="assets/gYahUWBiFhKgU.png" alt="" width="800" data-align="left"/>
 
 In the **Intune UI**
 
@@ -780,11 +771,9 @@ For **Custom configuration profile name enter** Support App Config
 
 Set **Deployment Channel** to **Device Channel**
 
-Upload the Custom Configuration profile file. Use filename `Baselinee Config Intune.mobileconfig`
+Upload the Custom Configuration profile file. Use filename `Support_Intune.mobileconfig`
 
 Under **Assignments** click **+Add all devices**
-
-***Repeat the above process for The Support app***
 
 ***
 <div style="page-break-after: always"></div>
@@ -809,12 +798,11 @@ Click **+ Add settings** and choose **Login -> Service Management - Managed Logi
 
 Enter the following values: 
 
-| Comment           | Rule Type                | Rule Value          | Team Identifier  | 
-| ----------------- | ------------------------ | ------------------- | ---------------- |
-| Microsoft Apps    | Bundle Identifier Prefix | com.microsoft       | _Not Configured_ |
-| Microsoft Daemons | Label Prefix             | com.microsoft       | _Not Configured_ |
-| Support App       | Label                    | nl.root3.support    | _Not Configured_ |
-| Privileges App    | Bundle Identifier        | corp.sap.privileges | _Not Configured_ |
+| Comment           | Rule Type                | Rule Value       | Team Identifier  | 
+| ----------------- | ------------------------ | ---------------- | ---------------- |
+| Microsoft Apps    | Bundle Identifier Prefix | com.microsoft    | _Not Configured_ |
+| Microsoft Daemons | Label Prefix             | com.microsoft    | _Not Configured_ |
+| Support App       | Label                    | nl.root3.support | _Not Configured_ |
 
 Under **Assignments** click **+Add all devices**
 
@@ -823,39 +811,60 @@ Under **Assignments** click **+Add all devices**
 
 # Mac App Deployment
 
-## Apple App Store (VPP)
+## Scripting
 
-### Deploy Outlook
+### Deploy Company Portal
 
-In **Apple Business Manager**
+_Company Portal is required for a number of functions. These include device registration with Azure AD, a self Service App catalogue and provision of the Azure AD SSO Extension code._
 
-In the sidebar click **Apps and Books**
+In a new browser window or tab open [https://github.com/microsoft/shell-intune samples/blob/master/macOS/Apps/Company%20Portal/installCompanyPortal.zsh](https://github.com/microsoft/shell-intune%20samples/blob/master/macOS/Apps/Company%2520Portal/installCompanyPortal.zsh)
 
-Search for **Microsoft Outlook** and select the macOS version
-
-Under Buy Licenses select the location corresponding to your Intune instance and specify 10 in the quantity then click **Get**
+Copy the contents of the zsh script, paste in to a text editor and save the file as `InstallCompanyPortal.zsh`
 <br>
 
 In the **Intune UI**
 
-**Apps -> macOS**
+Navigate to **Devices -> macOS -> Scripts**
 
-Select **Microsoft Outlook** from the list of available apps. If it is not listed try clicking **Refresh**
+Click **+ Add**
 
-Under **Properties -> Assignments** click **Edit** and click **+Add all devices**
+Name the Script e.g. Install Company Portal and click **Next**
+
+Upload the saved `InstallCompanyPortal.zsh` file and set the parameters as 
+
+<img src="assets/RNXQeUjQSYFrJ.png" alt="" width="800" data-align="left"/>
+
+Under **Assignments** click **+Add all devices**
 
 ***
 <div style="page-break-after: always"></div>
 
 ## Line of Business / Packaged
 
-### Deploy Baseline
+### Deploy Microsoft Office
 
-_The Baseline App runs after the Setup Assistant completes and installs other neccessary apps before the user gets to the Desktop. For this example Baseline installs Microsoft Company Portal, the Support app and the Privileges app. These options were configured earlier using the Custom Profile for Baseline_
+In the **Intune UI**
 
-_Intune supports two methods to deploy .pkg files. As this package has been created and signed by the developer we will use the Line-of-business method that leverages the MDM command InstallEnterpriseApplication._
+Navigate to **Apps -> macOS**
 
-Download the latest packaged version of Baseline from [https://github.com/SecondSonConsulting/Baseline/releases/tag/v2.2](https://github.com/SecondSonConsulting/Baseline/releases/tag/v2.2)
+Click **+Add**
+
+From the **App type** drop down list select **Microsoft 365 Apps / macOS**
+
+Under **Assignments** click **+Add all devices** under **REQUIRED**
+
+***
+<div style="page-break-after: always"></div>
+
+### Deploy Support App
+
+_The Support App helps an the end user get quick access to basic device information and apps needed when receiving support from IT._
+
+_This package has been created and signed by the developer so can be uploaded and deployed by Intune._
+
+_Intune supports two methods to deploy .pkg files. In this example we will use the Line-of-business method that leverages the MDM command InstallEnterpriseApplication._
+
+Download the latest packaged version of the Support app from [https://github.com/root3nl/SupportApp/releaseshttps://github.com/root3nl/SupportApp/releases](https://github.com/root3nl/SupportApp/releases)
 <br>
 
 In the **Intune UI**
@@ -866,58 +875,66 @@ Click **+ Add**
 
 From the drop down menu select **Other -> Line-of-business app**
 
-Upload the Baseline App package file `Baseline_v2.2.pkg`
+Upload the Support App package file `Support.x.x.pkg`
 
-<img src="assets/InstallBaseline1.png" alt="" width="800" data-align="left"/>
+<img src="assets/jc1XaxxvpBPJ9.png" alt="" width="800" data-align="left"/>
 
-Under **Assignments -> Required** click **+Add all devices**
-
-***
-<div style="page-break-after: always"></div>
-
-## Built In Apps
-
-### Deploy Microsoft Office
-
-_This will deploy most of the Microsoft Office Suite of apps for Mac. We have aready deployed Outlook via the Mac app store and this will reintall it. The reason to have deployed Outlook earlier is for speed. In a real world scenario there is no need for the overlap_
-
-In the **Intune UI**
-
-Navigate to **Apps -> macOS**
-
-Click **+Add**
-
-From the **App type** drop down list select **Microsoft 365 Apps / macOS**
-
-Under **Assignments -> Required** click **+Add all devices**
+Under **Assignments** click **+Add all devices**
 
 ***
 <div style="page-break-after: always"></div>
 
-## Scripting
+### Deploy Privileges App
 
-### Deploy Microsoft Remote Desktop
+_The SAP privileges App helps an Admin user manage their risk by allowing them to demote themselves to a Standard user when having Admin privileges is not required_
 
-_This app is not available on the Mac App store so we need an alternative method to install it. Scripting is one alternative that will be used here._
+_Intune supports two methods to deploy .pkg files. In this example we will use the Package method that leverages the Intune binary to intall the package._
 
-In a new browser window or tab open [https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Apps/Remote%20Desktop/installRemoteDesktop.sh](https://github.com/microsoft/shell-intune-samples/blob/master/macOS/Apps/Remote%20Desktop/installRemoteDesktop.sh)
+Download the latest version of the SAP Privileges tool from [https://github.com/SAP/macOS-enterprise-privileges](https://github.com/SAP/macOS-enterprise-privileges)
 
-Copy the contents of the bash script, paste in to a text editor and save the file as `InstallRemoteDesktop.sh`
 <br>
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Scripts**
+**Apps -> macOS**
 
-Click **+ Add**
+Click **+Add**
 
-Name the Script e.g. Install Teams and click **Next**
+From the drop down menu select **macOS app (PKG)**
 
-Upload the saved `InstallRemoteDesktop.sh` file and set the parameters as 
+Upload the Privileges.2.x.pkg file
 
-<img src="assets/RNXQeUjQSYFrJ.png" alt="" width="800" data-align="left"/>
+<img src="assets/PrivilegesApp1.png" alt="" width="800" data-align="left"/>
+
+<br>
+
+<img src="assets/PrivilegesApp2.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
+
+***
+<div style="page-break-after: always"></div>
+
+## VPP
+
+### Deploy Slack
+
+In **Apple Business Manager**
+
+In the sidebar click **Apps and Books**
+
+Search for **Slack for Desktop** and select the macOS version
+
+Under Buy Licenses select the location corresponding to your Intune instance and specify 10 in the quantity then click **Get**
+<br>
+
+In the **Intune UI**
+
+**Apps -> macOS**
+
+Select **Slack for Desktop** from the list of available apps. If it is not listed try clicking **Refresh**
+
+Under **Properties -> Assignments** click **Edit** and click **+Add all devices**
 
 ***
 <div style="page-break-after: always"></div>
@@ -1282,85 +1299,6 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 <div style="page-break-after: always"></div>
 
 # Resources
-
-## Baseline Configuration Profile
-
-```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-<plist version="1.0">
-<dict>
-	<key>PayloadContent</key>
-	<array>
-		<dict>
-			<key>CleanupAfterUse</key>
-			<true/>
-			<key>DialogListOptions</key>
-			<string>--message "We're setting up a few prerequisites. You will be logged out when finished. Please log in with your local account password."</string>
-			<key>DialogSuccessOptions</key>
-			<string>--message "Please register this Mac with your Pretendco Entra ID when prompted"</string>
-			<key>ExitCondition</key>
-			<string>/Applications/Support.app/Contents/Info.plist</string>
-			<key>Installomator</key>
-			<array>
-				<dict>
-					<key>Arguments</key>
-					<string>"downloadURL=https://go.microsoft.com/fwlink/?linkid=853070"</string>
-					<key>DisplayName</key>
-					<string>Installing Company Portal</string>
-					<key>Label</key>
-					<string>microsoftcompanyportal</string>
-				</dict>
-				<dict>
-					<key>DisplayName</key>
-					<string>Installing Support App</string>
-					<key>Label</key>
-					<string>supportapp</string>
-				</dict>
-			</array>
-			<key>LogOut</key>
-			<true/>
-			<key>Packages</key>
-			<array>
-				<dict>
-					<key>DisplayName</key>
-					<string>Installing Privileges App</string>
-					<key>PackagePath</key>
-					<string>https://github.com/SAP/macOS-enterprise-privileges/releases/download/2.1.0/Privileges_2.1.0.pkg</string>
-				</dict>
-			</array>
-			<key>PayloadDisplayName</key>
-			<string>Baseline</string>
-			<key>PayloadIdentifier</key>
-			<string>com.secondsonconsulting.baseline.0BC8DDD0-22FE-4D64-89A3-1E00FEA08422</string>
-			<key>PayloadType</key>
-			<string>com.secondsonconsulting.baseline</string>
-			<key>PayloadUUID</key>
-			<string>759E3975-BA30-4F0A-84F1-89BB23DBF49D</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-			<key>ProgressBar</key>
-			<true/>
-			<key>ProgressBarDisplayNames</key>
-			<true/>
-			<key>Restart</key>
-			<false/>
-		</dict>
-	</array>
-	<key>PayloadDisplayName</key>
-	<string>Baseline Config</string>
-	<key>PayloadIdentifier</key>
-	<string>Roberts-MacBook-Pro-14.92E98899-A386-42C5-9A4F-6F5978916FE0</string>
-	<key>PayloadType</key>
-	<string>Configuration</string>
-	<key>PayloadUUID</key>
-	<string>93C5997E-1E97-4409-B973-CF555B68A1C7</string>
-	<key>PayloadVersion</key>
-	<integer>1</integer>
-</dict>
-</plist>
-```
-## Links to other resources
 
 [Resouurces Page](Resources.md)
 
