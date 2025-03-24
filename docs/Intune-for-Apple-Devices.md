@@ -21,6 +21,7 @@ Intune for Apple Devices
   - [Managed Open In Profile](#managed-open-in-profile)
   - [Single Sign On Profile](#single-sign-on-profile)
   - [Email Profile](#email-profile)
+  - [Set Wallpaper](#set-wallpaper)
 - [iOS App Deployment](#ios-app-deployment)
   - [VPP](#vpp)
 - [iOS App Configuration](#ios-app-configuration)
@@ -408,6 +409,34 @@ Click **Profile Type - Templates** then **Email** then **Create**
 Give the profile a name e.g. `Exchange` Online then click **Next**
 
 <img src="assets/iRqMwGxb2KpBS.png" alt="" width="800" data-align="left"/>
+
+
+Click **+ Add all devices**
+
+Click **Next**
+
+Click **Create**
+
+***
+<div style="page-break-after: always"></div>
+
+## Set Wallpaper
+
+*The Email profile will add an account the the native iOS Mail app on behalf of the user.*
+
+In the **Intune UI**
+
+Navigate to **Devices -> iOS/iPadOS -> Configuration**
+
+Click **+ Create  -> + New Policy** to Create a new profile
+
+Click **Profile Type - Templates** then **Device Features** then **Create**
+
+Give the profile a name e.g. `Manage Devices Wallpaper` then click **Next**
+
+On the **Configuration Settings** screenn select **Wallpaper**
+
+<img src="assets/iOS_Wallpaper.png" alt="" width="800" data-align="left"/>
 
 
 Click **+ Add all devices**
@@ -896,7 +925,7 @@ Under **Assignments -> Required** click **+Add all devices**
 
 ## Scripting
 
-### Deploy Microsoft Remote Desktop
+### Deploy Microsoft Windows App
 
 _This app is not available on the Mac App store so we need an alternative method to install it. Scripting is one alternative that will be used here._
 
@@ -970,9 +999,9 @@ Give the profile a name e.g. `Set Wallpaper` then click **Next**
 
 Click **+ Add settings** and choose **User Exoperience > Desktop** then check **Override Picture Path** and close the **Settings Picker**
 
-Set **Overide Picture Path** to `/usr/local/wallpaper/background.png`
+Set **Overide Picture Path** to `/usr/local/wallpaper/ManageDevices_macOS.png`
 
-<img src="assets/wallpaper_path.png" alt="" width="800" data-align="left"/>
+<img src="assets/wallpaper1.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -1283,7 +1312,7 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 
 # Resources
 
-## Baseline Configuration Profile
+## Example Baseline Configuration Profile
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -1362,6 +1391,6 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 ```
 ## Links to other resources
 
-[Resouurces Page](Resources.md)
+[Resources Page](Resources.md)
 
 ***

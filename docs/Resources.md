@@ -115,4 +115,5 @@
 * [Comprehensive guide to managing macOS with Intune](https://oliverkieselbach.com/2021/07/14/comprehensive-guide-to-managing-macos-with-intune/) - A bit out of date but useful
 
 * [Microsoft Overview Feed for Apple](https://github.com/cocopuff2u/MOFA)
+
 ***
