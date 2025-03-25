@@ -1,7 +1,7 @@
-<!-- title: Intune for Apple Devices -->
+<!-- title: Managing Apple Devices with Intune -->
 
-Intune for Apple Devices
-========================
+Managing Apple Devices with Intune
+==================================
 
 [<img src="assets/OSList.png" width="600"/>](assets/OSList.png)
 
@@ -9,6 +9,7 @@ Intune for Apple Devices
 
 <!-- code_chunk_output -->
 
+- [Managing Apple Devices with Intune](#managing-apple-devices-with-intune)
 - [Introduction and Prerequisites](#introduction-and-prerequisites)
 - [Intune Setup](#intune-setup)
   - [APNS Certificate](#apns-certificate)
@@ -16,6 +17,8 @@ Intune for Apple Devices
   - [Apps and Books Token](#apps-and-books-token)
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
+    - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
+    - [Create Enrollment Profile](#create-enrollment-profile)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
   - [Passcode Compliance Policy](#passcode-compliance-policy)
   - [Managed Open In Profile](#managed-open-in-profile)
@@ -24,6 +27,8 @@ Intune for Apple Devices
   - [Set Wallpaper](#set-wallpaper)
 - [iOS App Deployment](#ios-app-deployment)
   - [VPP](#vpp)
+    - [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
+    - [Deploy Additional Apps](#deploy-additional-apps)
 - [iOS App Configuration](#ios-app-configuration)
   - [Teams](#teams)
 - [iOS Device Assignment](#ios-device-assignment)
@@ -40,9 +45,13 @@ Intune for Apple Devices
   - [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
   - [Apple App Store (VPP)](#apple-app-store-vpp)
+    - [Deploy Outlook](#deploy-outlook)
   - [Line of Business / Packaged](#line-of-business--packaged)
+    - [Deploy Baseline](#deploy-baseline)
   - [Built In Apps](#built-in-apps)
+    - [Deploy Microsoft Office](#deploy-microsoft-office)
   - [Scripting](#scripting)
+    - [Deploy Microsoft Windows App](#deploy-microsoft-windows-app)
 - [Mac Additional Setup](#mac-additional-setup)
   - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
