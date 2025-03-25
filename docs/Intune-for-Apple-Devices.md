@@ -228,7 +228,6 @@ Under **Buy Licenses** select the location corresponding to your Intune instance
 ***NOTE:*** *Company Portal is Deployed automatically as part of AutomatedDevice Enrolment. It is a pre requisite that VPP licenses are available for this to work but it is currently not necessary to separately scope the app to the required devices. This will change in future.*
 
 
-
 In the **Intune UI**
 
 Ensure the app appears in the list under Apps -> iOS/iPadOS apps
