@@ -98,6 +98,8 @@
 
 * [Baseline](https://github.com/SecondSonConsulting/Baseline)
 
+* [App Auto Patch](https://github.com/App-Auto-Patch/App-Auto-Patch)
+
 * [AutoPkg](https://github.com/autopkg/autopkg)
 
 * [Intune Uploader](https://github.com/almenscorner/intune-uploader?ref=almenscorner.io)
