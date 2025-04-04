@@ -12,67 +12,67 @@ Managing Apple Devices with Intune
 - [Managing Apple Devices with Intune](#managing-apple-devices-with-intune)
 - [Introduction and Prerequisites](#introduction-and-prerequisites)
 - [Intune Setup](#intune-setup)
-  - [APNS Certificate](#apns-certificate)
-  - [Automated Device Enrollment Token](#automated-device-enrollment-token)
-  - [Apps and Books Token](#apps-and-books-token)
+	- [APNS Certificate](#apns-certificate)
+	- [Automated Device Enrollment Token](#automated-device-enrollment-token)
+	- [Apps and Books Token](#apps-and-books-token)
 - [iOS / iPadOS](#ios--ipados)
-  - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
-    - [Purchase Company Portal licenses](#purchase-company-portal-licenses)
-    - [Create Enrollment Profile](#create-enrollment-profile)
+	- [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
+		- [Purchase Company Portal licenses](#purchase-company-portal-licenses)
+		- [Create Enrollment Profile](#create-enrollment-profile)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
-  - [Passcode Compliance Policy](#passcode-compliance-policy)
-  - [Managed Open In Profile](#managed-open-in-profile)
-  - [Single Sign On Profile](#single-sign-on-profile)
-  - [Email Profile](#email-profile)
-  - [Set Wallpaper](#set-wallpaper)
+	- [Passcode Compliance Policy](#passcode-compliance-policy)
+	- [Managed Open In Profile](#managed-open-in-profile)
+	- [Single Sign On Profile](#single-sign-on-profile)
+	- [Email Profile](#email-profile)
+	- [Set Wallpaper](#set-wallpaper)
 - [iOS App Deployment](#ios-app-deployment)
-  - [VPP](#vpp)
-    - [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
-    - [Deploy Additional Apps](#deploy-additional-apps)
+	- [VPP](#vpp)
+		- [Deploy Microsoft Authenticator](#deploy-microsoft-authenticator)
+		- [Deploy Additional Apps](#deploy-additional-apps)
 - [iOS App Configuration](#ios-app-configuration)
-  - [Teams](#teams)
+	- [Teams](#teams)
 - [iOS Device Assignment](#ios-device-assignment)
-  - [Enrolment Test](#enrolment-test)
+	- [Enrolment Test](#enrolment-test)
 - [macOS](#macos)
-  - [Mac Device Enrollment Profile](#mac-device-enrollment-profile)
+	- [Mac Device Enrollment Profile](#mac-device-enrollment-profile)
 - [Mac Configuration Profiles](#mac-configuration-profiles)
-  - [FileVault Profile](#filevault-profile)
-  - [Firewall Profile](#firewall-profile)
-  - [Gatekeeper Profile](#gatekeeper-profile)
-  - [Platform SSO Profile](#platform-sso-profile)
-  - [Office 365 Profile](#office-365-profile)
-  - [Custom Profiles](#custom-profiles)
-  - [Managed Login Items Profile](#managed-login-items-profile)
+	- [FileVault Profile](#filevault-profile)
+	- [Firewall Profile](#firewall-profile)
+	- [Gatekeeper Profile](#gatekeeper-profile)
+	- [Platform SSO Profile](#platform-sso-profile)
+	- [Office 365 Profile](#office-365-profile)
+	- [Custom Profiles](#custom-profiles)
+	- [Managed Login Items Profile](#managed-login-items-profile)
 - [Mac App Deployment](#mac-app-deployment)
-  - [Apple App Store (VPP)](#apple-app-store-vpp)
-    - [Deploy Outlook](#deploy-outlook)
-  - [Line of Business / Packaged](#line-of-business--packaged)
-    - [Deploy Baseline](#deploy-baseline)
-  - [Built In Apps](#built-in-apps)
-    - [Deploy Microsoft Office](#deploy-microsoft-office)
-  - [Scripting](#scripting)
-    - [Deploy Microsoft Windows App](#deploy-microsoft-windows-app)
+	- [Apple App Store (VPP)](#apple-app-store-vpp)
+		- [Deploy Outlook](#deploy-outlook)
+	- [Line of Business / Packaged](#line-of-business--packaged)
+		- [Deploy Baseline](#deploy-baseline)
+	- [Built In Apps](#built-in-apps)
+		- [Deploy Microsoft Office](#deploy-microsoft-office)
+	- [Scripting](#scripting)
+		- [Deploy Microsoft Windows App](#deploy-microsoft-windows-app)
 - [Mac Additional Setup](#mac-additional-setup)
-  - [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
+	- [Set Mac Wallpaper (Optional)](#set-mac-wallpaper-optional)
 - [Compliance Policies](#compliance-policies)
-  - [Disk Encryption Policy](#disk-encryption-policy)
+	- [Disk Encryption Policy](#disk-encryption-policy)
 - [Mac Device Assignment](#mac-device-assignment)
-  - [Enrolment Test](#enrolment-test-1)
+	- [Enrolment Test](#enrolment-test-1)
 - [Assignments / Scoping](#assignments--scoping)
-  - [Using Filters](#using-filters)
+	- [Using Filters](#using-filters)
 - [Mac Operations](#mac-operations)
-  - [Software Updates](#software-updates)
-  - [DDM Software Updates](#ddm-software-updates)
-  - [FileVault Key Escrow](#filevault-key-escrow)
-  - [Erase All Content and Settings](#erase-all-content-and-settings)
+	- [Software Updates](#software-updates)
+	- [DDM Software Updates](#ddm-software-updates)
+	- [FileVault Key Escrow](#filevault-key-escrow)
+	- [Erase All Content and Settings](#erase-all-content-and-settings)
 - [Additional Mac Config Profiles](#additional-mac-config-profiles)
-  - [Disable the Guest Account](#disable-the-guest-account)
-  - [Disable Auto-login](#disable-auto-login)
-  - [Configure Screensaver Lock](#configure-screensaver-lock)
-  - [Configure Passcode Profile](#configure-passcode-profile)
+	- [Disable the Guest Account](#disable-the-guest-account)
+	- [Disable Auto-login](#disable-auto-login)
+	- [Configure Screensaver Lock](#configure-screensaver-lock)
+	- [Configure Passcode Profile](#configure-passcode-profile)
 - [Resources](#resources)
-  - [Example Baseline Configuration Profile](#example-baseline-configuration-profile)
-  - [Links to other resources](#links-to-other-resources)
+	- [Example Baseline Configuration Profile](#example-baseline-configuration-profile)
+	- [Links to other resources](#links-to-other-resources)
 
 <!-- /code_chunk_output -->
 
@@ -443,7 +443,7 @@ Click **Profile Type - Templates** then **Device Features** then **Create**
 
 Give the profile a name e.g. `Manage Devices Wallpaper` then click **Next**
 
-On the **Configuration Settings** screenn select **Wallpaper**
+On the **Configuration Settings** screen select **Wallpaper**
 
 <img src="assets/iOS_Wallpaper.png" alt="" width="800" data-align="left"/>
 
@@ -467,7 +467,7 @@ In **Apple Business Manager**
 
 In the sidebar click **Apps and Books**
 
-Search for **Microsoft Authenticato**r and select the iOS version
+Search for **Microsoft Authenticator** and select the iOS version
 
 Under Buy Licenses select the location corresponding to your Intune instance and specify 10 in the quantity then click **Get**
 <br>
@@ -697,7 +697,7 @@ Click **Next** then on Scope Tags click **Next**
 
 In Assignments Click **+ Add all devices**
 
-Click **Next** then **** Click **Create**
+Click **Next** then click **Create**
 
 ***
 <div style="page-break-after: always"></div>
@@ -812,17 +812,17 @@ Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Templates** then **Custom** then **Create**
 
-Give the profile a name e.g. Support App Config then click **Next**
+Give the profile a name e.g. Baseline App Config then click **Next**
 
-For **Custom configuration profile name enter** Support App Config
+For **Custom configuration profile name enter** Baseline App Config
 
 Set **Deployment Channel** to **Device Channel**
 
-Upload the Custom Configuration profile file. Use filename `Baselinee Config Intune.mobileconfig`
+Upload the Custom Configuration profile file. Use filename `Baseline Config Intune.mobileconfig`
 
 Under **Assignments** click **+Add all devices**
 
-***Repeat the above process for The Support app***
+***Repeat the above process for The Support app and the Privileges app***
 
 ***
 <div style="page-break-after: always"></div>
@@ -889,7 +889,7 @@ Under **Properties -> Assignments** click **Edit** and click **+Add all devices*
 
 ### Deploy Baseline
 
-_The Baseline App runs after the Setup Assistant completes and installs other neccessary apps before the user gets to the Desktop. For this example Baseline installs Microsoft Company Portal, the Support app and the Privileges app. These options were configured earlier using the Custom Profile for Baseline_
+_The Baseline App runs after the Setup Assistant completes and installs other necessary apps before the user gets to the Desktop. For this example Baseline installs Microsoft Company Portal, the Support app and the Privileges app. These options were configured earlier using the Custom Profile for Baseline_
 
 _Intune supports two methods to deploy .pkg files. As this package has been created and signed by the developer we will use the Line-of-business method that leverages the MDM command InstallEnterpriseApplication._
 
@@ -917,7 +917,7 @@ Under **Assignments -> Required** click **+Add all devices**
 
 ### Deploy Microsoft Office
 
-_This will deploy most of the Microsoft Office Suite of apps for Mac. We have aready deployed Outlook via the Mac app store and this will reintall it. The reason to have deployed Outlook earlier is for speed. In a real world scenario there is no need for the overlap_
+_This will deploy most of the Microsoft Office Suite of apps for Mac. We have already deployed Outlook via the Mac app store and this will reinstall it. The reason to have deployed Outlook earlier is for speed. In a real world scenario there is no need for the overlap_
 
 In the **Intune UI**
 
@@ -978,7 +978,7 @@ Click **+ Add**
 
 From the drop down menu select **Other -> macOS App (PKG)** then click **Select**
 
-Click **Slect app package file** and choose the `Wallpaper.pkg` file
+Click **Select app package file** and choose the `Wallpaper.pkg` file
 
 Under **App Information** set
 
@@ -992,7 +992,7 @@ Set **Minimum operating system** = `macOS Ventura 13.0`
 
 Under **Detection Rules** leave the defaults and click **Next**
 
-Under **Assigment** choose **Add all devices** then click **Next** then **Create**
+Under **Assignment** choose **Add all devices** then click **Next** then **Create**
 
 <br>
 
@@ -1006,9 +1006,9 @@ Click **Profile Type - Settings Catalog** then **Create**
 
 Give the profile a name e.g. `Set Wallpaper` then click **Next**
 
-Click **+ Add settings** and choose **User Exoperience > Desktop** then check **Override Picture Path** and close the **Settings Picker**
+Click **+ Add settings** and choose **User Experience > Desktop** then check **Override Picture Path** and close the **Settings Picker**
 
-Set **Overide Picture Path** to `/usr/local/wallpaper/ManageDevices_macOS.png`
+Set **Override Picture Path** to `/usr/local/wallpaper/ManageDevices_macOS.png`
 
 <img src="assets/wallpaper1.png" alt="" width="800" data-align="left"/>
 
@@ -1070,7 +1070,7 @@ Click **Edit MDM Server**
 Click **Assign the Following MDM** and choose the appropriate MDM from the drop down list then click **Continue**
 <br>
 
-In the I**ntune UI**
+In the **Intune UI**
 
 Navigate to **Devices -> macOS -> macOS Enrollment**
 
