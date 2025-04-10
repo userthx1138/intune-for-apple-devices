@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>CleanupAfterUse</key>
+			<true/>
+			<key>DialogListOptions</key>
+			<string>--message "We're setting up a few prerequisites. You will be logged out when finished. Please log in with your local account password."</string>
+			<key>DialogSuccessOptions</key>
+			<string>--message "Please register this Mac with your Pretendco Entra ID when prompted"</string>
+			<key>ExitCondition</key>
+			<string>/Applications/Support.app/Contents/Info.plist</string>
+			<key>Installomator</key>
+			<array>
+				<dict>
+					<key>Arguments</key>
+					<string>"downloadURL=https://go.microsoft.com/fwlink/?linkid=853070"</string>
+					<key>DisplayName</key>
+					<string>Installing Company Portal</string>
+					<key>Label</key>
+					<string>microsoftcompanyportal</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Installing Support App</string>
+					<key>Label</key>
+					<string>supportapp</string>
+				</dict>
+			</array>
+			<key>LogOut</key>
+			<true/>
+			<key>Packages</key>
+			<array>
+				<dict>
+					<key>DisplayName</key>
+					<string>Installing Privileges App</string>
+					<key>PackagePath</key>
+					<string>https://github.com/SAP/macOS-enterprise-privileges/releases/download/2.1.0/Privileges_2.1.0.pkg</string>
+				</dict>
+			</array>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.0BC8DDD0-22FE-4D64-89A3-1E00FEA08422</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>759E3975-BA30-4F0A-84F1-89BB23DBF49D</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Baseline Config</string>
+	<key>PayloadIdentifier</key>
+	<string>Roberts-MacBook-Pro-14.92E98899-A386-42C5-9A4F-6F5978916FE0</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>93C5997E-1E97-4409-B973-CF555B68A1C7</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

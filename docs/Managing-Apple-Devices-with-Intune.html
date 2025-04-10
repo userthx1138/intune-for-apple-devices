@@ -373,7 +373,7 @@ create the Server Token</p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Templates</strong> then <strong>Device Features</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Manage Devices Wallpaper</code> then click <strong>Next</strong></p>
-<p>On the <strong>Configuration Settings</strong> screenn select <strong>Wallpaper</strong></p>
+<p>On the <strong>Configuration Settings</strong> screen select <strong>Wallpaper</strong></p>
 <img src="assets/iOS_Wallpaper.png" alt="" width="800" data-align="left">
 <p>Click <strong>+ Add all devices</strong></p>
 <p>Click <strong>Next</strong></p>
@@ -385,7 +385,7 @@ create the Server Token</p>
 <h3 id="deploy-microsoft-authenticator">Deploy Microsoft Authenticator </h3>
 <p>In <strong>Apple Business Manager</strong></p>
 <p>In the sidebar click <strong>Apps and Books</strong></p>
-<p>Search for <strong>Microsoft Authenticato</strong>r and select the iOS version</p>
+<p>Search for <strong>Microsoft Authenticator</strong> and select the iOS version</p>
 <p>Under Buy Licenses select the location corresponding to your Intune instance and specify 10 in the quantity then click <strong>Get</strong><br>
 <br></p>
 <p>In the <strong>Intune UI</strong></p>
@@ -518,7 +518,7 @@ screens to Hide except</p>
 <img src="assets/9jTidF7O3hn6F.png" alt="" width="800" data-align="left">
 <p>Click <strong>Next</strong> then on Scope Tags click <strong>Next</strong></p>
 <p>In Assignments Click <strong>+ Add all devices</strong></p>
-<p>Click <strong>Next</strong> then **** Click <strong>Create</strong></p>
+<p>Click <strong>Next</strong> then click <strong>Create</strong></p>
 <hr>
 <div style="page-break-after: always"></div>
 <h2 id="gatekeeper-profile">Gatekeeper Profile </h2>
@@ -601,12 +601,12 @@ screens to Hide except</p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type -&gt; Templates</strong> then <strong>Custom</strong> then <strong>Create</strong></p>
-<p>Give the profile a name e.g. Support App Config then click <strong>Next</strong></p>
-<p>For <strong>Custom configuration profile name enter</strong> Support App Config</p>
+<p>Give the profile a name e.g. Baseline App Config then click <strong>Next</strong></p>
+<p>For <strong>Custom configuration profile name enter</strong> Baseline App Config</p>
 <p>Set <strong>Deployment Channel</strong> to <strong>Device Channel</strong></p>
-<p>Upload the Custom Configuration profile file. Use filename <code>Baselinee Config Intune.mobileconfig</code></p>
+<p>Upload the Custom Configuration profile file. Use filename <code>Baseline Config Intune.mobileconfig</code></p>
 <p>Under <strong>Assignments</strong> click <strong>+Add all devices</strong></p>
-<p><em><strong>Repeat the above process for The Support app</strong></em></p>
+<p><em><strong>Repeat the above process for The Support app and the Privileges app</strong></em></p>
 <hr>
 <div style="page-break-after: always"></div>
 <h2 id="managed-login-items-profile">Managed Login Items Profile </h2>
@@ -674,7 +674,7 @@ screens to Hide except</p>
 <div style="page-break-after: always"></div>
 <h2 id="line-of-business--packaged">Line of Business / Packaged </h2>
 <h3 id="deploy-baseline">Deploy Baseline </h3>
-<p><em>The Baseline App runs after the Setup Assistant completes and installs other neccessary apps before the user gets to the Desktop. For this example Baseline installs Microsoft Company Portal, the Support app and the Privileges app. These options were configured earlier using the Custom Profile for Baseline</em></p>
+<p><em>The Baseline App runs after the Setup Assistant completes and installs other necessary apps before the user gets to the Desktop. For this example Baseline installs Microsoft Company Portal, the Support app and the Privileges app. These options were configured earlier using the Custom Profile for Baseline</em></p>
 <p><em>Intune supports two methods to deploy .pkg files. As this package has been created and signed by the developer we will use the Line-of-business method that leverages the MDM command InstallEnterpriseApplication.</em></p>
 <p>Download the latest packaged version of Baseline from <a href="https://github.com/SecondSonConsulting/Baseline/releases/tag/v2.2">https://github.com/SecondSonConsulting/Baseline/releases/tag/v2.2</a><br>
 <br></p>
@@ -689,7 +689,7 @@ screens to Hide except</p>
 <div style="page-break-after: always"></div>
 <h2 id="built-in-apps">Built In Apps </h2>
 <h3 id="deploy-microsoft-office">Deploy Microsoft Office </h3>
-<p><em>This will deploy most of the Microsoft Office Suite of apps for Mac. We have aready deployed Outlook via the Mac app store and this will reintall it. The reason to have deployed Outlook earlier is for speed. In a real world scenario there is no need for the overlap</em></p>
+<p><em>This will deploy most of the Microsoft Office Suite of apps for Mac. We have already deployed Outlook via the Mac app store and this will reinstall it. The reason to have deployed Outlook earlier is for speed. In a real world scenario there is no need for the overlap</em></p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Apps -&gt; macOS</strong></p>
 <p>Click <strong>+Add</strong></p>
@@ -721,7 +721,7 @@ screens to Hide except</p>
 <p><strong>Apps -&gt; macOS</strong></p>
 <p>Click <strong>+ Add</strong></p>
 <p>From the drop down menu select <strong>Other -&gt; macOS App (PKG)</strong> then click <strong>Select</strong></p>
-<p>Click <strong>Slect app package file</strong> and choose the <code>Wallpaper.pkg</code> file</p>
+<p>Click <strong>Select app package file</strong> and choose the <code>Wallpaper.pkg</code> file</p>
 <p>Under <strong>App Information</strong> set</p>
 <p><strong>Name</strong> = <code>Wallpaper</code><br>
 <strong>Description</strong> = <code>Wallpaper images</code><br>
@@ -729,15 +729,15 @@ screens to Hide except</p>
 <p>Click <strong>Next</strong> then <strong>Next</strong></p>
 <p>Set <strong>Minimum operating system</strong> = <code>macOS Ventura 13.0</code></p>
 <p>Under <strong>Detection Rules</strong> leave the defaults and click <strong>Next</strong></p>
-<p>Under <strong>Assigment</strong> choose <strong>Add all devices</strong> then click <strong>Next</strong> then <strong>Create</strong></p>
+<p>Under <strong>Assignment</strong> choose <strong>Add all devices</strong> then click <strong>Next</strong> then <strong>Create</strong></p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration Profiles</strong></p>
 <p>Click <strong>+ Create</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Set Wallpaper</code> then click <strong>Next</strong></p>
-<p>Click <strong>+ Add settings</strong> and choose <strong>User Exoperience &gt; Desktop</strong> then check <strong>Override Picture Path</strong> and close the <strong>Settings Picker</strong></p>
-<p>Set <strong>Overide Picture Path</strong> to <code>/usr/local/wallpaper/ManageDevices_macOS.png</code></p>
+<p>Click <strong>+ Add settings</strong> and choose <strong>User Experience &gt; Desktop</strong> then check <strong>Override Picture Path</strong> and close the <strong>Settings Picker</strong></p>
+<p>Set <strong>Override Picture Path</strong> to <code>/usr/local/wallpaper/ManageDevices_macOS.png</code></p>
 <img src="assets/wallpaper1.png" alt="" width="800" data-align="left">
 <p>Click <strong>Next</strong> then on Scope Tags click <strong>Next</strong></p>
 <p>In Assignments Click <strong>+ Add all devices</strong></p>
@@ -770,7 +770,7 @@ screens to Hide except</p>
 <p>Click <strong>Edit MDM Server</strong></p>
 <p>Click <strong>Assign the Following MDM</strong> and choose the appropriate MDM from the drop down list then click <strong>Continue</strong><br>
 <br></p>
-<p>In the I<strong>ntune UI</strong></p>
+<p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; macOS Enrollment</strong></p>
 <p>Click <strong>Enrollment program tokens</strong></p>
 <p>Select the token you created from the list</p>
