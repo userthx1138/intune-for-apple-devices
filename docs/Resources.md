@@ -74,6 +74,8 @@
 
 * [Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
 
+* [Configure Platform SSO for macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/intune/intune-service/configuration/platform-sso-macos)
+
 * [macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
 * [Compliance and device configuration policies that conflict](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot#compliance-and-device-configuration-policies-that-conflict)
 

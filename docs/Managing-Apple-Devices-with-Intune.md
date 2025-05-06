@@ -50,7 +50,7 @@ Managing Apple Devices with Intune
 - [Mac Device Assignment](#mac-device-assignment)
   - [Enrolment Test](#enrolment-test-1)
 - [Assignments / Scoping](#assignments--scoping)
-  - [Using Filters](#using-filters)
+  - [Using Assignment Filters](#using-assignment-filters)
 - [Mac Operations](#mac-operations)
   - [Software Updates](#software-updates)
   - [DDM Software Updates](#ddm-software-updates)
@@ -196,7 +196,7 @@ Enter the Managed Apple Account used to create the VPP token in ABM
 Upload the token file and click **Next**
 <br>
 
-<img src="assets/DYQ8Ta8mgLkWG.png" alt="" width="800" data-align="left"/>
+	
 
 Click through to complete the process.
 
@@ -321,7 +321,7 @@ Under **System Security**
 
 Click **+ Add all devices**
 
-_**Note:** You can refine your scope by using Filters. See [Using Filters](#using-filters)_
+_**Note:** You can refine your scope by using Assignment Filters. See [Using Assignment Filters](#using-Assignment Filters)_
 
 Click **Next**
 
@@ -1099,11 +1099,11 @@ Launch Apps, open [https://portal.office.com](https://portal.office.com) in Safa
 
 # Assignments / Scoping
 
-## Using Filters 
+## Using Assignment Filters 
 
 _In this workshop most examples of scoping use a scope of **All Devices** for simplicity and performance. When you want to limit the scope of devices but want to get the performance benefits of scoping to **All Devices** you can use a Filter_
 
-Navigate to **Devices -> Tenant administration -> Filters**
+Navigate to **Devices -> Tenant administration -> Assignment Filters**
 
 Click **Create -> Managed Devices**
 
@@ -1113,7 +1113,7 @@ Give the Filter a name e.g. `Enrollment Profile = iOS ADE with MFA` and under **
 
 Click **Next** then Click **Create**
 
-When scoping something that supports filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
+When scoping something that supports Assignment Filters you can use them as in the following example of scoping a configuration profile that is currently scoped to **All Devices**
 
 Under the **Assignments** screen for a Configuration Profile Click on **Edit Filter**
 

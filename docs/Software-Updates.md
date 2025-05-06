@@ -7,8 +7,11 @@ Managing Operating System Updates
 
 <!-- code_chunk_output -->
 
-- [Software Updates using Declaritive Device Management (DDM)](#software-updates-using-declaritive-device-management-ddm)
-- [Software Update Deferrals using Declaritive Device Management (DDM)](#software-update-deferrals-using-declaritive-device-management-ddm)
+- [Software Updates using Declarative Device Management (DDM)](#software-updates-using-declarative-device-management-ddm)
+  - [Method 1](#method-1)
+  - [Method 2](#method-2)
+- [Software Update Deferrals using Declarative Device Management (DDM)](#software-update-deferrals-using-declarative-device-management-ddm)
+- [Software Update Deferrals using Declarative Device Management (DDM)](#software-update-deferrals-using-declarative-device-management-ddm-1)
 - [Update Methods prior to iOS 17 / macOS 14](#update-methods-prior-to-ios-17--macos-14)
 - [Deferral Methods prior to iOS 18 / macOS 15](#deferral-methods-prior-to-ios-18--macos-15)
 - [References](#references)
@@ -16,7 +19,27 @@ Managing Operating System Updates
 <!-- /code_chunk_output -->
 
 
-# Software Updates using Declaritive Device Management (DDM)
+# Software Updates using Declarative Device Management (DDM)
+
+## Method 1
+
+In the **Intune UI**
+
+Navigate to **Devices -> macOS -> Configuration**
+
+Click **+ Create -> + New Policy**
+
+Choose **Profile Type -> Settings catalog** and click **Create**
+
+Give the profile a name e.g. `Update to Specific OS` then click **Next**
+
+Click **+ Add settings** and select **Declarative Device Management -> Software Update**
+
+Check **Target Date Time** and **Target OS Version** then close the **Settings Picker**
+
+<img src="assets/DDM_SW_Update_1.png" alt="" width="800" data-align="left"/>
+
+## Method 2
 
 In the **Intune UI**
 
@@ -28,13 +51,13 @@ Choose **Profile Type -> Settings catalog** and click **Create**
 
 Give the profile a name e.g. `Update to Latest OS` then click **Next**
 
-Click **+ Add settings** and select **Declaritive Device Management -> Software Update**
+Click **+ Add settings** and select **Declarative Device Management -> Software Update Enforce Latest**
 
-Check **Target Date Time** and **Target OS Version** then close the **Settings Picker**
+Check **Delay In Days** and **Install Time** then close the **Settings Picker**
 
-<img src="assets/DDM_SW_Update_1.png" alt="" width="800" data-align="left"/>
+<img src="assets/DDM_Latest_OS.png" alt="" width="800" data-align="left"/>
 
-# Software Update Deferrals using Declaritive Device Management (DDM)
+# Software Update Deferrals using Declarative Device Management (DDM)
 
 In the **Intune UI**
 
@@ -46,7 +69,26 @@ Choose **Profile Type -> Settings catalog** and click **Create**
 
 Give the profile a name e.g. `Defer OS Updates` then click **Next**
 
-Click **+ Add settings** and select **Declaritive Device Management -> Software Update Settings**
+Click **+ Add settings** and select **Declarative Device Management -> Software Update Settings**
+
+Check **Deferrals* and **Combined Period in Days** then close the **Settings Picker**
+
+<img src="assets/DDM_SW_Deferal_1.png" alt="" width="800" data-align="left"/>
+
+
+# Software Update Deferrals using Declarative Device Management (DDM)
+
+In the **Intune UI**
+
+Navigate to **Devices -> macOS -> Configuration**
+
+Click **+ Create -> + New Policy**
+
+Choose **Profile Type -> Settings catalog** and click **Create**
+
+Give the profile a name e.g. `Defer OS Updates` then click **Next**
+
+Click **+ Add settings** and select **Declarative Device Management -> Software Update Settings**
 
 Check **Deferrals* and **Combined Period in Days** then close the **Settings Picker**
 
@@ -54,7 +96,7 @@ Check **Deferrals* and **Combined Period in Days** then close the **Settings Pic
 
 # Update Methods prior to iOS 17 / macOS 14
 
-_Prior to the implemetation of Declaritive Device Management (DDM) on Apple operating systems updates were managed using a series of MDM commands. This was configured in the Update Policies area of the Intune UI_
+_Prior to the implemetation of Declarative Device Management (DDM) on Apple operating systems updates were managed using a series of MDM commands. This was configured in the Update Policies area of the Intune UI_
 
 In the **Intune UI**
 
