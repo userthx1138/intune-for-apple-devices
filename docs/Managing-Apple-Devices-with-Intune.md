@@ -321,7 +321,7 @@ Under **System Security**
 
 Click **+ Add all devices**
 
-_**Note:** You can refine your scope by using Assignment Filters. See [Using Assignment Filters](#using-Assignment Filters)_
+_**Note:** You can refine your scope by using Assignment Filters. See [Using Assignment Filters](#using-assignment-filters)_
 
 Click **Next**
 
@@ -500,7 +500,7 @@ Right click on the token name and select **Sync**
 
 In the Intune UI
 
-**Apps -> App Configuration Policies**
+**Apps -> Configuration**
 
 Click **+ Add -> Managed Devices**
 
