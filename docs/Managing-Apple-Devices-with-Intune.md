@@ -504,7 +504,7 @@ In the Intune UI
 
 **Apps -> Configuration**
 
-Click **+ Add -> Managed Devices**
+Click **+ Create -> Managed Devices**
 
 Give the policy a name e.g. `Teams UPN`
 
@@ -894,7 +894,7 @@ In the **Intune UI**
 
 **Apps -> macOS**
 
-Click **+ Add**
+Click **+ Create**
 
 From the drop down menu select **Other -> Line-of-business app**
 
@@ -968,7 +968,7 @@ In the **Intune UI**
 
 **Apps -> macOS**
 
-Click **+ Add**
+Click **+ Create**
 
 From the drop down menu select **Other -> macOS App (PKG)** then click **Select**
 
