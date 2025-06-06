@@ -110,7 +110,7 @@
 
 * [DFU Blaster (twocanoes) download](https://bitbucket.org/twocanoes/dfu-blaster-public/downloads/)
 
-* [Munki - Software Management for OS X](https://www.munki.org/munki/)
+* [Munki - Software Management for macOS](https://www.munki.org/munki/)
 
 * [Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility/releases)
 

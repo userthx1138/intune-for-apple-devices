@@ -3,7 +3,9 @@
 Managing Apple Devices with Intune
 ==================================
 
-[<img src="assets/OSList.png" width="600"/>](assets/OSList.png)
+<!-- [<img src="assets/OSList.png" width="600"/>](assets/OSList.png) -->
+
+[<img src="assets/Intune_256_Color.png" width="200"/>](assets/Intune_256_Color.png)
 
 <!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=2 orderedList=false} -->
 
@@ -1287,6 +1289,7 @@ Click **+ Add settings** and choose **System Configuration -> Screensaver -> Sel
 **Ask For Password Delay =** _Preferred Value_
 
 **Ask For Password =** `True`
+
 ***
 <div style="page-break-after: always"></div>
 
