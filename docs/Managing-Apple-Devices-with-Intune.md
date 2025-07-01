@@ -19,7 +19,7 @@ Managing Apple Devices with Intune
 - [iOS / iPadOS](#ios--ipados)
   - [iOS Device Enrollment Profile](#ios-device-enrollment-profile)
 - [iOS Configuration Profiles](#ios-configuration-profiles)
-  - [Passcode Compliance Policy](#passcode-compliance-policy)
+  - [iOS Passcode Profile](#ios-passcode-profile)
   - [Managed Open In Profile](#managed-open-in-profile)
   - [Single Sign On Profile](#single-sign-on-profile)
   - [Email Profile](#email-profile)
@@ -28,6 +28,8 @@ Managing Apple Devices with Intune
   - [VPP](#vpp)
 - [iOS App Configuration](#ios-app-configuration)
   - [Teams](#teams)
+- [iOS Compliance Policy](#ios-compliance-policy)
+  - [Passcode Compliance Policy](#passcode-compliance-policy)
 - [iOS Device Assignment](#ios-device-assignment)
   - [Enrolment Test](#enrolment-test)
 - [macOS](#macos)
@@ -300,28 +302,31 @@ Click **Set default profile** and set the just created profile as the default fo
 
 *Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting Catalog.*
 
-## Passcode Compliance Policy
+## iOS Passcode Profile
 
-*Setting a Compliance Policy creates a configuration profile and also implements a corresponding compliance check in Intune. This policy is used to ensure a device passcode is set with appropriate complexity.*
-
-[https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios](https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios)
-
-<br>
+*The [passcode configuration declaration](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/passcode.settings.yaml) is used to set the minimum complexity of the device unlock passcode.*
 
 In the **Intune UI**
 
-Navigate to **Devices -> iOS/iPadOS -> Compliance**
+Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
-Click **+ Create policy** to Create a new policy then Create a Policy **Create**
+Click **+ Create  -> + New Policy** to Create a new profile
 
-Give the policy a name e.g. `Passcode` then click **Next**
+Click **Profile Type -> Settings Catalog** then **Create**
 
-Under **System Security**
+Give the profile a name e.g. `Passcode` then click **Next**
 
-<img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left"/>
+Click **+ Add settings** and choose **Declarative Device Management (DDM) -> Passcode** and select the settings in the screenshot below and close the **Settings Picker**
 
+Set the values as shown
 
-Click **+ Add all devices**
+<img src="assets/DDM_Passcode.png" alt="" width="800" data-align="left"/>
+
+Click **Next** then on Scope Tags click **Next**
+
+In Assignments Click **+ Add all devices** (Optionally apply a Filter)
+
+Click **Next** then Click **Create**
 
 _**Note:** You can refine your scope by using Assignment Filters. See [Using Assignment Filters](#using-assignment-filters)_
 
@@ -533,6 +538,31 @@ Click **Create**
 
 ***
 <div style="page-break-after: always"></div>
+
+# iOS Compliance Policy
+
+## Passcode Compliance Policy
+
+*Setting a Compliance Policy implements a device compliance check in Intune. This policy is used to ensure a device passcode is set with appropriate complexity.*
+
+[https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios](https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios)
+
+<br>
+
+In the **Intune UI**
+
+Navigate to **Devices -> iOS/iPadOS -> Compliance**
+
+Click **+ Create policy** to Create a new policy then Create a Policy **Create**
+
+Give the policy a name e.g. `Passcode` then click **Next**
+
+Under **System Security**
+
+<img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left"/>
+
+
+Click **+ Add all devices**
 
 # iOS Device Assignment
 

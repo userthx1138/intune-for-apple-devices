@@ -78,6 +78,7 @@
 
 * [macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
 * [Compliance and device configuration policies that conflict](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot#compliance-and-device-configuration-policies-that-conflict)
+* [Apple MDM Beta Token Automation](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Tools/getBetaTokens)
 
 
 ## Other 3rd Party
