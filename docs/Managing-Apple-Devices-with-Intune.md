@@ -347,7 +347,7 @@ Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. `Managed Open In` then click **Next**
 
@@ -377,7 +377,7 @@ Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. `Entra ID SSO` then click Next
 
@@ -411,7 +411,7 @@ Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Templates** then **Email** then **Create**
+Click **Profile Type -> Templates** then **Email** then **Create**
 
 Give the profile a name e.g. `Exchange` Online then click **Next**
 
@@ -437,7 +437,7 @@ Navigate to **Devices -> iOS/iPadOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Templates** then **Device Features** then **Create**
+Click **Profile Type -> Templates** then **Device Features** then **Create**
 
 Give the profile a name e.g. `Manage Devices Wallpaper` then click **Next**
 
@@ -515,11 +515,11 @@ Give the policy a name e.g. `Teams UPN`
 
 Select Platform **iOS/iPadOS**
 
-Targeted App -> Select **Microsoft Teams**
+**Targeted App -> Select -> Microsoft Teams**
 
 Click **Next**
 
-Configuration settings format -> select **Use configuration designer**
+**Configuration settings format -> Use configuration designer**
 
 Enter values as follows:
 
@@ -641,7 +641,7 @@ Touch ID and Face ID = `Show`
 
 Configure Account Settings
 
-<img src="assets/5Yq7p8yzbb7q0.png" alt="" width="800" data-align="left"/>
+<img src="assets/macOS_ADE_Account.png" alt="" width="800" data-align="left"/>
 
 
 Click **Create**
@@ -674,7 +674,7 @@ Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. `FileVault` then click **Next**
 
@@ -705,7 +705,7 @@ Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. Firewall then click **Next**
 
@@ -735,7 +735,7 @@ Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. Gatekeeper then click **Next**
 
@@ -764,7 +764,7 @@ Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. `Entra ID PSSO` then click **Next**
 
@@ -798,7 +798,7 @@ Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. Office 365 Parameters then click **Next**
 
@@ -822,6 +822,8 @@ This can be done with a text editor or a tool like [iMazing Profile Editor](http
 [Baseline Sample Configs](https://github.com/SecondSonConsulting/Baseline/tree/main/ExampleConfigurationFiles)
 
 [Support App Sample Config](https://github.com/root3nl/SupportApp/blob/master/Configuration%20Profile%20Samples/Support%20App%20Configuration%20Sample.mobileconfig)
+
+[Privileges App Sample Configs](https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#sample-configuration-profiles)
 
 The Baseline Config for this workshop can be found here - [Baseline Configuration File](#baseline-configuration-profile)
 
@@ -861,7 +863,7 @@ Navigate to **Devices -> macOS -> Configuration**
 
 Click **+ Create  -> + New Policy** to Create a new profile
 
-Click **Profile Type - Settings Catalog** then **Create**
+Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. Background and Login Items then click **Next**
 
@@ -1425,6 +1427,6 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 ```
 ## Links to other resources
 
-[Resources Page](Resources.md)
+[Resources Page](Resources.html)
 
 ***

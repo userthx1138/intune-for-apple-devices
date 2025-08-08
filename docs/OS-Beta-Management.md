@@ -28,9 +28,5 @@ Neil Johnson of Microsoft has provided a script that can acheive this:
 4. Download the MDM token to Downloads. The script should detect this and automatically retrive the Beta Tokens and output them to the terminal
 5. Copy these tokens to a file for future reference.
 
-## Configuring Beta Uodate Policies
-
-
-
-
+## Configuring Beta Update Policies
 

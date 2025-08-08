@@ -42,7 +42,7 @@
 </li>
 <li><a href="#ios-configuration-profiles">iOS Configuration Profiles</a>
 <ul>
-<li><a href="#passcode-compliance-policy">Passcode Compliance Policy</a></li>
+<li><a href="#ios-passcode-profile">iOS Passcode Profile</a></li>
 <li><a href="#managed-open-in-profile">Managed Open In Profile</a></li>
 <li><a href="#single-sign-on-profile">Single Sign On Profile</a></li>
 <li><a href="#email-profile">Email Profile</a></li>
@@ -57,6 +57,11 @@
 <li><a href="#ios-app-configuration">iOS App Configuration</a>
 <ul>
 <li><a href="#teams">Teams</a></li>
+</ul>
+</li>
+<li><a href="#ios-compliance-policy">iOS Compliance Policy</a>
+<ul>
+<li><a href="#passcode-compliance-policy">Passcode Compliance Policy</a></li>
 </ul>
 </li>
 <li><a href="#ios-device-assignment">iOS Device Assignment</a>
@@ -249,17 +254,19 @@ create the Server Token</p>
 <div style="page-break-after: always"></div>
 <h1 id="ios-configuration-profiles">iOS Configuration Profiles </h1>
 <p><em>Create a few essential configuration profiles. The method is the same in each case with one possible key difference. Use of a Template or the Setting Catalog.</em></p>
-<h2 id="passcode-compliance-policy">Passcode Compliance Policy </h2>
-<p><em>Setting a Compliance Policy creates a configuration profile and also implements a corresponding compliance check in Intune. This policy is used to ensure a device passcode is set with appropriate complexity.</em></p>
-<p><a href="https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios">https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios</a></p>
-<br>
+<h2 id="ios-passcode-profile">iOS Passcode Profile </h2>
+<p><em>The <a href="https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/passcode.settings.yaml">passcode configuration declaration</a> is used to set the minimum complexity of the device unlock passcode.</em></p>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Compliance</strong></p>
-<p>Click <strong>+ Create policy</strong> to Create a new policy then Create a Policy <strong>Create</strong></p>
-<p>Give the policy a name e.g. <code>Passcode</code> then click <strong>Next</strong></p>
-<p>Under <strong>System Security</strong></p>
-<img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left">
-<p>Click <strong>+ Add all devices</strong></p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
+<p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Give the profile a name e.g. <code>Passcode</code> then click <strong>Next</strong></p>
+<p>Click <strong>+ Add settings</strong> and choose <strong>Declarative Device Management (DDM) -&gt; Passcode</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
+<p>Set the values as shown</p>
+<img src="assets/DDM_Passcode.png" alt="" width="800" data-align="left">
+<p>Click <strong>Next</strong> then on Scope Tags click <strong>Next</strong></p>
+<p>In Assignments Click <strong>+ Add all devices</strong> (Optionally apply a Filter)</p>
+<p>Click <strong>Next</strong> then Click <strong>Create</strong></p>
 <p><em><strong>Note:</strong> You can refine your scope by using Assignment Filters. See <a href="#using-assignment-filters">Using Assignment Filters</a></em></p>
 <p>Click <strong>Next</strong></p>
 <p>Click <strong>Create</strong></p>
@@ -380,7 +387,7 @@ create the Server Token</p>
 <h2 id="teams">Teams </h2>
 <p>In the Intune UI</p>
 <p><strong>Apps -&gt; Configuration</strong></p>
-<p>Click <strong>+ Add -&gt; Managed Devices</strong></p>
+<p>Click <strong>+ Create -&gt; Managed Devices</strong></p>
 <p>Give the policy a name e.g. <code>Teams UPN</code></p>
 <p>Select Platform <strong>iOS/iPadOS</strong></p>
 <p>Targeted App -&gt; Select <strong>Microsoft Teams</strong></p>
@@ -413,6 +420,18 @@ create the Server Token</p>
 <p>Click <strong>Create</strong></p>
 <hr>
 <div style="page-break-after: always"></div>
+<h1 id="ios-compliance-policy">iOS Compliance Policy </h1>
+<h2 id="passcode-compliance-policy">Passcode Compliance Policy </h2>
+<p><em>Setting a Compliance Policy implements a device compliance check in Intune. This policy is used to ensure a device passcode is set with appropriate complexity.</em></p>
+<p><a href="https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios">https://learn.microsoft.com/en-us/mem/intune/protect/compliance-policy-create-ios</a></p>
+<br>
+<p>In the <strong>Intune UI</strong></p>
+<p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Compliance</strong></p>
+<p>Click <strong>+ Create policy</strong> to Create a new policy then Create a Policy <strong>Create</strong></p>
+<p>Give the policy a name e.g. <code>Passcode</code> then click <strong>Next</strong></p>
+<p>Under <strong>System Security</strong></p>
+<img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left">
+<p>Click <strong>+ Add all devices</strong></p>
 <h1 id="ios-device-assignment">iOS Device Assignment </h1>
 <p>In <strong>Apple Business Manager</strong></p>
 <p>From the sidebar click <strong>Devices</strong></p>
@@ -652,7 +671,7 @@ screens to Hide except</p>
 <br></p>
 <p>In the <strong>Intune UI</strong></p>
 <p><strong>Apps -&gt; macOS</strong></p>
-<p>Click <strong>+ Add</strong></p>
+<p>Click <strong>+ Create</strong></p>
 <p>From the drop down menu select <strong>Other -&gt; Line-of-business app</strong></p>
 <p>Upload the Baseline App package file <code>Baseline_v2.2.pkg</code></p>
 <img src="assets/InstallBaseline1.png" alt="" width="800" data-align="left">
@@ -691,7 +710,7 @@ screens to Hide except</p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
 <p><strong>Apps -&gt; macOS</strong></p>
-<p>Click <strong>+ Add</strong></p>
+<p>Click <strong>+ Create</strong></p>
 <p>From the drop down menu select <strong>Other -&gt; macOS App (PKG)</strong> then click <strong>Select</strong></p>
 <p>Click <strong>Select app package file</strong> and choose the <code>Wallpaper.pkg</code> file</p>
 <p>Under <strong>App Information</strong> set</p>
