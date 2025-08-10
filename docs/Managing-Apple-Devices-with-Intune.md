@@ -939,6 +939,37 @@ Under **Assignments -> Required** click **+Add all devices**
 ***
 <div style="page-break-after: always"></div>
 
+### Make Privileges app available in Company Portal
+
+_The Privileges App can be used to temporarily grant a user Admin privileges_
+
+Download the latest packaged version of Privileges from [https://github.com/SAP/macOS-enterprise-privileges/releases](https://github.com/SAP/macOS-enterprise-privileges/releases)
+<br>
+
+In the **Intune UI**
+
+**Apps -> macOS**
+
+Click **+ Create**
+
+From the drop down menu select **Other -> macOS app (PKG)**
+
+Upload the Privileges App package file `Privileges_2.4.0.pkg`
+
+Set the **Publisher** to `corp.sap` and click **Next** then **Next**
+
+Set the **Minimum operating system** to `macOS Sequoia 15.0` then click **Next**
+
+
+<img src="assets/Privileges_App1.png" alt="" width="800" data-align="left"/>
+
+Click **Next**
+
+Under **Assignments -> Available** click **+Add all devices**
+
+***
+<div style="page-break-after: always"></div>
+
 ## Built In Apps
 
 ### Deploy Microsoft Office
@@ -1388,10 +1419,6 @@ Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings
 			<key>Packages</key>
 			<array>
 				<dict>
-					<key>DisplayName</key>
-					<string>Installing Privileges App</string>
-					<key>PackagePath</key>
-					<string>https://github.com/SAP/macOS-enterprise-privileges/releases/download/2.1.0/Privileges_2.1.0.pkg</string>
 				</dict>
 			</array>
 			<key>PayloadDisplayName</key>
