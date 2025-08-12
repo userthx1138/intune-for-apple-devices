@@ -57,7 +57,6 @@ Managing Apple Devices with Intune
   - [Using Assignment Filters](#using-assignment-filters)
 - [Mac Operations](#mac-operations)
   - [Software Updates](#software-updates)
-  - [DDM Software Updates](#ddm-software-updates)
   - [FileVault Key Escrow](#filevault-key-escrow)
   - [Erase All Content and Settings](#erase-all-content-and-settings)
 - [Additional Mac Config Profiles](#additional-mac-config-profiles)
@@ -608,6 +607,8 @@ You can now test the enrolment process on the iPhone you have assigned
 ## Mac Device Enrollment Profile
 
 *The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.*
+
+*Intune Service Realease 2507 introduced LAPS for macOS and the ability to create the first interactive user as a Standard User*
 <br>
 
 In the **Intune UI**
@@ -754,7 +755,7 @@ Click **Next** then Click **Create**
 
 ## Platform SSO Profile
 
-*The Platform Single Sign On profile enables the use of Apple's Single Sign On framework in conjunction with the Entra ID PSSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device.*
+*The Platform Single Sign On profile enables the use of Apple's Single Sign On framework in conjunction with the Entra ID PSSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device. In this example we will use the Secure Enclave Key method for authentication*
 
 <br>
 
@@ -930,7 +931,7 @@ Click **+ Create**
 
 From the drop down menu select **Other -> Line-of-business app**
 
-Upload the Baseline App package file `Baseline_v2.2.pkg`
+Upload the Baseline App package file `Baseline_v2.3pkg`
 
 <img src="assets/InstallBaseline1.png" alt="" width="800" data-align="left"/>
 
@@ -1082,7 +1083,7 @@ Click **Next** then Click **Create**
 
 ## Disk Encryption Policy
 
-*Intune can implement Compliance Policies which are evaluated as true or*false. This calculated state can be used by Azure AD Conditional Access polices to determine whether a user can access certain cloud based**resources from the device.*
+*Intune can implement Compliance Policies which are evaluated as true or false. This calculated state can be used by Azure AD Conditional Access polices to determine whether a user can access certain cloud based**resources from the device.*
 <br>
 
 In the Intune UI
@@ -1199,28 +1200,13 @@ Select **Include filtered devices in assignment** then slelct the previouly crea
 
 In the **Intune UI**
 
-Navigate to **Devices -> macOS -> Update policies for macOS**
-
-Click **+ Create** to Create a new profile
-
-Give the profile a name then click **Next**
-
-<img src="assets/Hk2FJRLFPSLdr.png" alt="" width="800" data-align="left"/>
-
-***
-<div style="page-break-after: always"></div>
-
-## DDM Software Updates
-
-In the **Intune UI**
-
 Navigate to Devices -> macOS -> Configuration Profiles
 
 Click **+ Create** to Create a new profile
 
 Click **Profile Type - Settings Catalog** then **Create**
 
-Give the profile a name e.g. `macOS Software Update` then click **Next**
+Give the profile a name e.g. `macOS Enforce Software Update` then click **Next**
 
 Click **+ Add settings** and choose **Declarative Device Management (DDM) -> Software Update** then check Local Date and Time and Target OS Version and close the Settings Picker
 
