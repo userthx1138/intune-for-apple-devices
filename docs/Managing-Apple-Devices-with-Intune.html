@@ -116,7 +116,6 @@
 <li><a href="#mac-operations">Mac Operations</a>
 <ul>
 <li><a href="#software-updates">Software Updates</a></li>
-<li><a href="#ddm-software-updates">DDM Software Updates</a></li>
 <li><a href="#filevault-key-escrow">FileVault Key Escrow</a></li>
 <li><a href="#erase-all-content-and-settings">Erase All Content and Settings</a></li>
 </ul>
@@ -277,7 +276,7 @@ create the Server Token</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Managed Open In</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Restrictions</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
 <p>Set the values to True or False as shown</p>
@@ -292,7 +291,7 @@ create the Server Token</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Entra ID SSO</code> then click Next</p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Authentication -&gt; Extensible Single Sign On (SSO)</strong> and select the settings in the screenshot below and close the Settings Picker</p>
 <img src="assets/HnfsoqYENrt5D.png" alt="" width="800" data-align="left">
@@ -337,7 +336,7 @@ create the Server Token</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Templates</strong> then <strong>Email</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Templates</strong> then <strong>Email</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Exchange</code> Online then click <strong>Next</strong></p>
 <img src="assets/iRqMwGxb2KpBS.png" alt="" width="800" data-align="left">
 <p>Click <strong>+ Add all devices</strong></p>
@@ -350,7 +349,7 @@ create the Server Token</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; iOS/iPadOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Templates</strong> then <strong>Device Features</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Templates</strong> then <strong>Device Features</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Manage Devices Wallpaper</code> then click <strong>Next</strong></p>
 <p>On the <strong>Configuration Settings</strong> screen select <strong>Wallpaper</strong></p>
 <img src="assets/iOS_Wallpaper.png" alt="" width="800" data-align="left">
@@ -390,9 +389,9 @@ create the Server Token</p>
 <p>Click <strong>+ Create -&gt; Managed Devices</strong></p>
 <p>Give the policy a name e.g. <code>Teams UPN</code></p>
 <p>Select Platform <strong>iOS/iPadOS</strong></p>
-<p>Targeted App -&gt; Select <strong>Microsoft Teams</strong></p>
+<p><strong>Targeted App -&gt; Select -&gt; Microsoft Teams</strong></p>
 <p>Click <strong>Next</strong></p>
-<p>Configuration settings format -&gt; select <strong>Use configuration designer</strong></p>
+<p><strong>Configuration settings format -&gt; Use configuration designer</strong></p>
 <p>Enter values as follows:</p>
 <table>
 <thead>
@@ -453,7 +452,8 @@ create the Server Token</p>
 <div style="page-break-after: always"></div>
 <h1 id="macos">macOS </h1>
 <h2 id="mac-device-enrollment-profile">Mac Device Enrollment Profile </h2>
-<p><em>The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.</em><br>
+<p><em>The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.</em></p>
+<p><em>Intune Service Realease 2507 introduced LAPS for macOS and the ability to create the first interactive user as a Standard User</em><br>
 <br></p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Enrollment</strong></p>
@@ -471,7 +471,7 @@ screens to Hide except</p>
 <p>Location Services = <code>Show</code></p>
 <p>Touch ID and Face ID = <code>Show</code></p>
 <p>Configure Account Settings</p>
-<img src="assets/5Yq7p8yzbb7q0.png" alt="" width="800" data-align="left">
+<img src="assets/macOS_ADE_Account.png" alt="" width="800" data-align="left">
 <p>Click <strong>Create</strong></p>
 <p>Click <strong>Set default profile</strong> and set the just created profile as the default for macOS</p>
 <img src="assets/CntiwVDVz784T.png" alt="" width="800" data-align="left">
@@ -486,7 +486,7 @@ screens to Hide except</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>FileVault</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Full Disk Encryption</strong> and select the settings in the screenshot below and close the Settings Picker.</p>
 <p>Make the selections as shown</p>
@@ -502,7 +502,7 @@ screens to Hide except</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Firewall then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Networking -&gt; Firewall</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
 <p>Make the selections as shown</p>
@@ -517,7 +517,7 @@ screens to Hide except</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Gatekeeper then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose setting from <strong>App Store, System Policy</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
 <img src="assets/fP1Q85BdL0PgE.png" alt="" width="800" data-align="left">
@@ -527,12 +527,12 @@ screens to Hide except</p>
 <hr>
 <div style="page-break-after: always"></div>
 <h2 id="platform-sso-profile">Platform SSO Profile </h2>
-<p><em>The Platform Single Sign On profile enables the use of Apple's Single Sign On framework in conjunction with the Entra ID PSSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device.</em></p>
+<p><em>The Platform Single Sign On profile enables the use of Apple's Single Sign On framework in conjunction with the Entra ID PSSO Extension to reduce the burden on users logging in while maintained strong authentication and authorisation using modern authentication protocols. This also requires that Company Portal is installed on the device. In this example we will use the Secure Enclave Key method for authentication</em></p>
 <br>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. <code>Entra ID PSSO</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Authentication -&gt; Extensible Single Sign On (SSO)</strong> and select the settings in the screenshot below and close the <strong>Settings Picker</strong></p>
 <img src="assets/PSSO1.png" alt="" width="800" data-align="left">
@@ -573,7 +573,7 @@ screens to Hide except</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Office 365 Parameters then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Microsoft Office -&gt; Microsoft Office</strong> then click the <strong>Enable Automatic sign-in</strong> and <strong>Office Activation Email Address</strong> checkboxes and close the <strong>Settings Picker</strong></p>
 <img src="assets/ckbr88YtyUFJT.png" alt="" width="800" data-align="left">
@@ -586,6 +586,7 @@ screens to Hide except</p>
 <p>This can be done with a text editor or a tool like <a href="https://imazing.com/profile-editor">iMazing Profile Editor</a>.</p>
 <p><a href="https://github.com/SecondSonConsulting/Baseline/tree/main/ExampleConfigurationFiles">Baseline Sample Configs</a></p>
 <p><a href="https://github.com/root3nl/SupportApp/blob/master/Configuration%20Profile%20Samples/Support%20App%20Configuration%20Sample.mobileconfig">Support App Sample Config</a></p>
+<p><a href="https://github.com/SAP/macOS-enterprise-privileges/wiki/Managing-Privileges#sample-configuration-profiles">Privileges App Sample Configs</a></p>
 <p>The Baseline Config for this workshop can be found here - <a href="#baseline-configuration-profile">Baseline Configuration File</a></p>
 <img src="assets/Imazing_Baseline.png" alt="" width="800" data-align="left">
 <p>In the <strong>Intune UI</strong></p>
@@ -605,7 +606,7 @@ screens to Hide except</p>
 <p>In the <strong>Intune UI</strong></p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Configuration</strong></p>
 <p>Click <strong>+ Create  -&gt; + New Policy</strong> to Create a new profile</p>
-<p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
+<p>Click <strong>Profile Type -&gt; Settings Catalog</strong> then <strong>Create</strong></p>
 <p>Give the profile a name e.g. Background and Login Items then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Login -&gt; Service Management - Managed Login Items</strong> then check all but <strong>Team Identifier</strong> and close the <strong>Settings Picker</strong></p>
 <img src="assets/ExjJYDRiuHooD.png" alt="" width="800" data-align="left">
@@ -673,9 +674,25 @@ screens to Hide except</p>
 <p><strong>Apps -&gt; macOS</strong></p>
 <p>Click <strong>+ Create</strong></p>
 <p>From the drop down menu select <strong>Other -&gt; Line-of-business app</strong></p>
-<p>Upload the Baseline App package file <code>Baseline_v2.2.pkg</code></p>
+<p>Upload the Baseline App package file <code>Baseline_v2.3pkg</code></p>
 <img src="assets/InstallBaseline1.png" alt="" width="800" data-align="left">
 <p>Under <strong>Assignments -&gt; Required</strong> click <strong>+Add all devices</strong></p>
+<hr>
+<div style="page-break-after: always"></div>
+<h3 id="make-privileges-app-available-in-company-portal">Make Privileges app available in Company Portal </h3>
+<p><em>The Privileges App can be used to temporarily grant a user Admin privileges</em></p>
+<p>Download the latest packaged version of Privileges from <a href="https://github.com/SAP/macOS-enterprise-privileges/releases">https://github.com/SAP/macOS-enterprise-privileges/releases</a><br>
+<br></p>
+<p>In the <strong>Intune UI</strong></p>
+<p><strong>Apps -&gt; macOS</strong></p>
+<p>Click <strong>+ Create</strong></p>
+<p>From the drop down menu select <strong>Other -&gt; macOS app (PKG)</strong></p>
+<p>Upload the Privileges App package file <code>Privileges_2.4.0.pkg</code></p>
+<p>Set the <strong>Publisher</strong> to <code>corp.sap</code> and click <strong>Next</strong> then <strong>Next</strong></p>
+<p>Set the <strong>Minimum operating system</strong> to <code>macOS Sequoia 15.0</code> then click <strong>Next</strong></p>
+<img src="assets/Privileges_App1.png" alt="" width="800" data-align="left">
+<p>Click <strong>Next</strong></p>
+<p>Under <strong>Assignments -&gt; Available</strong> click <strong>+Add all devices</strong></p>
 <hr>
 <div style="page-break-after: always"></div>
 <h2 id="built-in-apps">Built In Apps </h2>
@@ -737,7 +754,7 @@ screens to Hide except</p>
 <div style="page-break-after: always"></div>
 <h1 id="compliance-policies">Compliance Policies </h1>
 <h2 id="disk-encryption-policy">Disk Encryption Policy </h2>
-<p><em>Intune can implement Compliance Policies which are evaluated as true or</em>false. This calculated state can be used by Azure AD Conditional Access polices to determine whether a user can access certain cloud based**resources from the device.*<br>
+<p><em>Intune can implement Compliance Policies which are evaluated as true or false. This calculated state can be used by Azure AD Conditional Access polices to determine whether a user can access certain cloud based**resources from the device.</em><br>
 <br></p>
 <p>In the Intune UI</p>
 <p>Navigate to <strong>Devices -&gt; macOS -&gt; Compliance policies</strong></p>
@@ -798,18 +815,10 @@ screens to Hide except</p>
 <h1 id="mac-operations">Mac Operations </h1>
 <h2 id="software-updates">Software Updates </h2>
 <p>In the <strong>Intune UI</strong></p>
-<p>Navigate to <strong>Devices -&gt; macOS -&gt; Update policies for macOS</strong></p>
-<p>Click <strong>+ Create</strong> to Create a new profile</p>
-<p>Give the profile a name then click <strong>Next</strong></p>
-<img src="assets/Hk2FJRLFPSLdr.png" alt="" width="800" data-align="left">
-<hr>
-<div style="page-break-after: always"></div>
-<h2 id="ddm-software-updates">DDM Software Updates </h2>
-<p>In the <strong>Intune UI</strong></p>
 <p>Navigate to Devices -&gt; macOS -&gt; Configuration Profiles</p>
 <p>Click <strong>+ Create</strong> to Create a new profile</p>
 <p>Click <strong>Profile Type - Settings Catalog</strong> then <strong>Create</strong></p>
-<p>Give the profile a name e.g. <code>macOS Software Update</code> then click <strong>Next</strong></p>
+<p>Give the profile a name e.g. <code>macOS Enforce Software Update</code> then click <strong>Next</strong></p>
 <p>Click <strong>+ Add settings</strong> and choose <strong>Declarative Device Management (DDM) -&gt; Software Update</strong> then check Local Date and Time and Target OS Version and close the Settings Picker</p>
 <img src="assets/hcEAcR7W48pDS.png" alt="" width="800" data-align="left">
 <hr>
@@ -939,10 +948,6 @@ screens to Hide except</p>
 			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>Packages<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
 			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>array</span><span class="token punctuation">&gt;</span></span>
 				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>dict</span><span class="token punctuation">&gt;</span></span>
-					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>DisplayName<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
-					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>Installing Privileges App<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
-					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>PackagePath<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
-					<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>string</span><span class="token punctuation">&gt;</span></span>https://github.com/SAP/macOS-enterprise-privileges/releases/download/2.1.0/Privileges_2.1.0.pkg<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>string</span><span class="token punctuation">&gt;</span></span>
 				<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
 			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>array</span><span class="token punctuation">&gt;</span></span>
 			<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>key</span><span class="token punctuation">&gt;</span></span>PayloadDisplayName<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>key</span><span class="token punctuation">&gt;</span></span>
@@ -976,7 +981,7 @@ screens to Hide except</p>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>dict</span><span class="token punctuation">&gt;</span></span>
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>plist</span><span class="token punctuation">&gt;</span></span>
 </code></pre><h2 id="links-to-other-resources">Links to other resources </h2>
-<p><a href="Resources.md">Resources Page</a></p>
+<p><a href="Resources.html">Resources Page</a></p>
 <hr>
 
       </div>

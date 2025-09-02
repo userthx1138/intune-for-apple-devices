@@ -79,7 +79,7 @@ The following pages give high level directions for setting up Intune with basic 
 
 It is assumed that you are already familiar with Intune and have existing Intune and Apple Business Manager instances set up and have logins with sufficient privilege to carry out the operations required.
 
-In Apple Business Manager a Managed Apple Account with either the *Administrator* or *Device Enrollment Manager* role is required to add an MDM. To add a Location and assign the Content the _Administrator_ or _People Manager_ role is required.
+In Apple Business Manager a Managed Apple Account with either the *Administrator* or *Device Enrollment Manager* role is required to add a Device Management Service. To add a Location and assign the Content the _Administrator_ or _People Manager_ role is required.
 
 In Intune sign in as a member of the *Global Administrator* or *Intune Service Administrator* Entra ID roles
 
@@ -92,7 +92,7 @@ This section describes the essential setup information that links Intune to the 
 
 ## APNS Certificate
 
-_Apple Push Notification Services are critical to the operation of MDM. For any action the MDM needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS._
+_Apple Push Notification Services are critical to the operation of Device Management Service. For any action the Device Management Service needs to take such as issuing a command or installing a profile the initial communication with the device is via APNS._
 
 <br>
 
@@ -130,7 +130,7 @@ The Microsoft Documentation for this procedure is at [https://learn.microsoft.co
 
 ## Automated Device Enrollment Token
 
-*The Device Enrollment token enables secure communication between Apple Business Manager or Apple School Manager and the MDM to allow for Automated Device Enrollment.*
+*The Device Enrollment token enables secure communication between Apple Business Manager or Apple School Manager and the Device Management Service to allow for Automated Device Enrollment.*
 
 In the **Intune UI**
 
@@ -148,11 +148,11 @@ To access Apple Business Manager open a new browser window or tab and navigate t
 
 Click your name at the bottom of the left sidebar, and click **Preferences**
 
-Under **Your MDM Servers** click the plus sign **+** to add an MDM
+Under **Device Management Services** click the plus sign **+** to add a Device Management Service
 
-Name your MDM server and upload the **Public Key**
+Name your Device Management Service and upload the **Public Key**
 
-Download the Server Token by clicking on **Download MDM Server Token** then clicking **Download Server MDM Token**
+Download the Server Token by clicking on **Download Token** then clicking **Download Token**
 <br>
 
 In the **Intune UI**
@@ -167,7 +167,7 @@ The Microsoft Documentation for this procedure is at
 
 ## Apps and Books Token
 
-*The Apps and Books Token (previously known as the Volume Purchase Program or VPP token) enables secure communication between Apple Business Manager or Apple School Manager and the MDM for the management of Apps and Book licensing*  
+*The Apps and Books Token (previously known as the Volume Purchase Program or VPP token) enables secure communication between Apple Business Manager or Apple School Manager and the Device Management Service for the management of Apps and Book licensing*  
 <br>
 
 
@@ -216,7 +216,7 @@ The Microsoft Documentation for this procedure is at
 
 ## iOS Device Enrollment Profile
 
-*The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.*
+*The Device Enrollment Profile is created by the Device Management Service and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the Device Management Service that will manage the device. A list of Setup Assistant items to hide from the user is also provided.*
 
 ### Purchase Company Portal licenses
 
@@ -571,9 +571,9 @@ From the sidebar click **Devices**
 
 Search for the serial number of the iPhone you will enrol and select it
 
-Click **Edit MDM Server**
+Click on the elipsis in the top right corner
 
-Click **Assign the Following MDM** and choose the appropriate MDM from the drop down list then click Continue
+Click **Assign Device Management** and choose the appropriate Device Management Service from the drop down list then click Continue
 
 
 
@@ -606,9 +606,9 @@ You can now test the enrolment process on the iPhone you have assigned
 
 ## Mac Device Enrollment Profile
 
-*The Device Enrollment Profile is created by the MDM and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the MDM that will manage the device. A list of Setup Assistant items to hide from the user is also provided.*
+*The Device Enrollment Profile is created by the Device Management Service and synchronised with Apple Business Manager or Apple School Manager to enable the Automated Device Enrolment process. A Device Enrollment Profile is created and assigned to one or more devices. Upon activation that profile will be installed on the device which will provide certificates and the URL of the Device Management Service that will manage the device. A list of Setup Assistant items to hide from the user is also provided.*
 
-*Intune Service Realease 2507 introduced LAPS for macOS and the ability to create the first interactive user as a Standard User*
+*Intune Service Release 2507 introduced LAPS for macOS and the ability to create the first interactive user as a Standard User*
 <br>
 
 In the **Intune UI**
@@ -918,7 +918,7 @@ Under **Properties -> Assignments** click **Edit** and click **+Add all devices*
 
 _The Baseline App runs after the Setup Assistant completes and installs other necessary apps before the user gets to the Desktop. For this example Baseline installs Microsoft Company Portal, the Support app and the Privileges app. These options were configured earlier using the Custom Profile for Baseline_
 
-_Intune supports two methods to deploy .pkg files. As this package has been created and signed by the developer we will use the Line-of-business method that leverages the MDM command InstallEnterpriseApplication._
+_Intune supports two methods to deploy .pkg files. As this package has been created and signed by the developer we will use the Line-of-business method that leverages the Device Management Service command InstallEnterpriseApplication._
 
 Download the latest packaged version of Baseline from [https://github.com/SecondSonConsulting/Baseline/releases/tag/v2.2](https://github.com/SecondSonConsulting/Baseline/releases/tag/v2.2)
 <br>
@@ -1123,9 +1123,9 @@ From the sidebar click **Devices**
 
 Search for the serial number of the Mac you will enrol and select it
 
-Click **Edit MDM Server**
+Click the elipsis in the top right corner
 
-Click **Assign the Following MDM** and choose the appropriate MDM from the drop down list then click **Continue**
+Click **Assign Device Management** and choose the appropriate Device Management Service from the drop down list then click **Continue**
 <br>
 
 In the **Intune UI**
@@ -1344,8 +1344,6 @@ Click **+ Add settings** and choose **System Configuration -> Screensaver -> Sel
 
 ## Configure Passcode Profile
 
-_**NOTE:** Be sure to set this via the Settings Catalog and not via a Template_
-
 In the **Intune UI**
 
 Navigate to **Devices -> macOS -> Configuration**
@@ -1356,9 +1354,9 @@ Click **Profile Type -> Settings Catalog** then **Create**
 
 Give the profile a name e.g. `Passcode Policy` then click **Next**
 
-Click **+ Add settings** and choose **Security -> Passcode ->** *Needed Settings based on company security policy*
+Click **+ Add settings** and choose **Declaritive Device Management (DDM) -> Passcode ->** *Needed Settings based on company security policy*
 
-<img src="assets/l9aGkXT9CmjXt.png" alt="" width="400" data-align="left"/>
+<img src="assets/DDM_Passcode1.png" alt="" width="800" data-align="left"/>
 
 ***
 <div style="page-break-after: always"></div>
