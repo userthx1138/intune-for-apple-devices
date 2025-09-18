@@ -44,14 +44,12 @@
 
 ## Microsoft
 
+### Intune
+
 * [End-to-end guide to get started with macOS endpoints by Microsoft](https://learn.microsoft.com/en-au/mem/solutions/end-to-end-guides/macos-endpoints-get-started)
 
 * [Set up enrollment for macOS devices in Intune](https://learn.microsoft.com/en-us/mem/intune/enrollment/macos-enroll)
 
-* [Configure Temporary Access Pass in Azure AD to register Passwordless authentication methods](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-temporary-access-pass)
-
-* [Just in Time Registration and Compliance Remediation for iOS / iPadOS with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/just-in-time-registration-and-compliance-remediation-for-ios/ba-p/3660843
-)
 * [Add app configuration policies for managed iOS/iPadOS devices](https://learn.microsoft.com/en-us/mem/intune/apps/app-configuration-policies-use-ios)
 
 * [User filters when assigning your apps, policies, and profiles in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/fundamentals/filters)
@@ -60,16 +58,12 @@
 
 * [Intune Device Checkin Frequency](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot)
 
-
-* [Script to report on stale devices](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Reporting/ManagedDeviceCertificateExpiryReport)
-
 * [Deploying Microsoft 365 Apps for Mac](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-microsoft-365-apps-for-mac-with-microsoft-intune-a/ba-p/2243040)
-
-* [macOS update policies](https://learn.microsoft.com/en-us/mem/intune/protect/software-updates-macos)
   
 * [Use shell scripts on macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/apps/macos-shell-scripts)
 
 * [Deploying macOS apps with the Microsoft Intune scripting agent](https://techcommunity.microsoft.com/t5/intune-customer-success/deploying-macos-apps-with-the-microsoft-intune-scripting-agent/ba-p/2298072)
+
 * [Intune Shell Scripts](https://github.com/microsoft/shell-intune-samples/tree/master/macOS)
 
 * [Microsoft Enterprise SSO plug-in for Apple devices](https://learn.microsoft.com/en-us/azure/active-directory/develop/apple-sso-plugin)
@@ -77,8 +71,21 @@
 * [Configure Platform SSO for macOS devices in Microsoft Intune](https://learn.microsoft.com/en-us/intune/intune-service/configuration/platform-sso-macos)
 
 * [macOS LOB apps](https://learn.microsoft.com/en-us/mem/intune/apps/lob-apps-macos)
+
 * [Compliance and device configuration policies that conflict](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-troubleshoot#compliance-and-device-configuration-policies-that-conflict)
+
 * [Apple MDM Beta Token Automation](https://github.com/microsoft/shell-intune-samples/tree/master/macOS/Tools/getBetaTokens)
+
+### Entra ID
+
+* [Configure Temporary Access Pass in Azure AD to register Passwordless authentication methods](https://learn.microsoft.com/en-us/azure/active-directory/authentication/howto-authentication-temporary-access-pass)
+
+* [Just in Time Registration and Compliance Remediation for iOS / iPadOS with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/just-in-time-registration-and-compliance-remediation-for-ios/ba-p/3660843
+)
+
+* [Script to report on stale devices](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Reporting/ManagedDeviceCertificateExpiryReport)
+
+* [Enable passkeys for your organization - Microsoft Entra ID | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
 
 ## Other 3rd Party
@@ -114,10 +121,6 @@
 * [Munki - Software Management for macOS](https://www.munki.org/munki/)
 
 * [Jamf PPPC Utility](https://github.com/jamf/PPPC-Utility/releases)
-
-* [iMazing Profile Editor](https://imazing.com/profile-editor)
-
-* [Comprehensive guide to managing macOS with Intune](https://oliverkieselbach.com/2021/07/14/comprehensive-guide-to-managing-macos-with-intune/) - A bit out of date but useful
 
 * [Microsoft Overview Feed for Apple](https://github.com/cocopuff2u/MOFA)
 

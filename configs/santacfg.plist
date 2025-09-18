@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>UnknownBlockMessage</key>
+	<string>This application is not approved for use on Pretendco Managed devices.&lt;br/&gt;Downloading, installing, and using applications without completing&lt;br/&gt;appropriate governance via a software packaging request&lt;br/&gt;and the Workplace Governance Guild is a violation&lt;br/&gt;of GIRP and presents a data-loss risk to the bank.</string>
+  <key>BannedBlockMessage</key>
+  	<string>This application is not approved for use on Pretendco Managed devices</string>
+  <key>EventDetailText</key>
+  	<string>More Info</string>
+  <key>EventDetailURL</key>
+  	<string>https://apple.com</string>
+  <key>MoreInfoURL</key>
+  	<string>https://apple.com</string>
+  <key>ClientMode</key>
+  	<integer>2</integer>
+  <key>MachineID</key>
+  	<string>$SERIALNUMBER</string>
+  <key>MachineOwnerKey</key>
+  	<string>lastUserName</string>
+  <key>MachineOwnerPlist</key>
+  	<string>/Library/Preferences/com.apple.loginwindow.plist</string>
+  <key>EventLogType</key>
+  	<string>filelog</string>
+  <key>FileAccessPolicyPlist</key>
+  	<string>/Library/Managed Preferences/pretendco.santa.fileaccess.plist</string>
+  <key>EnableTransitiveRules</key>
+  	<true />
+  <key>Telemetry</key>
+  	<array>
+    	<string>Everything</string>
+  	</array>
+  <key>EnableDebugLogging</key>
+  	<true />
+  <key>AllowedPathRegex</key>
+  	<string>^/(?:Applications|Library|usr/local)/.*</string>
+  <key>FileChangesRegex</key>
+  	<string>/private/var/folders/[A-Za-z]*/[A-Za-z0-9]*/[A-Z]*/TemporaryDirectory[.A-Za-z0-9]*/swift-openapi-generator-manifest</string>
+  <key>StaticRules</key>
+  	<array>
+  	 <dict>
+      <!-- Allow Xcode ld Compiler Rule -->
+      <key>identifier</key>
+      <string>platform:com.apple.ld</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Xcode lipo Compiler Rule -->
+      <key>identifier</key>
+      <string>platform:com.apple.lipo</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Xcode Linker Daemon Compiler Rule -->
+      <key>identifier</key>
+      <string>platform:com.apple.security.codesign</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPI	LER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict> 
+      <!-- Always allow Absolute -->
+      <key>identifier</key>
+      <string>8462WEET47</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>TEAMID</string>
+    </dict>
+    <dict>
+      <!-- Always allow ZScaler or totally screwed -->
+      <key>identifier</key>
+      <string>PCBCQZJ7S7</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>TEAMID</string>
+    </dict>
+    <dict>
+      <!-- Always allow JAMF -->
+      <key>identifier</key>
+      <string>483DWKW443</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>TEAMID</string>
+    </dict>
+    <dict>
+      <!-- Always allow Crowdstrike -->
+      <key>identifier</key>
+      <string>X9E956P446</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>TEAMID</string>
+    </dict>
+    <dict>
+      <!-- Always allow Qualys -->
+      <key>identifier</key>
+      <string>CLRUMG7LZ6</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>TEAMID</string>
+    </dict>
+    <dict>
+      <!-- Always allow NoMAD -->
+      <key>identifier</key>
+      <string>AAPZK3CB24:com.trusourcelabs.NoMAD</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Always allow MailToOutlook -->
+      <key>identifier</key>
+      <string>QGS93ZLCU7:MailToOutlook</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Microsoft installer helper -->
+      <key>identifier</key>
+      <string>UBF8T346G9:com.microsoft.wdav.installhelper</string>
+      <key>policy</key>
+      <string>ALLOWLIST</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Xcode Compiler Rule -->
+      <key>identifier</key>
+      <string>59GAB85EFG:com.apple.dt.Xcode</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Xcode Linker Daemon Compiler Rule -->
+      <key>identifier</key>
+      <string>59GAB85EFG:com.apple.ld</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Xcode Linker Daemon Compiler Rule -->
+      <key>identifier</key>
+      <string>platform:com.apple.dt.xcode_select.tool-shim</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Swift Frontend Compiler Rule -->
+      <key>identifier</key>
+      <string>59GAB85EFG:com.apple.swift-frontend</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Swift Package Compiler Rule -->
+      <key>identifier</key>
+      <string>59GAB85EFG:com.apple.swift-package</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Allow Swift Package Compiler Rule -->
+      <key>identifier</key>
+      <string>59GAB85EFG:com.apple.dt.xcodebuild</string>
+      <key>policy</key>
+      <string>ALLOWLIST_COMPILER</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+    <dict>
+      <!-- Block News to Demo -->
+      <key>identifier</key>
+      <string>platform:com.apple.news</string>
+      <key>policy</key>
+      <string>BLOCKLIST</string>
+      <key>rule_type</key>
+      <string>SIGNINGID</string>
+    </dict>
+  </array>
+</dict>
+</plist>
