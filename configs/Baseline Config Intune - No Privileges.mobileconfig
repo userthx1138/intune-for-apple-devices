@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>CleanupAfterUse</key>
+			<true/>
+			<key>DialogListOptions</key>
+			<string>--message "We're setting up a few prerequisites. You will be logged out when finished. Please log in with your local account password."</string>
+			<key>DialogSuccessOptions</key>
+			<string>--message "Please register this Mac with your Pretendco Entra ID when prompted"</string>
+			<key>ExitCondition</key>
+			<string>/Applications/Support.app/Contents/Info.plist</string>
+			<key>Installomator</key>
+			<array>
+				<dict>
+					<key>Arguments</key>
+					<string>"downloadURL=https://go.microsoft.com/fwlink/?linkid=853070"</string>
+					<key>DisplayName</key>
+					<string>Installing Company Portal</string>
+					<key>Label</key>
+					<string>microsoftcompanyportal</string>
+				</dict>
+				<dict>
+					<key>DisplayName</key>
+					<string>Installing Support App</string>
+					<key>Label</key>
+					<string>supportapp</string>
+				</dict>
+			</array>
+			<key>LogOut</key>
+			<true/>
+			<key>PayloadDisplayName</key>
+			<string>Baseline</string>
+			<key>PayloadIdentifier</key>
+			<string>com.secondsonconsulting.baseline.2D75BB9F-C586-4D99-B8B8-BFD026A2F183</string>
+			<key>PayloadType</key>
+			<string>com.secondsonconsulting.baseline</string>
+			<key>PayloadUUID</key>
+			<string>2D75BB9F-C586-4D99-B8B8-BFD026A2F183</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ProgressBar</key>
+			<true/>
+			<key>ProgressBarDisplayNames</key>
+			<true/>
+			<key>Restart</key>
+			<false/>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Baseline Config</string>
+	<key>PayloadIdentifier</key>
+	<string>Roberts-MacBook-Pro-14-M4.0B10CA74-EE01-40F7-91AC-EBFF4738419F</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>0B10CA74-EE01-40F7-91AC-EBFF4738419F</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>

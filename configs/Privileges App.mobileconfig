@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+		<dict>
+			<key>ExpirationInterval</key>
+			<integer>15</integer>
+			<key>PayloadDisplayName</key>
+			<string>SAP Privileges app</string>
+			<key>PayloadIdentifier</key>
+			<string>corp.sap.privileges.3D83624B-DAAE-427D-A05B-7F9E6C4460C5</string>
+			<key>PayloadType</key>
+			<string>corp.sap.privileges</string>
+			<key>PayloadUUID</key>
+			<string>3D83624B-DAAE-427D-A05B-7F9E6C4460C5</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>ReasonMinLength</key>
+			<integer>10</integer>
+			<key>ReasonRequired</key>
+			<true/>
+			<key>RequireAuthentication</key>
+			<true/>
+			<key>RevokePrivilegesAtLogin</key>
+			<true/>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>Privileges App</string>
+	<key>PayloadIdentifier</key>
+	<string>Roberts-MacBook-Pro-14.595317F1-8A2B-4DC5-9E39-C0C168E996AC</string>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>595317F1-8A2B-4DC5-9E39-C0C168E996AC</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
