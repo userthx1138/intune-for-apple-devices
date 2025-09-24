@@ -831,7 +831,7 @@ The Baseline Config for this workshop can be found here - [Baseline Configuratio
 
 <img src="assets/Imazing_Baseline.png" alt="" width="800" data-align="left"/>
 
-In the **Intune UI**
+In the **Intune UI** 
 
 Navigate to **Devices -> macOS -> Configuration**
 
@@ -1007,7 +1007,7 @@ Navigate to **Devices -> macOS -> Scripts**
 
 Click **+ Add**
 
-Name the Script e.g. Install Teams and click **Next**
+Name the Script e.g. `Install Windows App` and click **Next**
 
 Upload the saved `InstallRemoteDesktop.sh` file and set the parameters as 
 
