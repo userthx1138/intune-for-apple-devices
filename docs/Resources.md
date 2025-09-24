@@ -85,7 +85,7 @@
 
 * [Script to report on stale devices](https://github.com/scottbreenmsft/scripts/tree/master/Intune/Reporting/ManagedDeviceCertificateExpiryReport)
 
-* [Enable passkeys for your organization - Microsoft Entra ID | Microsoft Learn](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
+* [Enable passkeys for your organization - Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
 
 ## Other 3rd Party
