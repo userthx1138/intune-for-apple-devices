@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<!--
+NETWORK_RELAY(com.apple.relay.managed)
+attachment; filename="Jamf_Trust_5a22355a-7d4a-4553-9911-3a9ece8c6c70_pijqi0fu_INTUNE_SUPERVISED_IOS_.xml"
+-->
+<plist version="1.0">
+    <dict>
+        <key>PayloadType</key>
+        <string>Configuration</string>
+        <key>PayloadUUID</key>
+        <string>3350908e-ba0d-4afe-b313-999e43e3a57d</string>
+        <key>PayloadIdentifier</key>
+        <string>com.jamf.trust.profile.jit.pijqi0fu.supervised_ios</string>
+        <key>PayloadOrganization</key>
+        <string>Jamf</string>
+        <key>PayloadDisplayName</key>
+        <string>Jamf Trust</string>
+        <key>PayloadDescription</key>
+        <string>Keeping you safe and productive on your mobile device.</string>
+        <key>PayloadVersion</key>
+        <integer>1</integer>
+        <key>PayloadRemovalDisallowed</key>
+        <true/>
+        <key>PayloadContent</key>
+        <array>
+			<dict>
+				<key>PayloadType</key>
+				<string>com.apple.relay.managed</string>
+				<key>PayloadUUID</key>
+				<string>B7E0D3EC-8593-40A8-A4C1-26583D3A999</string>
+				<key>PayloadIdentifier</key>
+				<string>com.jamf.trust.profile.jit.pijqi0fu.supervised_ios.network.relay</string>
+				<key>PayloadDisplayName</key>
+				<string>Jamf Network Relay</string>
+				<key>PayloadDescription</key>
+				<string>Configures Network Relays</string>
+				<key>PayloadVersion</key>
+				<integer>1</integer>
+				<key>UIToggleEnabled</key>
+				<true/>
+				<key>Relays</key>
+				<array>
+					<dict>
+						<key>HTTP3RelayURL</key>
+						<string>https://mask.sc.jamfcloud.com</string>
+						<key>HTTP2RelayURL</key>
+						<string>https://mask-h2.sc.jamfcloud.com</string>
+						<key>PayloadCertificateUUID</key>
+						<string>BC9955E3-DAEC-498C-A5E0-C29A9D8AD3A0</string>
+						<key>AdditionalHTTPHeaderFields</key>
+						<dict>
+							<key>deployment-code</key>
+							<string>pijqi0fu-is-mem</string>
+							<key>request-id</key>
+							<string>INSERT-RANDOM-TRANSACTION-ID</string>
+						</dict>
+					</dict>
+				</array>
+				<key>MatchDomains</key>
+				<array>
+						<string>auto.map.wpademo.pc.wandera.com</string>
+						<string>map.wandera.com</string>
+				</array>
+				<key>ExcludedDomains</key>
+				<array>
+						<string>*.apple.com</string>
+				</array>
+			</dict>
+			<dict>
+				<key>PayloadType</key>
+				<string>com.apple.security.acme</string>
+				<key>PayloadUUID</key>
+				<string>BC9955E3-DAEC-498C-A5E0-C29A9D8AD3A0</string>
+				<key>PayloadIdentifier</key>
+				<string>com.apple.security.acme.BC9955E3-DAEC-498C-A5E0-C29A9D8AD3A0</string>
+				<key>PayloadDisplayName</key>
+				<string>ACME Certificate</string>
+				<key>PayloadOrganization</key>
+				<string>Jamf</string>
+				<key>PayloadVersion</key>
+				<integer>1</integer>
+				<key>Attest</key>
+				<true/>
+				<key>ClientIdentifier</key>
+				<string>device</string>
+				<key>DirectoryURL</key>
+				<string>https://attestation.acme.jamfcloud.com/acme/acme/directory?customerId=5a22355a-7d4a-4553-9911-3a9ece8c6c70</string>
+				<key>HardwareBound</key>
+				<true/>
+				<key>KeySize</key>
+				<integer>384</integer>
+				<key>KeyType</key>
+				<string>ECSECPrimeRandom</string>
+				<key>Subject</key>
+				<array>
+					<array>
+						<array>
+							<string>O</string>
+							<string>Apple ANZ - AU</string>
+						</array>
+					</array>
+				</array>
+			</dict>
+        </array>
+    </dict>
+</plist>
