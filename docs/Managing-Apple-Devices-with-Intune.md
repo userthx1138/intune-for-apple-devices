@@ -236,7 +236,7 @@ In the **Intune UI**
 
 Ensure the app appears in the list under Apps -> iOS/iPadOS apps
 
-<img src="assets/IF9DSDUOjQsDa.png" alt="" height="48" data-align="left"/>
+<img src="assets/Company_Portal_app.png" alt="" height="48" data-align="left"/>
 
 <br>
 
@@ -277,7 +277,7 @@ Await Final Configuration = `Yes`
 
 Other settings can be default
 
-<img src="assets/FtBdU09cONMZo.png" alt="" width="800" data-align="left"/>
+<img src="assets/iOS_ADE_MFA.png" alt="" width="800" data-align="left"/>
 
 Enter a department Name and Phone Number and toggle all setup assistant screens to Hide except
 
@@ -287,7 +287,7 @@ Location Services = `Show`
 
 Touch ID and Face ID = `Show`
 
-<img src="assets/HNEKjiiO8BmcJ.png" alt="" width="800" data-align="left"/>
+<img src="assets/iOS_Setup_Assistant_Skip.png" alt="" width="800" data-align="left"/>
 
 
 Save the enrolment profile
@@ -354,7 +354,7 @@ Click **+ Add settings** and choose **Restrictions** and select the settings in 
 
 Set the values to True or False as shown
 
-<img src="assets/0U9jAlaGcu9Vw.png" alt="" width="800" data-align="left"/>
+<img src="assets/Managed_Open_In.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -382,7 +382,7 @@ Give the profile a name e.g. `Entra ID SSO` then click Next
 
 Click **+ Add settings** and choose **Authentication -> Extensible Single Sign On (SSO)** and select the settings in the screenshot below and close the Settings Picker
 
-<img src="assets/HnfsoqYENrt5D.png" alt="" width="800" data-align="left"/>
+<img src="assets/iOS_SSO.png" alt="" width="800" data-align="left"/>
 
 | Key                             | Type    | Value                     |
 | ------------------------------- | ------- | ------------------------- |
@@ -414,7 +414,7 @@ Click **Profile Type -> Templates** then **Email** then **Create**
 
 Give the profile a name e.g. `Exchange` Online then click **Next**
 
-<img src="assets/iRqMwGxb2KpBS.png" alt="" width="800" data-align="left"/>
+<img src="assets/Email.png" alt="" width="800" data-align="left"/>
 
 
 Click **+ Add all devices**
@@ -558,7 +558,7 @@ Give the policy a name e.g. `Passcode` then click **Next**
 
 Under **System Security**
 
-<img src="assets/kBdLcidFQ1SKN.png" alt="" width="800" data-align="left"/>
+<img src="assets/iOS_Passcode.png" alt="" width="800" data-align="left"/>
 
 
 Click **+ Add all devices**
@@ -649,7 +649,7 @@ Click **Create**
 
 Click **Set default profile** and set the just created profile as the default for macOS
 
-<img src="assets/CntiwVDVz784T.png" alt="" width="800" data-align="left"/>
+<img src="assets/Default_Profile.png" alt="" width="800" data-align="left"/>
 
 
 ***
@@ -683,7 +683,7 @@ Click **+ Add settings** and choose **Full Disk Encryption** and select the sett
 
 Make the selections as shown
 
-<img src="assets/tSlGZEiBOTHGx.png" alt="" width="800" data-align="left"/>
+<img src="assets/FileVault.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -804,7 +804,7 @@ Give the profile a name e.g. `Office 365 Parameters` then click **Next**
 
 Click **+ Add settings** and choose **Microsoft Office -> Microsoft Office** then click the **Enable Automatic sign-in** and **Office Activation Email Address** checkboxes and close the **Settings Picker**
 
-<img src="assets/ckbr88YtyUFJT.png" alt="" width="800" data-align="left"/>
+<img src="assets/Office_Config.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -869,7 +869,7 @@ Give the profile a name e.g. `Background and Login Items` then click **Next**
 
 Click **+ Add settings** and choose **Login -> Service Management - Managed Login Items** then check all but **Team Identifier** and close the **Settings Picker**
 
-<img src="assets/ExjJYDRiuHooD.png" alt="" width="800" data-align="left"/>
+<img src="assets/Login_Items.png" alt="" width="800" data-align="left"/>
 
 Enter the following values: 
 
@@ -1010,7 +1010,7 @@ Name the Script e.g. `Install Windows App` and click **Next**
 
 Upload the saved `InstallRemoteDesktop.sh` file and set the parameters as 
 
-<img src="assets/RNXQeUjQSYFrJ.png" alt="" width="800" data-align="left"/>
+<img src="assets/Script_Settings.png" alt="" width="800" data-align="left"/>
 
 Under **Assignments** click **+Add all devices**
 
@@ -1103,11 +1103,11 @@ Set the following:
 
 **System Security -> Device Security -> Stealth Mode** to `Enable`
 
-<img src="assets/O15DRZ7lKzghS.png" alt="" width="800" data-align="left"/>
+<img src="assets/Mac_Compliance_1.png" alt="" width="800" data-align="left"/>
 
 Set the **Action** to **Mark device noncompliant** and the **Schedule** to **Immediately**
 
-<img src="assets/zGQUjGACfEgEa.png" alt="" width="800" data-align="left"/>
+<img src="assets/Mac_Compliance_2.png" alt="" width="800" data-align="left"/>
 
 Under Assignments click **+Add all devices**
 
@@ -1210,7 +1210,7 @@ Give the profile a name e.g. `macOS Enforce Software Update` then click **Next**
 Click **+ Add settings** and choose **Declarative Device Management (DDM) -> Software Update** then check Local Date and Time and Target OS Version and close the Settings Picker
 
 
-<img src="assets/hcEAcR7W48pDS.png" alt="" width="800" data-align="left"/>
+<img src="assets/DDM_OS_Update_Enforce.png" alt="" width="800" data-align="left"/>
 
 ***
 <div style="page-break-after: always"></div>
@@ -1260,7 +1260,7 @@ Click **+ Add settings** and choose **Accounts -> Accounts -> Disable Guest Acco
 
 Then set **Disable Guest Account** to **True**
 
-<img src="assets/tdHRoNvxZdVVO.png" alt="" width="800" data-align="left"/>
+<img src="assets/Disable_Guest.png" alt="" width="800" data-align="left"/>
 
 ***
 <div style="page-break-after: always"></div>
