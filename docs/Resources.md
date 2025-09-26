@@ -87,6 +87,8 @@
 
 * [Enable passkeys for your organization - Microsoft Entra ID](https://learn.microsoft.com/en-us/entra/identity/authentication/how-to-enable-passkey-fido2)
 
+* [From Strong To Stronger: Phishing Resistant Authentication Methods (The Blueprint | BRK244 - YouTube](https://www.youtube.com/watch?v=3wtwUh6iyxY)
+
 
 ## Other 3rd Party
 

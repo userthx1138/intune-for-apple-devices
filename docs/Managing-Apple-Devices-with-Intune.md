@@ -708,14 +708,13 @@ Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
-Give the profile a name e.g. Firewall then click **Next**
+Give the profile a name e.g. `Firewall` then click **Next**
 
 Click **+ Add settings** and choose **Networking -> Firewall** and select the settings in the screenshot below and close the **Settings Picker**
 
 Make the selections as shown
 
-<img src="assets/9jTidF7O3hn6F.png" alt="" width="800" data-align="left"/>
-
+<img src="assets/Firewall.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -738,11 +737,11 @@ Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
-Give the profile a name e.g. Gatekeeper then click **Next**
+Give the profile a name e.g. `Gatekeeper` then click **Next**
 
 Click **+ Add settings** and choose setting from **App Store, System Policy** and select the settings in the screenshot below and close the **Settings Picker**
 
-<img src="assets/fP1Q85BdL0PgE.png" alt="" width="800" data-align="left"/>
+<img src="assets/Gatekeeper.png" alt="" width="800" data-align="left"/>
 
 Click **Next** then on Scope Tags click **Next**
 
@@ -801,7 +800,7 @@ Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
-Give the profile a name e.g. Office 365 Parameters then click **Next**
+Give the profile a name e.g. `Office 365 Parameters` then click **Next**
 
 Click **+ Add settings** and choose **Microsoft Office -> Microsoft Office** then click the **Enable Automatic sign-in** and **Office Activation Email Address** checkboxes and close the **Settings Picker**
 
@@ -839,7 +838,7 @@ Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Templates** then **Custom** then **Create**
 
-Give the profile a name e.g. Baseline App Config then click **Next**
+Give the profile a name e.g. `Baseline App Config` then click **Next**
 
 For **Custom configuration profile name enter** Baseline App Config
 
@@ -866,7 +865,7 @@ Click **+ Create  -> + New Policy** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
-Give the profile a name e.g. Background and Login Items then click **Next**
+Give the profile a name e.g. `Background and Login Items` then click **Next**
 
 Click **+ Add settings** and choose **Login -> Service Management - Managed Login Items** then check all but **Team Identifier** and close the **Settings Picker**
 
@@ -1255,7 +1254,7 @@ Click **+ Create** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
-Give the profile a name e.g. Disable Guest Account then click **Next**
+Give the profile a name e.g. `Disable Guest Account` then click **Next**
 
 Click **+ Add settings** and choose **Accounts -> Accounts -> Disable Guest Account**
 
@@ -1276,7 +1275,7 @@ Click **+ Create** to Create a new profile
 
 Click **Profile Type -> Templates** then **Custom** then **Create**
 
-Give the profile a name e.g. Disable Auto Login then click **Next**
+Give the profile a name e.g. `Disable Auto Login` then click **Next**
 
 For **Custom configuration profile name enter Disable Auto Login**
 
@@ -1325,7 +1324,7 @@ Click **+ Create** to Create a new profile
 
 Click **Profile Type -> Settings Catalog** then **Create**
 
-Give the profile a name e.g. Screensaver Lock then click **Next**
+Give the profile a name e.g. `Screensaver Lock` then click **Next**
 
 Click **+ Add settings** and choose **System Configuration -> Screensaver -> Select all these settings**
 
