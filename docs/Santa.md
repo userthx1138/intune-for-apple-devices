@@ -200,103 +200,86 @@ Under **Assignments** click **+Add all devices**
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>PayloadContent</key>
-	<array>
-		<dict>
-			<key>PayloadContent</key>
-			<dict>
-				<key>nl.root3.support</key>
-				<dict>
-					<key>Forced</key>
-					<array>
-						<dict>
-							<key>mcx_preference_settings</key>
-							<dict>
-								<key>FirstRowLinkLeft</key>
-								<string>https://aka.ms/mysecurityinfo</string>
-								<key>FirstRowLinkRight</key>
-								<string>com.microsoft.CompanyPortalMac</string>
-								<key>FirstRowSymbolLeft</key>
-								<string>person.badge.key</string>
-								<key>FirstRowTitleLeft</key>
-								<string>Authentication Options</string>
-								<key>FirstRowTitleRight</key>
-								<string>Self Service</string>
-								<key>FirstRowTypeLeft</key>
-								<string>URL</string>
-								<key>FirstRowTypeRight</key>
-								<string>App</string>
-								<key>InfoItemFour</key>
-								<string>Storage</string>
-								<key>InfoItemOne</key>
-								<string>ComputerName</string>
-								<key>InfoItemThree</key>
-								<string>Network</string>
-								<key>InfoItemTwo</key>
-								<string>MacOSVersion</string>
-								<key>SecondRowLinkLeft</key>
-								<string>https://servicenow.com</string>
-								<key>SecondRowLinkRight</key>
-								<string>com.apple.MacEvalUtility</string>
-								<key>SecondRowSymbolRight</key>
-								<string>checkmark.square</string>
-								<key>SecondRowTitleRight</key>
-								<string>MEU</string>
-								<key>SecondRowTypeLeft</key>
-								<string>URL</string>
-								<key>SecondRowTypeRight</key>
-								<string>App</string>
-								<key>ShowWelcomeScreen</key>
-								<false/>
-								<key>StatusBarIconNotifierEnabled</key>
-								<true/>
-								<key>StorageLimit</key>
-								<integer>80</integer>
-								<key>Title</key>
-								<string>PretendCo IT Support</string>
-							</dict>
-						</dict>
-					</array>
-				</dict>
-			</dict>
-			<key>PayloadDescription</key>
-			<string></string>
-			<key>PayloadDisplayName</key>
-			<string>Custom</string>
-			<key>PayloadEnabled</key>
-			<true/>
-			<key>PayloadIdentifier</key>
-			<string>com.apple.ManagedClient.preferences.E07B484A-FC4A-450B-A0E9-3BC0B737974B</string>
-			<key>PayloadOrganization</key>
-			<string>Root3</string>
-			<key>PayloadType</key>
-			<string>com.apple.ManagedClient.preferences</string>
-			<key>PayloadUUID</key>
-			<string>E07B484A-FC4A-450B-A0E9-3BC0B737974B</string>
-			<key>PayloadVersion</key>
-			<integer>1</integer>
-		</dict>
-	</array>
-	<key>PayloadDescription</key>
-	<string></string>
-	<key>PayloadDisplayName</key>
-	<string>Support App Configuration</string>
-	<key>PayloadEnabled</key>
-	<true/>
-	<key>PayloadIdentifier</key>
-	<string>BDA1AE71-4F70-4D93-9924-F8E77E8F0F10</string>
-	<key>PayloadOrganization</key>
-	<string>Pretendco</string>
-	<key>PayloadRemovalDisallowed</key>
-	<true/>
-	<key>PayloadScope</key>
-	<string>System</string>
-	<key>PayloadType</key>
-	<string>Configuration</string>
-	<key>PayloadUUID</key>
-	<string>164671D3-3656-41FF-A387-E3229001BB9B</string>
-	<key>PayloadVersion</key>
-	<integer>1</integer>
+    <key>PayloadContent</key>
+    <array>
+        <dict>
+            <key>PayloadContent</key>
+            <dict>
+                <key>com.northpolesec.santa</key>
+                <dict>
+                    <key>Forced</key>
+                    <array>
+                        <dict>
+                            <key>mcx_preference_settings</key>
+                            <dict>
+                                <key>UnknownBlockMessage</key>
+                                <string>This app has not been approved for use on Pretendco Macs&lt;br/&gt;If needed you can run this app for now but it will require IT review for continued use</string>
+                                <key>BannedBlockMessage</key>
+                                <string>This application is not allowed to run on Pretendco Managed devices</string>
+                                <key>EventDetailText</key>
+                                <string>More Info</string>
+                                <key>EventDetailURL</key>
+                                <string>https://pretendco.biz/appinfo.html</string>
+                                <key>MoreInfoURL</key>
+                                <string>https://pretendco.biz/appinfo.html</string>
+                                <!-- Set the Client mode to STANDALONE -->
+                                <key>ClientMode</key>
+                                <integer>3</integer>
+                                <key>EnableSilentMode</key>
+                                <false/>
+                                <key>MachineIDKey</key>
+                                <string>MachineUUID</string>
+                                <key>ModeNotificationLockdown</key>
+                                <string>Entering Lockdown mode</string>
+                                <key>ModeNotificationMonitor</key>
+                                <string>Entering Monitor mode&lt;br/&gt;Please be careful!</string>
+                                <key>StaticRules</key>
+                                <array>
+                                   <dict>
+                                        <!-- Block News to Demo -->
+                                        <key>identifier</key>
+                                        <string>platform:com.apple.news</string>
+                                        <key>policy</key>
+                                        <string>BLOCKLIST</string>
+                                        <key>rule_type</key>
+                                        <string>SIGNINGID</string>
+                                    </dict>
+                                </array>
+                            </dict>
+                        </dict>
+                    </array>
+                </dict>
+            </dict>
+            <key>PayloadEnabled</key>
+            <true/>
+            <key>PayloadIdentifier</key>
+            <string>biz.pretendco.santa.359E3C7D-396F-4C45-99E7-F429620B9B21</string>
+            <key>PayloadType</key>
+            <string>com.apple.ManagedClient.preferences</string>
+            <key>PayloadUUID</key>
+            <string>359E3C7D-396F-4C45-99E7-F429620B9B21</string>
+            <key>PayloadVersion</key>
+            <integer>1</integer>
+        </dict>
+    </array>
+    <key>PayloadDescription</key>
+    <string>Manages Santa's configuration</string>
+    <key>PayloadDisplayName</key>
+    <string>Santa - Policy Configuration</string>
+    <key>PayloadIdentifier</key>
+    <string>biz.pretendco.santa</string>
+    <key>PayloadOrganization</key>
+    <string>Pretendco</string>
+    <key>PayloadRemovalDisallowed</key>
+    <true/>
+    <key>PayloadScope</key>
+    <string>System</string>
+    <key>PayloadType</key>
+    <string>Configuration</string>
+    <key>PayloadUUID</key>
+    <string>AFA02DE3-ACA6-49C4-9980-A3664E22E446</string>
+    <key>PayloadVersion</key>
+    <integer>1</integer>
 </dict>
 </plist>
 ```
