@@ -830,6 +830,8 @@ The Baseline Config for this workshop can be found here - [Baseline Configuratio
 
 <img src="assets/Imazing_Baseline.png" alt="" width="800" data-align="left"/>
 
+### Baseline Profile
+
 In the **Intune UI** 
 
 Navigate to **Devices -> macOS -> Configuration**
@@ -848,7 +850,13 @@ Upload the Custom Configuration profile file. Use filename `Baseline Config Intu
 
 Under **Assignments** click **+Add all devices**
 
-***Repeat the above process for The Support app and the Privileges app***
+### Support App Profile
+
+Repeat the above process for The Support app
+
+### Priviliges App Profile
+
+Repeat the above process for the Privileges app
 
 ***
 <div style="page-break-after: always"></div>
