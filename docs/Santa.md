@@ -37,6 +37,7 @@ The Santa app by North Pole Security leverages the macOS Endpoint Security frame
 In Intune sign in as a member of the *Global Administrator* or *Intune Service Administrator* Entra ID roles
 
 ***
+<div style="page-break-after: always"></div>
 
 # Santa App Installation
 
@@ -70,6 +71,7 @@ Under **Assignment** choose **Add all devices** then click **Next** then **Creat
 <div style="page-break-after: always"></div>
 
 ***
+<div style="page-break-after: always"></div>
 
 # Configuration Profiles
 
@@ -98,6 +100,7 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
+
 ## Notifications Profile
 
 *This profile sets the Notification settings for Santa so the user is not prompted to do so*
@@ -148,6 +151,7 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
+
 ## System Extension Profile
 
 *This profile allows Santa to intsall a System Extension*
@@ -173,6 +177,8 @@ In Assignments Click **+ Add all devices**
 Click **Next** then Click **Create**
 
 ***
+<div style="page-break-after: always"></div>
+
 ## Sample Santa Policy Config
 
 In the **Intune UI** 
